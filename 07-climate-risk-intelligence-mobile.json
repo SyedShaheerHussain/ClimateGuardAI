@@ -1,0 +1,195 @@
+{
+  "id": "1a2e2bd5e73e4fada723a844cef42e12",
+  "title": "Climate Risk Intelligence - Mobile",
+  "deviceType": "MOBILE",
+  "width": "780",
+  "height": "5814",
+  "prompt": "Generate the mobile responsive 'Risk Intelligence' screen for ClimateGuard AI.\nSHELL: Use mobile_tab shell for 'Risk Intel' with active tab highlight on 'Risk Intel'.\n\nCONTENT REQUIREMENTS (strictly structured for mobile portrait viewport ~390px):\n1. TOP SELECTION CONTROLS:\n   - Screen Title: 'Risk Intelligence' with 'Inference Live' cyan status pill.\n   - Subtitle: 'Multi-hazard predictive synthesis & calibrated exposure'.\n   - Location Selector dropdown: 'Indus Basin & Thar Corridor (Zone 43N)'.\n   - Filter chips / horizontal scroll pills: 'All Hazards', 'Flood (Critical)', 'Heat (High)', 'Drought (Moderate)'.\n   - Forecast Horizon Selector: Segmented pill buttons ('24h', '48h (Rec)', '7d', '14d').\n   - Action Button: Full-width electric cyan 'Run Risk Analysis' button with icon.\n\n2. THREE HAZARD CARDS (Vertical stacked mobile-first cards):\n   - FLOOD RISK CARD (Card with subtle border and #EF4444 left accent):\n     - Header: Flood icon, 'Flood Inundation Risk', Badge: 'CRITICAL (88%)' in Red #EF4444.\n     - Primary metric: 14,200 m³/s river discharge (+18.3% over 10-yr threshold of 12,000 m³/s).\n     - Secondary metrics: 68.4 mm precip / 24h, +1.80m gauge anomaly.\n     - Contributing Factors: Glacial melt (42%), Monsoonal convergence (38%), Soil saturation limit (20%).\n     - Model: Hydro-Net v3.2. Status: Pre-Breach Warning.\n   - HEATWAVE RISK CARD (Border with #F97316 left accent):\n     - Header: Sun icon, 'Extreme Heatwave Risk', Badge: 'HIGH ANOMALY (76%)' in Orange #F97316.\n     - Primary metric: 46.2°C ambient / 31.8°C WBGT (+6.4°C vs seasonal baseline).\n     - Secondary metrics: Night min temp 33.5°C, 78.4% RH.\n     - Contributing Factors: 500hPa Heat dome (55%), Low radiative cooling (25%), Albedo trapping (20%).\n     - Model: ThermoWatch v2.1.\n   - DROUGHT / ARIDITY RISK CARD (Border with #EAB308 left accent):\n     - Header: Drought icon, 'Agricultural Drought Deficit', Badge: 'MODERATE (64%)' in Yellow #EAB308.\n     - Primary metric: -41.0% Root Zone Soil Moisture (45 rain-free days).\n     - Secondary metrics: NDVI deviation -0.32, Evapotranspiration 7.2 mm/d.\n     - Contributing Factors: Monsoonal delay (60%), Aquifer drawdown (25%), VPD elevation (15%).\n     - Model: AridScan v4.0.\n\n3. FORECAST PROBABILITY & TRAJECTORY CHART (Mobile optimized):\n   - Title: '7-Day Multi-Hazard Forecast Trajectory'\n   - Clean SVG line chart displaying Discharge (Red/Cyan curve) rising above the Parametric Breach Band (> 12,000 m³/s), alongside ambient temperature (orange) with historical reference point.\n   - Historical Comparison badge: 'Exceeds 2010 Super-Flood baseline by +4.2%'.\n\n4. SHAP ATTRIBUTION & FEATURE SENSITIVITY:\n   - Compact progress bars showing key model weights:\n     - Upstream Precipitation Volume: 0.38\n     - Antecedent Soil Saturation: 0.28\n     - Surface Radiative Heating: 0.18\n     - Barometric Pressure Gradient: 0.16\n\n5. EXPLAINABLE RISK & AUTOMATED PROTOCOL CARDS:\n   - Algorithmic Narrative: Concise summary highlighting compound stress of monsoonal moisture meeting extreme glacial melt in Sector 43N.\n   - Parametric Trigger Alert Banner: 'CG-FIN-9821 Primed: Capital Pool Escrow $24,500,000 USD'.\n   - Quick Action buttons: 'Dispatch Evacuation Notice', 'Deploy Dyke Barriers', 'Sign Multisig Escrow'.\n\n6. DATA PROVENANCE & TIMESTAMPS:\n   - Providers: Open-Meteo, NASA MODIS, Copernicus ERA5.\n   - Timestamp: 'Generated 2026-10-24 14:32 UTC • Model #INF-8849-C01 • Confidence: 96.8%'.\n\nDESIGN SPECIFICATIONS:\n- Strict alignment with ClimateGuard AI dark theme: #07111F, #0B1728, #101F33, #162840, #24364B border.\n- Risk colors: Safe #22C55E, Moderate #EAB308, High #F97316, Critical #EF4444, Accent #22D3EE.\n- Mobile friendly touch targets (min 44px), readable typography, no horizontal page overflow.",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "MANROPE",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#22d3ee",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "on_secondary_fixed_variant": "#004395",
+      "outline_variant": "#3c494c",
+      "secondary_fixed": "#d8e2ff",
+      "on_surface": "#d4e4fa",
+      "on_error_container": "#ffdad6",
+      "primary": "#8aebff",
+      "on_tertiary": "#003731",
+      "surface_dim": "#051424",
+      "on_tertiary_container": "#00594f",
+      "error_container": "#93000a",
+      "surface": "#051424",
+      "on_secondary_fixed": "#001a42",
+      "primary_fixed_dim": "#2fd9f4",
+      "inverse_primary": "#006877",
+      "tertiary_fixed_dim": "#4fdbc8",
+      "surface_container_highest": "#273647",
+      "inverse_surface": "#d4e4fa",
+      "surface_container": "#122131",
+      "secondary_container": "#0566d9",
+      "secondary_fixed_dim": "#adc6ff",
+      "error": "#ffb4ab",
+      "on_secondary": "#002e6a",
+      "secondary": "#adc6ff",
+      "surface_variant": "#273647",
+      "on_error": "#690005",
+      "surface_bright": "#2c3a4c",
+      "on_surface_variant": "#bbc9cd",
+      "on_background": "#d4e4fa",
+      "surface_container_lowest": "#010f1f",
+      "on_primary_fixed_variant": "#004e5a",
+      "on_tertiary_fixed": "#00201c",
+      "background": "#051424",
+      "on_tertiary_fixed_variant": "#005048",
+      "tertiary_fixed": "#71f8e4",
+      "primary_fixed": "#a2eeff",
+      "on_primary_container": "#005763",
+      "surface_container_low": "#0d1c2d",
+      "outline": "#859397",
+      "on_primary": "#00363e",
+      "primary_container": "#22d3ee",
+      "surface_tint": "#2fd9f4",
+      "on_secondary_container": "#e6ecff",
+      "on_primary_fixed": "#001f25",
+      "tertiary": "#6af2de",
+      "tertiary_container": "#47d5c2",
+      "inverse_on_surface": "#233143",
+      "surface_container_high": "#1c2b3c"
+    },
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#22d3ee",
+    "overrideSecondaryColor": "#3b82f6",
+    "overrideTertiaryColor": "#14b8a6",
+    "overrideNeutralColor": "#94a3b8",
+    "spacingScale": 2,
+    "typography": {
+      "headline-sm": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.75rem",
+        "letterSpacing": "-0.01em"
+      },
+      "title-md": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.005em"
+      },
+      "mono-metric": {
+        "fontFamily": "Inter",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.02em"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "2.75rem",
+        "letterSpacing": "-0.02em"
+      },
+      "display-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "3.5rem",
+        "fontWeight": "700",
+        "lineHeight": "4rem",
+        "letterSpacing": "-0.03em"
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "0"
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.125rem",
+        "letterSpacing": "0.01em"
+      },
+      "headline-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.015em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0"
+      },
+      "display-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.5rem",
+        "fontWeight": "600",
+        "lineHeight": "3rem",
+        "letterSpacing": "-0.025em"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "lineHeight": "1rem",
+        "letterSpacing": "0.05em"
+      },
+      "title-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1.125rem",
+        "fontWeight": "600",
+        "lineHeight": "1.625rem",
+        "letterSpacing": "-0.01em"
+      },
+      "display-md-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.75rem",
+        "fontWeight": "600",
+        "lineHeight": "2.25rem",
+        "letterSpacing": "-0.02em"
+      },
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.6875rem",
+        "fontWeight": "600",
+        "lineHeight": "0.875rem",
+        "letterSpacing": "0.06em"
+      },
+      "headline-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.875rem",
+        "fontWeight": "600",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.02em"
+      }
+    },
+    "spacing": {
+      "margin": "1rem",
+      "space-md": "1rem",
+      "space-sm": "0.75rem",
+      "margin-desktop": "1.5rem",
+      "space-xl": "2rem",
+      "space-lg": "1.5rem",
+      "space-2xs": "0.25rem",
+      "gutter": "1rem",
+      "space-xs": "0.5rem",
+      "space-2xl": "3rem",
+      "gutter-desktop": "1.5rem"
+    },
+    "headlineFontFamily": "Manrope",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "id": "7504176f8f754e579af1f2dad60698b1",
+  "title": "C01 Low-Compute Edge Inference Benchmark",
+  "deviceType": "DESKTOP",
+  "width": "2560",
+  "height": "4070",
+  "prompt": "Create the C01 Low-Compute Edge Inference Benchmark verification dashboard for ClimateGuard AI.\nKeep the identical styling, navbar, and sidebar active item: \"C01 Edge Benchmark\" (under SYSTEM menu in the sidebar).\n\nCRITICAL REQUIREMENTS FROM USER SPECIFICATION:\n1. Strict Benchmark Constraints & Thresholds Prominently Displayed:\n   - Target Inferences: 100 inferences\n   - Maximum total latency threshold: Under 200 ms\n   - Maximum operational memory threshold: Under 256 MB\n2. Engineering & Scientific Credibility:\n   - Default Status: Neutral \"NOT TESTED\" (or \"STANDBY / AWAITING EXECUTION\") state.\n   - NEVER show fabricated PASS status or fake pre-measured benchmark values. Show clear \"— —\" or \"Not Tested\" placeholders with clear target thresholds displayed.\n   - Prominent action controls: \"Run Benchmark (100 Inferences)\" primary button (with active/standby states) and \"Download Report (JSON / PDF)\" button (currently disabled until benchmark run).\n3. KPI & Target Cards Grid (Row 1):\n   - Card 1: Benchmark Status: Badge \"NOT TESTED\" in muted slate/neutral styling (`#64748B` / `#94A3B8`), subtitle \"Awaiting test execution on target hardware\".\n   - Card 2: Total Latency: Target \"< 200.0 ms\" | Measured: \"— — ms\" | Status: \"Pending execution\".\n   - Card 3: Average Latency: Target \"< 2.0 ms / inf\" | Measured: \"— — ms\" | Status: \"Deterministic batch\".\n   - Card 4: Peak Operational Memory: Target \"< 256.0 MB\" | Measured: \"— — MB\" | Status: \"Resident set size (RSS)\".\n   - Card 5: Model Artifact Footprint: Serialized Compact Decision Tree (ONNX / C01-Micro) Size: \"18.4 MB\" (Model weight on disk, well below 256MB boundary).\n4. Dual Benchmark Target vs Measured Comparison Visualizations:\n   - Visual 1: Total Latency Threshold Gauge / Bar:\n     - Clear target ceiling line at 200 ms marked in cyan/amber threshold indicator.\n     - Measurement zone showing \"Awaiting Execution • Run benchmark to record actual latency envelope\".\n     - Visual breakdown of anticipated pipeline stages: Preprocessing / Tensor Normalization (<15ms), Core Tree Inference (<160ms), Anomaly Post-filtering (<25ms).\n   - Visual 2: Memory Ceiling & Allocation Topology:\n     - Target ceiling boundary line at 256 MB.\n     - Stack breakdown: Base Runtime (<42MB), In-Memory Hazard Weights (~18.4MB), Dynamic Tensor Buffer (<65MB), Headroom (~130MB).\n     - Status: \"Memory Profiler Ready • jemalloc tracing armed\".\n5. Target Hardware & Execution Environment Panel:\n   - Hardware Architecture: ARM Cortex-A72 / x86_64 Edge Gateway (e.g. Raspberry Pi 4 Compute Module / Industrial Edge Node).\n   - CPU Clock & Cores: 4 Cores @ 1.50 GHz (Unthrottled, single-thread inference mode).\n   - Total Available RAM: 1024 MB LPDDR4.\n   - Operating Environment: Alpine Linux 3.19 (Minimal Edge Container) / glibc-minimal.\n   - Runtime Engine: C01 Micro-Inference Core v2.4 (Zero-cloud-dependency, pure C/C++ runtime).\n   - External Network Call Constraint: 0 External API Calls (100% Isolated Local Execution Guarantee).\n6. Technical Architecture & Algorithmic Rationale Section:\n   - Four explanatory pillars:\n     1. Quantized Compact Decision Tree: Pruned gradient-boosted decision trees converted into static branchless C code arrays.\n     2. Zero External Network Latency: Complete self-contained operation without satellite re-querying during local inference passes.\n     3. Deterministic Execution Boundaries: Hard real-time execution guarantees avoiding garbage collection jitter.\n     4. Extreme Serialization Footprint: Sub-20MB static footprint designed for disconnected municipal warning sirens and field gateways.\n7. Benchmark Run History & Cryptographic Audit Table:\n   - Clear empty state / baseline history showing previous environment tests or initial calibration runs:\n     - Run ID (e.g. `BENCH-RUN-000` or calibration pre-run), Date, Hardware Profile, Inferences (100), Measured Latency, Peak RAM, Verification Result (\"CALIBRATION ONLY - NOT CERTIFIED\" / \"NOT TESTED\"), Action.\n     - Clear helper text: \"Official certified benchmark runs are cryptographically signed and stored in local edge logs.\"\n8. Interactive feel:\n   - Realistic tabs or controls (All Tests, Stress Test, Cold Start, Batch Size 1 vs 100).\n   - Include banner: \"HACKATHON HARDWARE CONSTRAINT VERIFICATION SPECIFICATION (C01 DEFENSE COMPLIANT)\".\n\nStyle strictly follows ClimateGuard AI:\n- Background: `#07111F`\n- Sidebar/Navbar: `#0B1728`\n- Cards: `#101F33` with 1px border `#24364B`\n- Accents: `#22D3EE` (Cyan), `#3B82F6` (Enterprise Blue)\n- Muted/Status colors: `#64748B`, `#94A3B8`, `#F8FAFC`. No fake green passes!",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "MANROPE",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#22d3ee",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "on_error_container": "#ffdad6",
+      "on_primary": "#00363e",
+      "surface": "#051424",
+      "on_background": "#d4e4fa",
+      "background": "#051424",
+      "primary_container": "#22d3ee",
+      "surface_dim": "#051424",
+      "surface_container_lowest": "#010f1f",
+      "surface_container": "#122131",
+      "on_primary_container": "#005763",
+      "inverse_surface": "#d4e4fa",
+      "on_tertiary_fixed": "#00201c",
+      "on_secondary_fixed_variant": "#004395",
+      "surface_container_highest": "#273647",
+      "on_secondary_container": "#e6ecff",
+      "surface_bright": "#2c3a4c",
+      "tertiary_container": "#47d5c2",
+      "secondary_fixed_dim": "#adc6ff",
+      "surface_container_high": "#1c2b3c",
+      "on_secondary_fixed": "#001a42",
+      "primary_fixed_dim": "#2fd9f4",
+      "on_surface": "#d4e4fa",
+      "on_tertiary_container": "#00594f",
+      "on_surface_variant": "#bbc9cd",
+      "inverse_primary": "#006877",
+      "inverse_on_surface": "#233143",
+      "outline": "#859397",
+      "primary_fixed": "#a2eeff",
+      "on_primary_fixed": "#001f25",
+      "surface_variant": "#273647",
+      "secondary_container": "#0566d9",
+      "primary": "#8aebff",
+      "surface_container_low": "#0d1c2d",
+      "on_tertiary_fixed_variant": "#005048",
+      "tertiary": "#6af2de",
+      "secondary": "#adc6ff",
+      "on_secondary": "#002e6a",
+      "surface_tint": "#2fd9f4",
+      "on_tertiary": "#003731",
+      "on_error": "#690005",
+      "tertiary_fixed": "#71f8e4",
+      "outline_variant": "#3c494c",
+      "tertiary_fixed_dim": "#4fdbc8",
+      "on_primary_fixed_variant": "#004e5a",
+      "secondary_fixed": "#d8e2ff",
+      "error_container": "#93000a",
+      "error": "#ffb4ab"
+    },
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#22d3ee",
+    "overrideSecondaryColor": "#3b82f6",
+    "overrideTertiaryColor": "#14b8a6",
+    "overrideNeutralColor": "#94a3b8",
+    "spacingScale": 2,
+    "typography": {
+      "headline-sm": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.75rem",
+        "letterSpacing": "-0.01em"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "lineHeight": "1rem",
+        "letterSpacing": "0.05em"
+      },
+      "display-md-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.75rem",
+        "fontWeight": "600",
+        "lineHeight": "2.25rem",
+        "letterSpacing": "-0.02em"
+      },
+      "headline-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.015em"
+      },
+      "title-md": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.005em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0"
+      },
+      "display-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "3.5rem",
+        "fontWeight": "700",
+        "lineHeight": "4rem",
+        "letterSpacing": "-0.03em"
+      },
+      "mono-metric": {
+        "fontFamily": "Inter",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.02em"
+      },
+      "title-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1.125rem",
+        "fontWeight": "600",
+        "lineHeight": "1.625rem",
+        "letterSpacing": "-0.01em"
+      },
+      "display-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.5rem",
+        "fontWeight": "600",
+        "lineHeight": "3rem",
+        "letterSpacing": "-0.025em"
+      },
+      "headline-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.875rem",
+        "fontWeight": "600",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.02em"
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.125rem",
+        "letterSpacing": "0.01em"
+      },
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.6875rem",
+        "fontWeight": "600",
+        "lineHeight": "0.875rem",
+        "letterSpacing": "0.06em"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "2.75rem",
+        "letterSpacing": "-0.02em"
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "0"
+      }
+    },
+    "spacing": {
+      "space-2xs": "0.25rem",
+      "margin": "1rem",
+      "gutter-desktop": "1.5rem",
+      "space-md": "1rem",
+      "space-lg": "1.5rem",
+      "space-sm": "0.75rem",
+      "gutter": "1rem",
+      "space-xs": "0.5rem",
+      "margin-desktop": "1.5rem",
+      "space-xl": "2rem",
+      "space-2xl": "3rem"
+    },
+    "headlineFontFamily": "Manrope",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  }
+}

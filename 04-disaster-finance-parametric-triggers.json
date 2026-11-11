@@ -1,0 +1,195 @@
+{
+  "id": "da6b0f85af4d4445a453a1106b3dbbe6",
+  "title": "Disaster Finance & Parametric Triggers",
+  "deviceType": "DESKTOP",
+  "width": "2560",
+  "height": "3640",
+  "prompt": "Design the DISASTER FINANCE & AUTOMATED FUNDING TRIGGERS dashboard for ClimateGuard AI.\nHeader: \"Disaster Finance Management\", Subtitle: \"Simulate parametric trigger payouts, monitor reserve liquidity, and audit automated relief disbursements.\"\nProminent Header Badge: \"SIMULATION ONLY • Parametric Testnet Environment\"\n\nROW 1 — FINANCIAL KPI CARDS:\n- Total Simulated Funding: \"$42,500,000\" (+12.4% pool capacity)\n- Pending Funding Requests: \"3 Active Verifications ($6,200,000)\"\n- Triggered Financial Rules: \"8 Rules Met Threshold\"\n- Disbursed Relief Simulations: \"$28,150,000\" (Average payout velocity: 4.2 hours)\n\nROW 2 — FINANCIAL CHARTS:\n- LEFT (60%): Funding Distribution & Reserve Liquidity Chart (Disaster type breakdown: Floods $22M, Drought Relief $14M, Heatwave Response $6.5M with monthly trajectory).\n- RIGHT (40%): Parametric Rule Verification Gauge & Payout Speed Analytics (comparing traditional claims at 45 days vs ClimateGuard automated triggers at <6 hours).\n\nROW 3 — PARAMETRIC RULE CONFIGURATION & TRIGGER EVALUATION:\n- Rule Cards List & Creation Trigger:\n  1. \"Mekong Flash Flood Trigger v2\" | Hazard: Flood | Threshold: Discharge > 12,000 m³/s for 6h | Max Simulated Payout: $5,000,000 | Status: ACTIVE (TRIGGERED)\n  2. \"Sahel Drought Soil Depletion\" | Hazard: Drought | Threshold: Soil Moisture < 12% for 21 days | Max Simulated Payout: $8,000,000 | Status: ACTIVE (MONITORING)\n  3. \"Urban Heatwave Health Relief\" | Hazard: Heatwave | Threshold: WBGT > 32°C for 72 consecutive hours | Max Simulated Payout: $2,500,000 | Status: ACTIVE (STANDBY)\n- \"Create New Parametric Rule\" quick button.\n\nROW 4 — RECENT SIMULATED DISBURSEMENTS & AUDIT LOG:\n- Detailed Table:\n  Request ID (e.g. CG-FIN-9821), Monitored Region, Hazard Indicator, Triggering Rule, Calculated Payout Amount ($), Multi-sig Smart Audit Status (Simulated Approved, Pending Risk Review, Executed), Timestamp, Action (\"View Simulation Proof\").",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "MANROPE",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#22d3ee",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "primary_fixed": "#a2eeff",
+      "tertiary_fixed": "#71f8e4",
+      "background": "#051424",
+      "on_secondary_fixed": "#001a42",
+      "tertiary_fixed_dim": "#4fdbc8",
+      "on_primary": "#00363e",
+      "on_primary_fixed": "#001f25",
+      "outline": "#859397",
+      "surface": "#051424",
+      "surface_container": "#122131",
+      "on_error": "#690005",
+      "error": "#ffb4ab",
+      "primary": "#8aebff",
+      "primary_container": "#22d3ee",
+      "surface_container_low": "#0d1c2d",
+      "on_error_container": "#ffdad6",
+      "secondary_fixed": "#d8e2ff",
+      "on_secondary": "#002e6a",
+      "surface_container_lowest": "#010f1f",
+      "on_primary_fixed_variant": "#004e5a",
+      "inverse_primary": "#006877",
+      "surface_dim": "#051424",
+      "tertiary": "#6af2de",
+      "on_tertiary_container": "#00594f",
+      "on_tertiary_fixed_variant": "#005048",
+      "on_background": "#d4e4fa",
+      "primary_fixed_dim": "#2fd9f4",
+      "tertiary_container": "#47d5c2",
+      "surface_container_highest": "#273647",
+      "surface_container_high": "#1c2b3c",
+      "surface_bright": "#2c3a4c",
+      "on_secondary_container": "#e6ecff",
+      "on_surface": "#d4e4fa",
+      "on_primary_container": "#005763",
+      "secondary": "#adc6ff",
+      "secondary_container": "#0566d9",
+      "inverse_on_surface": "#233143",
+      "error_container": "#93000a",
+      "inverse_surface": "#d4e4fa",
+      "on_tertiary": "#003731",
+      "secondary_fixed_dim": "#adc6ff",
+      "outline_variant": "#3c494c",
+      "surface_tint": "#2fd9f4",
+      "surface_variant": "#273647",
+      "on_tertiary_fixed": "#00201c",
+      "on_secondary_fixed_variant": "#004395",
+      "on_surface_variant": "#bbc9cd"
+    },
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#22d3ee",
+    "overrideSecondaryColor": "#3b82f6",
+    "overrideTertiaryColor": "#14b8a6",
+    "overrideNeutralColor": "#94a3b8",
+    "spacingScale": 2,
+    "typography": {
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.6875rem",
+        "fontWeight": "600",
+        "lineHeight": "0.875rem",
+        "letterSpacing": "0.06em"
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "0"
+      },
+      "headline-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.015em"
+      },
+      "display-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "3.5rem",
+        "fontWeight": "700",
+        "lineHeight": "4rem",
+        "letterSpacing": "-0.03em"
+      },
+      "headline-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.875rem",
+        "fontWeight": "600",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.02em"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "2.75rem",
+        "letterSpacing": "-0.02em"
+      },
+      "title-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1.125rem",
+        "fontWeight": "600",
+        "lineHeight": "1.625rem",
+        "letterSpacing": "-0.01em"
+      },
+      "display-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.5rem",
+        "fontWeight": "600",
+        "lineHeight": "3rem",
+        "letterSpacing": "-0.025em"
+      },
+      "display-md-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.75rem",
+        "fontWeight": "600",
+        "lineHeight": "2.25rem",
+        "letterSpacing": "-0.02em"
+      },
+      "headline-sm": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.75rem",
+        "letterSpacing": "-0.01em"
+      },
+      "mono-metric": {
+        "fontFamily": "Inter",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.02em"
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.125rem",
+        "letterSpacing": "0.01em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0"
+      },
+      "title-md": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.005em"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "lineHeight": "1rem",
+        "letterSpacing": "0.05em"
+      }
+    },
+    "spacing": {
+      "margin": "1rem",
+      "space-xl": "2rem",
+      "space-sm": "0.75rem",
+      "gutter": "1rem",
+      "space-xs": "0.5rem",
+      "space-lg": "1.5rem",
+      "margin-desktop": "1.5rem",
+      "gutter-desktop": "1.5rem",
+      "space-2xs": "0.25rem",
+      "space-2xl": "3rem",
+      "space-md": "1rem"
+    },
+    "headlineFontFamily": "Manrope",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  }
+}

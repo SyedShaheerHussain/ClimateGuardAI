@@ -1,0 +1,195 @@
+{
+  "id": "77e6394916c644ba876254f1cc8add62",
+  "title": "Disaster Finance & Parametric Triggers",
+  "deviceType": "DESKTOP",
+  "width": "2560",
+  "height": "4598",
+  "prompt": "Create the complete enterprise Disaster Finance and Parametric Funding Management dashboard for ClimateGuard AI.\nMaintain strict consistency with the dark navy design system (Background #07111F, Nav/Sidebar #0B1728, Card surfaces #101F33, Elevated surfaces #162840, Primary Cyan #22D3EE, Primary Blue #3B82F6, Risk colors: Safe #22C55E, Moderate #EAB308, High #F97316, Critical #EF4444).\n\nKey Sections & Requirements:\n1. Top Banner & Page Header:\n   - \"SIMULATION ONLY • Parametric Testnet Environment (Sepolia Block #9,481,204)\" highlighted disclaimer badge in cyan/blue translucent pill.\n   - Title: \"Disaster Finance & Parametric Triggers\"\n   - Subtitle: \"Simulate parametric trigger payouts, monitor reserve capital pools, evaluate trigger conditions, and audit automated relief disbursements.\"\n   - Action buttons: \"Liquidity Controls\", \"Audit Trail Export (CSV/PDF)\", and prominent \"+ Create Funding Rule\" primary button.\n\n2. Financial Overview KPI Cards (Top Row - 4 Cards):\n   - Card 1: \"Total Simulated Liquidity Pool\" -> $42,500,000 USD (+12.4% pool capacity vs Q2, Solvency Factor 3.2x, Cap $60M)\n   - Card 2: \"Pending Funding Verifications\" -> $6,200,000 USD (3 Active Multi-Sig Verifications, Oracle Quorum 4/5 Nodes, ETA ~18 mins)\n   - Card 3: \"Active Trigger Rules\" -> 8 Rules (3 Thresholds Exceeded in last 48h, 24 Parametric Contracts, Auto-execution: ON)\n   - Card 4: \"Approved Simulated Payouts\" -> $28,150,000 USD (Avg Payout Velocity: 4.2 Hours vs 45-day traditional claims, 14 Disaster Incidents, Settlement Rate 100%)\n\n3. Analytical Graphs & Distribution (Middle Section - 2 Columns):\n   - Left Column (60%): \"Cumulative Simulated Liquidity & Capital Distribution\"\n     - Timeframe filter pills: \"30 Days (Active)\", \"90 Days\", \"YTD\", \"All Time\"\n     - Sub-metrics: Floods ($22.0M • 51.8%), Drought Relief ($14.0M • 32.9%), Heatwave Emergency ($6.5M • 15.3%)\n     - High-fidelity SVG chart showing monthly liquidity reserve line + parametric payout step-area curve with clear axis labels and tooltips.\n   - Right Column (40%): \"Payout Velocity & Oracle Consensus Engine\"\n     - Comparative metric card: ClimateGuard AI Parametric Payout (4.2 Hours automated telemetry verification) vs Traditional Disaster Adjusting (45 Days manual damage inspection).\n     - Live Consensus Status: 99.94% Oracle Consensus (Zero Basis Risk), validated through multi-constellation satellite feeds (Sentinel-2, GPM IMERG, ERA5 Reanalysis).\n     - Multisig Escrow Vault health indicator with quorum status.\n\n4. Parametric Rule Configuration & Active Trigger Policies (3-4 Card Grid):\n   - Header with active count and filter: \"Active Parametric Trigger Rules\" (with \"+ New Rule\" CTA).\n   - Rule Card 1: Mekong Flash Flood Trigger v2.1 (Status: ACTIVE / TRIGGERED - Red #EF4444 pill). Condition: Discharge > 12,000 m³/s for 6h. Current: 12,480 m³/s (Exceeded). Max Payout: $5,000,000. Quick action: \"Audit Trigger Condition\".\n   - Rule Card 2: Sahel Drought Soil Depletion v4.0 (Status: MONITORING - Cyan #22D3EE pill). Condition: Root Soil Moisture < 12% for 21d. Current: 13.8% (Day 14). Max Payout: $8,000,000. Quick action: \"Configure Parameters\".\n   - Rule Card 3: Urban Heatwave Health Relief v1.9 (Status: ACTIVE / STANDBY - Green #22C55E pill). Condition: Wet-Bulb > 32°C for 72h. Current: 29.4°C (Sub-threshold). Max Payout: $2,500,000. Quick action: \"Configure Parameters\".\n\n5. Recent Transactions & Simulated Disbursements Audit Log (Full Width Table):\n   - Filter controls: Search by Request ID/Region, Hazard selector dropdown, Status filter (\"All\", \"Pending Risk Review\", \"Executed\", \"Simulated Approved\"), \"Export Audit Proofs\" button.\n   - Table columns:\n     - Request ID (e.g. CG-FIN-9821, CG-FIN-9818, CG-FIN-9790, CG-FIN-9755, CG-FIN-9732)\n     - Monitored Region / Catchment (e.g., Lower Mekong Delta Sector 4, Northern Kenya Pastoral Belt, Brahmaputra River Basin, Jacobabad Thermal Corridor, Chari-Logone Catchment)\n     - Hazard Indicator (Flood, Drought, Heatwave with distinct icon and badge)\n     - Triggering Rule & Threshold Telemetry (e.g., Discharge > 12,000 m³/s, NDVI Deficit -0.32σ, WBGT > 32°C)\n     - Calculated Payout Amount ($5,000,000 USD, $8,000,000 USD, $12,000,000 USD, etc.)\n     - Multi-Sig Audit Status (Pill badges: \"Pending Risk Review\" in Yellow/Red, \"Executed (3.8h)\" in Green, \"Simulated Approved\" in Blue)\n     - Timestamp (UTC)\n     - Action: \"View Simulation Proof\" modal trigger / \"Inspect Oracle Data\".\n   - Table footer: Cryptographic Merkle Root hash (0x8f4c...39a1 notarized on Sepolia Testnet) with pagination controls.\n\n6. Modal / Slide-out Component: \"Create New Parametric Funding Rule\"\n   - Display an elegant, functional open modal overlay on top or toggleable UI preview illustrating the Rule Configuration Form:\n     - Form Header: \"Create Parametric Funding Rule\" with \"Simulation Environment\" badge and close button.\n     - Field 1: Rule Name (e.g., \"Indus Basin Monsoon Surge Protocol\")\n     - Field 2: Hazard Type Selector (Radio pills with icons: Flash Flood, Extreme Heat, Agricultural Drought)\n     - Field 3: Geographic Boundary / Target Catchment (Dropdown selector: \"Indus Basin NW - Zone 43N\", \"Lower Mekong\", etc.)\n     - Field 4: Primary Oracle Trigger Metric (Dropdown: River Discharge m³/s, Wet-Bulb Globe Temp °C, Root Zone Soil Moisture %)\n     - Field 5: Threshold Trigger Operator & Value (Operator: \">=\" or \"<=\", Value: \"12,000\", Duration: \"6 Hours continuous\")\n     - Field 6: Maximum Simulated Payout Cap ($ Amount: \"$5,000,000 USD\")\n     - Field 7: Automated Multi-Sig Execution Toggle (Switch: ON)\n     - Modal Footer Actions: \"Cancel\" secondary button, \"Deploy Parametric Rule\" cyan primary button.\n\nEnsure impeccable layout balance, crystal-clear typography hierarchy using Manrope, precision borders, SVG telemetry curves, realistic financial numbers, and zero visual clutter.",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "MANROPE",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#22d3ee",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "error": "#ffb4ab",
+      "surface": "#051424",
+      "surface_container_highest": "#273647",
+      "error_container": "#93000a",
+      "on_surface": "#d4e4fa",
+      "inverse_primary": "#006877",
+      "on_surface_variant": "#bbc9cd",
+      "on_error": "#690005",
+      "surface_bright": "#2c3a4c",
+      "on_secondary_fixed": "#001a42",
+      "primary_fixed": "#a2eeff",
+      "inverse_on_surface": "#233143",
+      "on_error_container": "#ffdad6",
+      "on_primary_container": "#005763",
+      "on_primary_fixed": "#001f25",
+      "surface_variant": "#273647",
+      "on_tertiary_fixed": "#00201c",
+      "on_secondary": "#002e6a",
+      "secondary": "#adc6ff",
+      "surface_container_low": "#0d1c2d",
+      "on_background": "#d4e4fa",
+      "inverse_surface": "#d4e4fa",
+      "surface_container_lowest": "#010f1f",
+      "on_secondary_container": "#e6ecff",
+      "primary_container": "#22d3ee",
+      "surface_tint": "#2fd9f4",
+      "background": "#051424",
+      "outline_variant": "#3c494c",
+      "on_tertiary": "#003731",
+      "surface_dim": "#051424",
+      "secondary_fixed": "#d8e2ff",
+      "surface_container_high": "#1c2b3c",
+      "primary_fixed_dim": "#2fd9f4",
+      "on_secondary_fixed_variant": "#004395",
+      "primary": "#8aebff",
+      "tertiary_container": "#47d5c2",
+      "tertiary_fixed": "#71f8e4",
+      "secondary_container": "#0566d9",
+      "surface_container": "#122131",
+      "on_tertiary_container": "#00594f",
+      "on_tertiary_fixed_variant": "#005048",
+      "on_primary": "#00363e",
+      "tertiary": "#6af2de",
+      "outline": "#859397",
+      "tertiary_fixed_dim": "#4fdbc8",
+      "secondary_fixed_dim": "#adc6ff",
+      "on_primary_fixed_variant": "#004e5a"
+    },
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#22d3ee",
+    "overrideSecondaryColor": "#3b82f6",
+    "overrideTertiaryColor": "#14b8a6",
+    "overrideNeutralColor": "#94a3b8",
+    "spacingScale": 2,
+    "typography": {
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "0"
+      },
+      "mono-metric": {
+        "fontFamily": "Inter",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.02em"
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.125rem",
+        "letterSpacing": "0.01em"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "2.75rem",
+        "letterSpacing": "-0.02em"
+      },
+      "title-md": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.005em"
+      },
+      "headline-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.015em"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "lineHeight": "1rem",
+        "letterSpacing": "0.05em"
+      },
+      "title-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1.125rem",
+        "fontWeight": "600",
+        "lineHeight": "1.625rem",
+        "letterSpacing": "-0.01em"
+      },
+      "display-md-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.75rem",
+        "fontWeight": "600",
+        "lineHeight": "2.25rem",
+        "letterSpacing": "-0.02em"
+      },
+      "display-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "3.5rem",
+        "fontWeight": "700",
+        "lineHeight": "4rem",
+        "letterSpacing": "-0.03em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0"
+      },
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.6875rem",
+        "fontWeight": "600",
+        "lineHeight": "0.875rem",
+        "letterSpacing": "0.06em"
+      },
+      "headline-sm": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.75rem",
+        "letterSpacing": "-0.01em"
+      },
+      "headline-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.875rem",
+        "fontWeight": "600",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.02em"
+      },
+      "display-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.5rem",
+        "fontWeight": "600",
+        "lineHeight": "3rem",
+        "letterSpacing": "-0.025em"
+      }
+    },
+    "spacing": {
+      "margin": "1rem",
+      "gutter-desktop": "1.5rem",
+      "space-2xs": "0.25rem",
+      "space-md": "1rem",
+      "space-lg": "1.5rem",
+      "space-xl": "2rem",
+      "space-sm": "0.75rem",
+      "margin-desktop": "1.5rem",
+      "gutter": "1rem",
+      "space-2xl": "3rem",
+      "space-xs": "0.5rem"
+    },
+    "headlineFontFamily": "Manrope",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  }
+}

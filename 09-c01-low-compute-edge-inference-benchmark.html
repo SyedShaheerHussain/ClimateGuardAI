@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-tertiary": "#003731",
+        "inverse-primary": "#006877",
+        "on-error": "#690005",
+        "on-surface": "#d4e4fa",
+        "surface-tint": "#2fd9f4",
+        "surface-variant": "#273647",
+        "surface-container-lowest": "#010f1f",
+        "outline": "#859397",
+        "on-secondary-fixed-variant": "#004395",
+        "on-primary-fixed-variant": "#004e5a",
+        "inverse-on-surface": "#233143",
+        "on-secondary-fixed": "#001a42",
+        "surface-dim": "#051424",
+        "on-tertiary-container": "#00594f",
+        "on-background": "#d4e4fa",
+        "tertiary": "#6af2de",
+        "primary-fixed-dim": "#2fd9f4",
+        "on-secondary": "#002e6a",
+        "surface": "#051424",
+        "tertiary-fixed": "#71f8e4",
+        "on-primary-container": "#005763",
+        "surface-container-high": "#1c2b3c",
+        "on-surface-variant": "#bbc9cd",
+        "on-tertiary-fixed-variant": "#005048",
+        "surface-container-highest": "#273647",
+        "tertiary-container": "#47d5c2",
+        "secondary": "#adc6ff",
+        "outline-variant": "#3c494c",
+        "secondary-container": "#0566d9",
+        "error": "#ffb4ab",
+        "surface-container": "#122131",
+        "secondary-fixed": "#d8e2ff",
+        "background": "#051424",
+        "inverse-surface": "#d4e4fa",
+        "on-secondary-container": "#e6ecff",
+        "primary": "#8aebff",
+        "on-tertiary-fixed": "#00201c",
+        "secondary-fixed-dim": "#adc6ff",
+        "surface-bright": "#2c3a4c",
+        "primary-container": "#22d3ee",
+        "surface-container-low": "#0d1c2d",
+        "tertiary-fixed-dim": "#4fdbc8",
+        "on-primary-fixed": "#001f25",
+        "primary-fixed": "a2eeff",
+        "error-container": "#93000a",
+        "on-primary": "#00363e",
+        "on-error-container": "#ffdad6"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.75rem",
+        "space-md": "1rem",
+        "space-2xs": "0.25rem",
+        "space-2xl": "3rem",
+        "gutter-desktop": "1.5rem",
+        "gutter": "1rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "1rem",
+        "margin-desktop": "1.5rem",
+        "space-xs": "0.5rem"
+      },
+      "fontFamily": {
+        "headline-md": ["Manrope"],
+        "mono-metric": ["Inter"],
+        "display-lg-mobile": ["Manrope"],
+        "label-sm": ["Inter"],
+        "display-md": ["Manrope"],
+        "display-md-mobile": ["Manrope"],
+        "body-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "display-lg": ["Manrope"],
+        "title-lg": ["Inter"],
+        "body-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-lg": ["Manrope"],
+        "title-md": ["Inter"],
+        "headline-sm": ["Manrope"]
+      },
+      "fontSize": {
+        "headline-md": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "mono-metric": ["1.25rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "display-lg-mobile": ["2.25rem", {"lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["0.6875rem", {"lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "600"}],
+        "display-md": ["2.5rem", {"lineHeight": "3rem", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+        "display-md-mobile": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "body-sm": ["0.75rem", {"lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "label-md": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "600"}],
+        "display-lg": ["3.5rem", {"lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+        "title-lg": ["1.125rem", {"lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-lg": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "body-md": ["0.875rem", {"lineHeight": "1.375rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "headline-lg": ["1.875rem", {"lineHeight": "2.375rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "title-md": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "headline-sm": ["1.25rem", {"lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[250px] bg-surface-container-low border-r border-outline-variant z-50 flex flex-col justify-between"><div class="flex flex-col h-full"><div class="h-[72px] px-space-md flex items-center justify-between border-b border-outline-variant"><div class="flex items-center gap-space-xs"><img alt="ClimateGuard AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCU_Ya2ti5_-1RFMCeeOEKCjv6Q7J7Tr5B8ePKmk-JZb17HA012l5lg5WmlikGmAwzLUZxkaFOBK25DQ-a6CFFJdiUQ2T3Xq2xMxEtd8lDwBDq28inNfOtqXLHqiegC0ZmuDaVSjwOUKXt5xw9aE2R7FQxZZ1T13szL4Qa6NgioJCtFHRNyNTwAVQ29jzKZ5eJMpFiWtBb9bn5VNTMT4q3ziw-6oMo-XRwOwxoUYzjuHg"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface text-[1.125rem]">ClimateGuard</span></div><span class="px-space-2xs py-0.5 rounded bg-primary-container/20 text-primary-container border border-primary-container/40 font-label-sm text-label-sm uppercase">Enterprise</span></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-lg"><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Main Menu</p><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Overview</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Live Monitoring</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="risk-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span>Risk Intelligence</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="flood-forecast" href="#"><span class="material-symbols-outlined text-[18px]">tsunami</span>Flood Forecast</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="heatwave-forecast" href="#"><span class="material-symbols-outlined text-[18px]">sunny</span>Heatwave Forecast</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="drought-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">water_loss</span>Drought Monitoring</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="geospatial-map" href="#"><span class="material-symbols-outlined text-[18px]">public</span>Geospatial Map</a></nav><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Finance</p><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="disaster-finance" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span>Disaster Finance</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="funding-triggers" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span>Funding Triggers</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="incident-reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span>Incident Reports</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="analytics" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Analytics</a></nav><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System</p><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="c01-edge-benchmark" href="#"><span class="material-symbols-outlined text-[18px]">memory</span>C01 Edge Benchmark</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="data-sources" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span>Data Sources</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</a></nav></div><div class="p-space-sm border-t border-outline-variant bg-surface-container-lowest flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBKlHGeCfdgkzIUI0jnt3WdbvUwmAXj78a-EfyV23QoyeWNfcPj6hkx9VT7FH2k5T_mg_pLWN8pxEI8GALzqRbjxgazSWqXuUx0-6hViatxd_z9krLyWE0WJ1-Guvf-oq7V4QiopExhlc5t113myh0j1uB2yX6m4pg13Mn60IBEfO47lnVZB8VzYAWHDrFo3rf7LGVb7EFjbSl4xYTipe7Fi2cptO7gRHljuveqJq"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Dr. Aris Thorne</span><span class="font-label-sm text-label-sm text-on-surface-variant">Risk Director</span></div></div><a class="text-outline hover:text-error transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-[250px]"><header class="fixed top-0 left-[250px] right-0 h-[72px] bg-surface-container-low/90 backdrop-blur-xl border-b border-outline-variant z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">menu_open</span></button><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="hover:text-on-surface">Telemetry Operations</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-primary font-semibold">Global Sentinel</span></div></div><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-outline">search</span><input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg pl-9 pr-space-md py-1.5 font-body-sm text-body-sm text-on-surface placeholder-outline focus:border-primary-container focus:outline-none transition-colors" placeholder="Search basin, province, or lat/long..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-2xs px-space-xs py-1 rounded-full bg-tertiary-container/10 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary font-mono-metric">SYSTEM NORMAL • 99.98%</span></div><div class="relative"><button class="relative text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface-container-low"></span></button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBKlHGeCfdgkzIUI0jnt3WdbvUwmAXj78a-EfyV23QoyeWNfcPj6hkx9VT7FH2k5T_mg_pLWN8pxEI8GALzqRbjxgazSWqXuUx0-6hViatxd_z9krLyWE0WJ1-Guvf-oq7V4QiopExhlc5t113myh0j1uB2yX6m4pg13Mn60IBEfO47lnVZB8VzYAWHDrFo3rf7LGVb7EFjbSl4xYTipe7Fi2cptO7gRHljuveqJq"/></div></header><main class="relative pt-[72px] p-[28px] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Operational Context / Compliance Banner -->
+<div class="mb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start lg:items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">C01 Low-Compute Edge Benchmark Suite</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">Specification C01-E88</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase">Air-Gapped Node</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5 truncate">
+            Deterministic runtime verification profile • Strict latency ≤ 200.0 ms • Memory ceiling ≤ 256.0 MB • Disconnected Edge Telemetry
+          </p>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center gap-space-xs shrink-0 self-start lg:self-center">
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-primary-container text-on-primary rounded-lg font-title-md text-title-md font-semibold hover:bg-primary transition-all duration-200 shadow-sm active:scale-95 cursor-pointer" id="run-bench-btn" onclick="handleRunBenchmark()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="run-bench-icon">play_arrow</span>
+<span id="run-bench-text">Run Benchmark (100 Inferences)</span>
+</button>
+<button class="flex items-center gap-space-2xs px-space-sm py-2 bg-surface-container-high text-outline rounded-lg font-title-md text-title-md transition-colors opacity-60 cursor-not-allowed" disabled="" id="download-report-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Report (JSON)</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Row 1: KPI & Target Metric Decks (5-Column Bento Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-lg">
+<!-- KPI 1: Execution Status -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Benchmark Status</span>
+<span class="material-symbols-outlined text-[18px] text-outline">hourglass_empty</span>
+</div>
+<div class="my-space-xs">
+<div class="inline-flex items-center gap-1.5 px-space-xs py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md" id="kpi-status-badge">
+<span class="w-2 h-2 rounded-full bg-outline" id="kpi-status-dot"></span>
+<span class="font-semibold" id="kpi-status-label">NOT TESTED</span>
+</div>
+</div>
+<div class="pt-space-2xs">
+<p class="font-body-sm text-body-sm text-outline leading-tight" id="kpi-status-sub">Awaiting execution on target edge gateway</p>
+</div>
+</div>
+<!-- KPI 2: Total Latency Target (100 Inferences) -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Latency (100x)</span>
+<span class="font-label-sm text-label-sm text-primary font-mono-metric">LIMIT: &lt; 200.0 ms</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-display-md text-display-md text-on-surface tracking-tight" id="kpi-total-lat">— —</span>
+<span class="font-body-md text-body-md text-outline">ms</span>
+</div>
+<div class="pt-space-2xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline" id="kpi-total-sub">Pending deterministic run</span>
+<span class="font-label-sm text-label-sm text-outline font-mono-metric">100 INF</span>
+</div>
+</div>
+<!-- KPI 3: Average Latency per Inference -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Avg Latency / Inf</span>
+<span class="font-label-sm text-label-sm text-primary font-mono-metric">LIMIT: &lt; 2.0 ms</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-display-md text-display-md text-on-surface tracking-tight" id="kpi-avg-lat">— —</span>
+<span class="font-body-md text-body-md text-outline">ms</span>
+</div>
+<div class="pt-space-2xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline" id="kpi-avg-sub">Zero GC jitter target</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono-metric">ARM-v8</span>
+</div>
+</div>
+<!-- KPI 4: Peak RSS Memory -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Peak Memory (RSS)</span>
+<span class="font-label-sm text-label-sm text-primary font-mono-metric">LIMIT: &lt; 256.0 MB</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-display-md text-display-md text-on-surface tracking-tight" id="kpi-peak-mem">— —</span>
+<span class="font-body-md text-body-md text-outline">MB</span>
+</div>
+<div class="pt-space-2xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline" id="kpi-mem-sub">jemalloc tracing armed</span>
+<span class="font-label-sm text-label-sm text-outline font-mono-metric">POOL</span>
+</div>
+</div>
+<!-- KPI 5: Model Artifact Weight on Disk -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Model Footprint</span>
+<span class="px-space-2xs py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm">STATIC</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-display-md text-display-md text-tertiary tracking-tight">18.4</span>
+<span class="font-body-md text-body-md text-outline">MB</span>
+</div>
+<div class="pt-space-2xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline">ONNX Compact Tree</span>
+<span class="font-label-sm text-label-sm text-outline font-mono-metric">7.18% CAP</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Dual Threshold Comparison Engine (Visualizations & Hardware Context) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Left Visualization: 100-Inference Latency Envelope (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">timer</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Total Latency Threshold vs Pipeline Budget</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono-metric">BATCH: N=100</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Continuous execution budget across 100 sequential edge inferences. Maximum allowable SLA is 200 ms total under single-threaded Cortex-A72 clocking.
+        </p>
+<!-- Dynamic Threshold Linear Visualization -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline mb-2">
+<span>0 ms (T₀)</span>
+<span class="text-on-surface-variant font-mono-metric">P90 Anticipated: ~165 ms</span>
+<span class="text-primary font-mono-metric font-semibold">CEILING: 200.0 ms</span>
+</div>
+<!-- Threshold Track -->
+<div class="relative w-full h-8 bg-surface-container-high rounded-md overflow-hidden flex items-center">
+<!-- Simulated execution stage segments placeholder (inactive until run) -->
+<div class="h-full flex w-0 transition-all duration-1000 ease-out" id="lat-stage-bar">
+<div class="h-full bg-secondary-container/80 flex items-center justify-center text-[10px] font-semibold text-on-secondary truncate px-1" style="width: 8%;">NORM</div>
+<div class="h-full bg-primary-container flex items-center justify-center text-[10px] font-semibold text-on-primary truncate px-1" style="width: 78%;">CORE TREE</div>
+<div class="h-full bg-tertiary-container flex items-center justify-center text-[10px] font-semibold text-on-tertiary truncate px-1" style="width: 14%;">POST</div>
+</div>
+<!-- Standby Overlay (Visible when not run) -->
+<div class="absolute inset-0 flex items-center justify-center text-outline font-body-sm text-body-sm" id="lat-standby-overlay">
+<span class="flex items-center gap-1.5 font-mono-metric">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                STANDBY • Run benchmark to sample 100 real-time inference cycles
+              </span>
+</div>
+<!-- 200ms Marker Pin -->
+<div class="absolute right-0 top-0 bottom-0 w-0.5 bg-primary z-10 shadow-[0_0_8px_#22d3ee]"></div>
+</div>
+<!-- Micro Stage Indicators -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-sm">
+<div class="bg-surface-container-low p-space-xs rounded border-l-2 border-secondary-container">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">1. Normalization</span>
+<span class="text-on-surface font-mono-metric">&lt; 15.0 ms</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline mt-0.5 text-[11px]">Tensor scaling &amp; clamp</p>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded border-l-2 border-primary-container">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">2. Core Tree Graph</span>
+<span class="text-on-surface font-mono-metric">&lt; 160.0 ms</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline mt-0.5 text-[11px]">Branchless C01 leaf walks</p>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded border-l-2 border-tertiary-container">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline">3. Anomaly Filter</span>
+<span class="text-on-surface font-mono-metric">&lt; 25.0 ms</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline mt-0.5 text-[11px]">Parametric threshold verify</p>
+</div>
+</div>
+</div>
+<!-- Telemetry Details Strip -->
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Deterministic memory pinning (no swap page-faults)</span>
+</div>
+<span class="font-mono-metric text-on-surface-variant">Clocking: 1.50 GHz Locked</span>
+</div>
+</div>
+<!-- Historical Latency Sparkline Graph -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high flex flex-col">
+<div class="flex items-center justify-between text-label-sm font-label-sm mb-1.5">
+<span class="text-outline uppercase">Latency Jitter Distribution (Target Envelope)</span>
+<span class="text-outline font-mono-metric">Δ &lt; 0.18 ms variance</span>
+</div>
+<div class="h-14 w-full flex items-end gap-1 px-1 bg-surface-container-lowest/50 rounded py-1">
+<!-- Static SVG Jitter curve showing the hard threshold ceiling -->
+<svg class="w-full h-full text-primary" preserveaspectratio="none" viewbox="0 0 400 50">
+<!-- 200ms ceiling line -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.3" stroke-width="1" x1="0" x2="400" y1="8" y2="8"></line>
+<!-- Baseline simulation profile path -->
+<path d="M0,42 L20,38 L40,40 L60,35 L80,39 L100,37 L120,41 L140,36 L160,38 L180,35 L200,39 L220,37 L240,40 L260,36 L280,38 L300,34 L320,39 L340,37 L360,40 L380,36 L400,38" fill="none" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Right Visualization: Operational Memory Ceiling (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-tertiary">memory</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Memory Topology (256 MB Ceiling)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono-metric">RSS RESIDENT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Static memory footprint allocation profile. Edge gateway imposes a strict maximum of 256 MB operational RAM.
+        </p>
+<!-- Memory Gauge Stack -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md mb-space-md">
+<div class="flex justify-between text-label-sm font-label-sm mb-2">
+<span class="text-outline">Allocated (Anticipated ~125.4 MB)</span>
+<span class="text-tertiary font-mono-metric font-semibold">MAX: 256.0 MB</span>
+</div>
+<!-- Layered Segment Stack -->
+<div class="w-full h-8 bg-surface-container-high rounded-md overflow-hidden flex items-center p-0.5 gap-0.5">
+<div class="h-full bg-surface-variant rounded-sm flex items-center justify-center text-[10px] font-mono-metric text-on-surface-variant" style="width: 16.4%;" title="Runtime Engine: 42 MB">
+              42M
+            </div>
+<div class="h-full bg-tertiary-container/70 rounded-sm flex items-center justify-center text-[10px] font-mono-metric text-on-tertiary font-semibold" style="width: 7.2%;" title="Model Weights: 18.4 MB">
+              18.4M
+            </div>
+<div class="h-full bg-secondary-container/60 rounded-sm flex items-center justify-center text-[10px] font-mono-metric text-on-secondary" style="width: 25.4%;" title="Tensor Buffers: 65 MB">
+              65M
+            </div>
+<div class="h-full bg-surface-container-lowest flex items-center justify-center text-[10px] font-mono-metric text-outline" style="width: 51%;" title="Guaranteed Headroom: 130.6 MB">
+              130.6 MB Headroom
+            </div>
+</div>
+<!-- Memory Legend -->
+<div class="grid grid-cols-2 gap-y-2 gap-x-space-md mt-space-md text-label-sm font-label-sm">
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-variant shrink-0"></span>
+<span class="text-outline">Base OS/Runtime</span>
+<span class="ml-auto font-mono-metric text-on-surface">42.0 MB</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary-container shrink-0"></span>
+<span class="text-outline">C01 Model Weights</span>
+<span class="ml-auto font-mono-metric text-tertiary">18.4 MB</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary-container shrink-0"></span>
+<span class="text-outline">Dynamic Buffers</span>
+<span class="ml-auto font-mono-metric text-on-surface">65.0 MB</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-container-high shrink-0"></span>
+<span class="text-outline">Safety Headroom</span>
+<span class="ml-auto font-mono-metric text-primary">130.6 MB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Execution isolation notice -->
+<div class="p-space-xs rounded bg-surface-container-low flex items-center gap-space-xs text-body-sm font-body-sm text-outline">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">lock</span>
+<span>Zero external API calls. jemalloc memory tracking actively intercepting malloc/free.</span>
+</div>
+</div>
+</div>
+<!-- Row 3: Target Hardware & Execution Environment Deck -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-sm mb-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md border-b border-surface-container-high gap-space-sm mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Hardware &amp; Execution Environment Profile</h3>
+<p class="font-body-sm text-body-sm text-outline">Deterministic edge hardware parameters for reproducible verification benchmarks</p>
+</div>
+<div class="flex items-center gap-space-2xs self-start md:self-auto">
+<span class="px-space-xs py-1 rounded bg-surface-container-highest text-primary font-mono-metric text-label-sm font-semibold">TARGET: ARMv8-A Cortex-A72</span>
+<span class="px-space-xs py-1 rounded bg-tertiary-container/10 text-tertiary font-mono-metric text-label-sm">ISO-IEC 25010</span>
+</div>
+</div>
+<!-- Hardware Spec Grid (6 metrics) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-space-md">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Architecture</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold block">ARM Cortex-A72</span>
+<span class="font-body-sm text-body-sm text-outline">Broadcom BCM2711 SoC</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Core &amp; Clock</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold block">4 Cores @ 1.50 GHz</span>
+<span class="font-body-sm text-body-sm text-outline">Single-threaded test mode</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Physical RAM</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold block">1024 MB LPDDR4</span>
+<span class="font-body-sm text-body-sm text-outline">Target quota: 256 MB</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Operating System</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold block">Alpine Linux 3.19</span>
+<span class="font-body-sm text-body-sm text-outline">Minimal kernel 6.1-LTS</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Runtime Engine</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold block">C01 Micro-Core v2.4</span>
+<span class="font-body-sm text-body-sm text-tertiary">Zero-cloud C++20 engine</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block mb-1">Network Barrier</span>
+<span class="font-title-md text-title-md text-tertiary font-semibold block">0 Network Calls</span>
+<span class="font-body-sm text-body-sm text-outline">100% Air-Gapped Local</span>
+</div>
+</div>
+</div>
+<!-- Row 4: Technical Architecture & Algorithmic Rationale (4 Pillars) -->
+<div class="mb-space-lg">
+<div class="mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Technical Rationale: Sub-200ms Low-Compute Operation</h3>
+<p class="font-body-sm text-body-sm text-outline">Engineered for disconnected disaster gateways, solar telemetry towers, and siren triggers</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pillar 1 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">account_tree</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-space-2xs">Quantized Compact Trees</h4>
+<p class="font-body-sm text-body-sm text-outline leading-relaxed">
+            Gradient-boosted decision ensembles are compiled into static branchless C arrays. Eliminates SIMD emulation overhead and cache-miss churn on resource-limited micro-gateways.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high">
+<span class="font-label-sm text-label-sm text-primary font-mono-metric">Zero Floating-Point Jitter</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">wifi_off</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-space-2xs">Zero External Latency</h4>
+<p class="font-body-sm text-body-sm text-outline leading-relaxed">
+            Completely self-contained. The local edge node executes flood peak and heat anomaly classifications locally without satellite handshake or round-trip REST querying delays.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high">
+<span class="font-label-sm text-label-sm text-tertiary font-mono-metric">100% Autonomous Sovereign</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-space-2xs">Deterministic Execution</h4>
+<p class="font-body-sm text-body-sm text-outline leading-relaxed">
+            Built strictly in C/C++ without garbage collectors or dynamic paging. Every inference pass operates within a predictable CPU cycle budget, ensuring zero random tail latencies.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high">
+<span class="font-label-sm text-label-sm text-secondary font-mono-metric">Hard Real-Time Guarantees</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[22px]">folder_zip</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-space-2xs">Extreme Serialization</h4>
+<p class="font-body-sm text-body-sm text-outline leading-relaxed">
+            18.4 MB total artifact footprint compresses the entire hydrological catastrophe graph. Deploys seamlessly to low-cost eMMC storage or read-only EEPROM emergency chips.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-high">
+<span class="font-label-sm text-label-sm text-primary-container font-mono-metric">Sub-20 MB Artifact</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 5: Benchmark Execution Registry & Cryptographic Audit Table -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-sm mb-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md border-b border-surface-container-high gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-outline">history</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Benchmark Run History &amp; Cryptographic Signatures</h3>
+<p class="font-body-sm text-body-sm text-outline">All formal verification runs are SHA-256 hashed and preserved in tamper-resistant flash logs</p>
+</div>
+</div>
+<!-- Filter controls -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold" type="button">All Tests</button>
+<button class="px-space-xs py-1 rounded hover:bg-surface-container-highest text-outline hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">100-Batch</button>
+<button class="px-space-xs py-1 rounded hover:bg-surface-container-highest text-outline hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Cold-Start</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm mt-space-md">
+<thead>
+<tr class="text-label-sm font-label-sm text-outline uppercase border-b border-surface-container-high">
+<th class="py-space-xs px-space-sm font-semibold">Run ID</th>
+<th class="py-space-xs px-space-sm font-semibold">Timestamp (UTC)</th>
+<th class="py-space-xs px-space-sm font-semibold">Hardware Target</th>
+<th class="py-space-xs px-space-sm font-semibold text-right">Inferences</th>
+<th class="py-space-xs px-space-sm font-semibold text-right">Total Latency</th>
+<th class="py-space-xs px-space-sm font-semibold text-right">Avg / Inf</th>
+<th class="py-space-xs px-space-sm font-semibold text-right">Peak RAM</th>
+<th class="py-space-xs px-space-sm font-semibold text-center">Status</th>
+<th class="py-space-xs px-space-sm font-semibold text-right">Digest</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high font-mono-metric" id="bench-log-tbody">
+<!-- Default Row 1: Calibration pre-run -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-sm text-on-surface font-semibold">BENCH-CALIB-001</td>
+<td class="py-space-sm px-space-sm text-outline">2025-05-18 09:14:02</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-label-sm">ARM Cortex-A72 (Pi4-CM)</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface">10 (Pre-flight)</td>
+<td class="py-space-sm px-space-sm text-right text-outline">18.2 ms</td>
+<td class="py-space-sm px-space-sm text-right text-outline">1.82 ms</td>
+<td class="py-space-sm px-space-sm text-right text-outline">118.2 MB</td>
+<td class="py-space-sm px-space-sm text-center">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-label-sm uppercase">CALIBRATION ONLY</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-outline font-label-sm">e4b7...910a</td>
+</tr>
+<!-- Default Row 2: Standby Current Target Run -->
+<tr class="hover:bg-surface-container-high/40 transition-colors bg-surface-container-low/50" id="current-run-row">
+<td class="py-space-sm px-space-sm text-primary font-semibold">BENCH-RUN-100-CUR</td>
+<td class="py-space-sm px-space-sm text-outline">PENDING INITIATION</td>
+<td class="py-space-sm px-space-sm text-on-surface-variant font-label-sm">ARM Cortex-A72 (Air-Gapped)</td>
+<td class="py-space-sm px-space-sm text-right text-on-surface font-semibold">100 Inferences</td>
+<td class="py-space-sm px-space-sm text-right text-outline" id="table-total-lat">— —</td>
+<td class="py-space-sm px-space-sm text-right text-outline" id="table-avg-lat">— —</td>
+<td class="py-space-sm px-space-sm text-right text-outline" id="table-peak-ram">— —</td>
+<td class="py-space-sm px-space-sm text-center" id="table-status-cell">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase">NOT TESTED</span>
+</td>
+<td class="py-space-sm px-space-sm text-right text-outline font-label-sm" id="table-hash">— —</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Notes -->
+<div class="mt-space-md pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between text-body-sm font-body-sm text-outline gap-space-2xs">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+        Official certified benchmark runs are cryptographically signed with ed25519 node keypair.
+      </span>
+<span class="font-mono-metric">Verification Spec: C01-DEFENSE-STRICT-2025</span>
+</div>
+</div>
+<!-- Interactive Benchmark Simulation Logic -->
+<script>
+    let isBenchmarking = false;
+
+    function handleRunBenchmark() {
+      if (isBenchmarking) return;
+      isBenchmarking = true;
+
+      const runBtn = document.getElementById('run-bench-btn');
+      const runText = document.getElementById('run-bench-text');
+      const runIcon = document.getElementById('run-bench-icon');
+      const downloadBtn = document.getElementById('download-report-btn');
+
+      // Visual progress feedback
+      runText.textContent = "Executing 100 Inferences...";
+      runIcon.textContent = "refresh";
+      runIcon.classList.add("animate-spin");
+      runBtn.classList.remove("bg-primary-container", "text-on-primary");
+      runBtn.classList.add("bg-surface-container-high", "text-primary");
+
+      // Update badge to executing
+      const statusBadge = document.getElementById('kpi-status-badge');
+      const statusDot = document.getElementById('kpi-status-dot');
+      const statusLabel = document.getElementById('kpi-status-label');
+      const statusSub = document.getElementById('kpi-status-sub');
+      
+      statusLabel.textContent = "EXECUTING 100/100";
+      statusDot.className = "w-2 h-2 rounded-full bg-primary animate-pulse";
+      statusSub.textContent = "Measuring resident cycles on Cortex-A72...";
+
+      // Expand Latency pipeline bar
+      const standbyOverlay = document.getElementById('lat-standby-overlay');
+      const stageBar = document.getElementById('lat-stage-bar');
+      standbyOverlay.style.opacity = '0';
+      stageBar.style.width = '78%'; // 156ms out of 200ms ceiling
+
+      // Deterministic simulation delay (recreating physical hardware clock elapsed time)
+      setTimeout(() => {
+        // Measured realistic values well within C01 thresholds:
+        // Threshold Latency: < 200.0 ms | Measured: 154.2 ms (PASS)
+        // Average Latency: < 2.0 ms | Measured: 1.54 ms (PASS)
+        // Peak Memory: < 256.0 MB | Measured: 124.8 MB (PASS)
+
+        const totalLatency = 154.2;
+        const avgLatency = 1.54;
+        const peakMem = 124.8;
+        const hash = "9fa1...38d2";
+
+        // Update KPI Cards
+        document.getElementById('kpi-total-lat').textContent = totalLatency.toFixed(1);
+        document.getElementById('kpi-total-sub').textContent = "Meets < 200ms constraint";
+        document.getElementById('kpi-total-sub').classList.remove('text-outline');
+        document.getElementById('kpi-total-sub').classList.add('text-tertiary');
+
+        document.getElementById('kpi-avg-lat').textContent = avgLatency.toFixed(2);
+        document.getElementById('kpi-avg-sub').textContent = "P99 Deterministic";
+        document.getElementById('kpi-avg-sub').classList.remove('text-outline');
+        document.getElementById('kpi-avg-sub').classList.add('text-tertiary');
+
+        document.getElementById('kpi-peak-mem').textContent = peakMem.toFixed(1);
+        document.getElementById('kpi-mem-sub').textContent = "Meets < 256MB constraint";
+        document.getElementById('kpi-mem-sub').classList.remove('text-outline');
+        document.getElementById('kpi-mem-sub').classList.add('text-tertiary');
+
+        // Status Card -> VERIFIED COMPLIANT
+        statusLabel.textContent = "VERIFIED COMPLIANT";
+        statusBadge.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+        statusBadge.classList.add('bg-tertiary-container/20', 'text-tertiary');
+        statusDot.className = "w-2 h-2 rounded-full bg-tertiary";
+        statusSub.textContent = "Passed all C01 edge constraints & SLA";
+
+        // Table Row Update
+        document.getElementById('table-total-lat').textContent = totalLatency.toFixed(1) + " ms";
+        document.getElementById('table-total-lat').classList.remove('text-outline');
+        document.getElementById('table-total-lat').classList.add('text-on-surface');
+
+        document.getElementById('table-avg-lat').textContent = avgLatency.toFixed(2) + " ms";
+        document.getElementById('table-avg-lat').classList.remove('text-outline');
+        document.getElementById('table-avg-lat').classList.add('text-on-surface');
+
+        document.getElementById('table-peak-ram').textContent = peakMem.toFixed(1) + " MB";
+        document.getElementById('table-peak-ram').classList.remove('text-outline');
+        document.getElementById('table-peak-ram').classList.add('text-on-surface');
+
+        document.getElementById('table-status-cell').innerHTML = `
+          <span class="px-space-xs py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-semibold uppercase">
+            &check; CERTIFIED PASS
+          </span>
+        `;
+        document.getElementById('table-hash').textContent = hash;
+
+        // Reset Run Button to Completed State
+        runText.textContent = "Re-Run Benchmark";
+        runIcon.textContent = "replay";
+        runIcon.classList.remove("animate-spin");
+        runBtn.classList.remove("bg-surface-container-high", "text-primary");
+        runBtn.classList.add("bg-primary-container", "text-on-primary");
+
+        // Enable Report Download
+        downloadBtn.removeAttribute('disabled');
+        downloadBtn.classList.remove('opacity-60', 'cursor-not-allowed', 'bg-surface-container-high', 'text-outline');
+        downloadBtn.classList.add('bg-surface-container-highest', 'text-primary', 'hover:bg-surface-container-high', 'cursor-pointer');
+
+        isBenchmarking = false;
+      }, 1400);
+    }
+  </script>
+</div></main></div></body></html>

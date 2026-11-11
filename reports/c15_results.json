@@ -1,0 +1,77 @@
+{
+  "directive": "C15 — Net Financial Impact Boardroom Calculation (Value Quantification)",
+  "evaluationTimestamp": "2026-11-11T21:48:34.383Z",
+  "currency": "PKR",
+  "portfolio": {
+    "totalValuePkr": 16550000000,
+    "formattedTotalValue": "PKR 1655.00 Crore",
+    "assetCount": 5,
+    "citiesCovered": [
+      "Karachi",
+      "Hyderabad",
+      "Sukkur",
+      "Lahore",
+      "Islamabad"
+    ]
+  },
+  "modelBridges": {
+    "c01EdgeCompute": {
+      "measuredBatchLatencyMs": 5.497,
+      "peakMemoryMb": 60.41,
+      "annualCloudOpexSavedPkr": 2898000,
+      "formattedCloudOpexSaved": "PKR 0.29 Crore"
+    },
+    "c07ModelShowdown": {
+      "primaryF1": 0.7123,
+      "baselineF1": 0.6,
+      "f1ImprovementPct": 18.72,
+      "precisionPrimary": 0.65,
+      "precisionBaseline": 0.4286,
+      "falseAlarmsEliminatedAnnual": 30,
+      "avoidedFalseAlarmCostPkr": 75000000,
+      "formattedAvoidedFalseAlarmCost": "PKR 7.50 Crore"
+    }
+  },
+  "boardroomIndicators": {
+    "grossHazardExposurePkr": 368568500,
+    "formattedGrossExposure": "PKR 36.86 Crore",
+    "protectedAssetValuePkr": 145197561,
+    "formattedProtectedValue": "PKR 14.52 Crore",
+    "avoidedFalseAlarmCostPkr": 75000000,
+    "formattedAvoidedFalseAlarmCost": "PKR 7.50 Crore",
+    "cloudOpexSavedPkr": 2898000,
+    "formattedCloudOpexSaved": "PKR 0.29 Crore",
+    "totalAnnualBenefitPkr": 223095561,
+    "formattedTotalBenefit": "PKR 22.31 Crore",
+    "annualSolutionCostPkr": 35000000,
+    "formattedSolutionCost": "PKR 3.50 Crore",
+    "netFinancialImpactPkr": 188095561,
+    "formattedNetImpact": "PKR 18.81 Crore",
+    "roiPct": 537.4,
+    "returnOnInvestmentPct": 537.4,
+    "benefitCostRatio": 6.37
+  },
+  "scenarios": {
+    "conservative": {
+      "multiplier": 1.25,
+      "protectedValuePkr": 181496951,
+      "netImpactPkr": 224394951,
+      "roiPct": 641.1,
+      "bcr": 7.41
+    },
+    "base": {
+      "multiplier": 1,
+      "protectedValuePkr": 145197561,
+      "netImpactPkr": 188095561,
+      "roiPct": 537.4,
+      "bcr": 6.37
+    },
+    "optimistic": {
+      "multiplier": 0.75,
+      "protectedValuePkr": 108898171,
+      "netImpactPkr": 151796171,
+      "roiPct": 433.7,
+      "bcr": 5.34
+    }
+  }
+}

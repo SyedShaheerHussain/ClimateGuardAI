@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 62% 7%;      /* #07111F */
+    --foreground: 210 40% 98%;     /* #F8FAFC */
+    --card: 216 52% 13%;           /* #101F33 */
+    --card-foreground: 210 40% 98%;
+    --popover: 216 48% 17%;        /* #162840 */
+    --popover-foreground: 210 40% 98%;
+    --primary: 189 88% 54%;        /* #22D3EE */
+    --primary-foreground: 215 62% 7%;
+    --secondary: 217 33% 22%;      /* #24364B */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 25% 27%;
+    --muted-foreground: 215 20% 65%; /* #94A3B8 */
+    --accent: 216 48% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;      /* #EF4444 */
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 35% 22%;         /* #24364B */
+    --input: 214 35% 22%;
+    --ring: 189 88% 54%;
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-brand-canvas text-slate-100 font-sans antialiased selection:bg-brand-cyan/20 selection:text-brand-cyan;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+  }
+}
+
+/* Custom scrollbar for dense data tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07111f;
+}
+::-webkit-scrollbar-thumb {
+  background: #24364b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+}

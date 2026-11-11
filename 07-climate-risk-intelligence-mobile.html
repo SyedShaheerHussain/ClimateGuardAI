@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#690005", "surface-tint": "#2fd9f4", "on-primary-fixed": "#001f25", "on-surface": "#d4e4fa", "on-tertiary": "#003731", "tertiary-fixed-dim": "#4fdbc8", "surface-container-low": "#0d1c2d", "on-background": "#d4e4fa", "secondary-fixed": "#d8e2ff", "on-secondary-fixed-variant": "#004395", "surface-container-high": "#1c2b3c", "on-tertiary-fixed-variant": "#005048", "secondary": "#adc6ff", "on-primary-fixed-variant": "#004e5a", "surface-container-highest": "#273647", "tertiary-container": "#47d5c2", "tertiary-fixed": "#71f8e4", "on-tertiary-fixed": "#00201c", "inverse-on-surface": "#233143", "error-container": "#93000a", "primary-fixed": "#a2eeff", "outline-variant": "#3c494c", "secondary-container": "#0566d9", "on-secondary": "#002e6a", "tertiary": "#6af2de", "on-secondary-container": "#e6ecff", "surface-container": "#122131", "on-primary": "#00363e", "primary-container": "#22d3ee", "inverse-primary": "#006877", "on-error-container": "#ffdad6", "surface-container-lowest": "#010f1f", "surface": "#051424", "background": "#051424", "surface-dim": "#051424", "surface-variant": "#273647", "outline": "#859397", "on-tertiary-container": "#00594f", "inverse-surface": "#d4e4fa", "secondary-fixed-dim": "#adc6ff", "on-secondary-fixed": "#001a42", "on-surface-variant": "#bbc9cd", "surface-bright": "#2c3a4c", "error": "#ffb4ab", "primary-fixed-dim": "#2fd9f4", "on-primary-container": "#005763", "primary": "#8aebff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "1.5rem", "space-2xl": "3rem", "gutter": "1rem", "space-xs": "0.5rem", "margin-desktop": "1.5rem", "space-xl": "2rem", "space-sm": "0.75rem", "space-2xs": "0.25rem", "space-lg": "1.5rem", "margin": "1rem", "space-md": "1rem" }, "fontFamily": { "label-md": ["Inter"], "display-lg": ["Manrope"], "label-sm": ["Inter"], "body-lg": ["Inter"], "display-md-mobile": ["Manrope"], "headline-lg": ["Manrope"], "headline-sm": ["Manrope"], "mono-metric": ["Inter"], "headline-md": ["Manrope"], "display-md": ["Manrope"], "body-md": ["Inter"], "display-lg-mobile": ["Manrope"], "body-sm": ["Inter"], "title-lg": ["Inter"], "title-md": ["Inter"] }, "fontSize": { "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "600" }], "display-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "display-md-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["1.875rem", { "lineHeight": "2.375rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "mono-metric": ["1.25rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-md": ["2.5rem", { "lineHeight": "3rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0", "fontWeight": "400" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-lg": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] pt-safe"><div class="h-14 px-margin flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><button aria-label="Navigation Menu" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-primary text-[22px]">shield_with_house</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm leading-none text-on-surface tracking-tight">ClimateGuard</span><span class="font-label-sm text-label-sm leading-none text-primary tracking-widest uppercase">AI System</span></div></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container/30 text-error"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span class="font-label-sm text-label-sm uppercase font-semibold tracking-wider">3 Alerts</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-14 pb-20 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP HERO & PARAMETRIC CONTROLS SECTION -->
+<div class="px-margin pt-space-xs pb-space-sm flex flex-col gap-space-sm bg-surface-container-lowest/60">
+<!-- Title & Live Inference Status -->
+<div class="flex items-center justify-between gap-space-xs">
+<div>
+<h1 class="font-headline-md text-headline-md tracking-tight text-on-surface">Risk Intelligence</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Multi-hazard predictive synthesis & calibrated exposure</p>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-container/15 text-primary-container flex-shrink-0">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Inference Live</span>
+</div>
+</div>
+<!-- Geographic Location Selector Dropdown -->
+<div class="relative w-full">
+<button class="w-full h-11 px-space-sm bg-surface-container rounded-lg flex items-center justify-between text-left hover:bg-surface-container-high transition-colors" type="button">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">pin_drop</span>
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Indus Basin & Thar Corridor (Zone 43N)</span>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0 text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase bg-surface-container-highest px-1.5 py-0.5 rounded text-primary">Hyd-43</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</button>
+</div>
+<!-- Filter Chips (Horizontal Scroll) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-margin px-margin no-scrollbar">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold whitespace-nowrap flex-shrink-0 shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+<span>All Hazards (3)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-error font-label-md text-label-md font-semibold whitespace-nowrap flex-shrink-0 flex items-center gap-1.5" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+<span>Flood (Critical)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap flex-shrink-0 flex items-center gap-1.5" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-[#F97316]"></span>
+<span>Heat (High)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap flex-shrink-0 flex items-center gap-1.5" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-[#EAB308]"></span>
+<span>Drought (Moderate)</span>
+</button>
+</div>
+<!-- Horizon Selector & Run Trigger -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between bg-surface-container-lowest p-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2 uppercase tracking-wider">Horizon:</span>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">24h</button>
+<button class="px-3 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold shadow-xs" type="button">48h (Rec)</button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">7d</button>
+<button class="px-2.5 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">14d</button>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-12 bg-primary-container hover:bg-primary text-on-primary-container font-title-md text-title-md font-bold rounded-lg flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+<span>Run Deep Risk Analysis</span>
+</button>
+</div>
+</div>
+<!-- HAZARD SUMMARY DECK (3 CARDS) -->
+<div class="px-margin py-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Active Threat Matrix</span>
+<span class="font-label-sm text-label-sm text-primary">Hydrological Peak in T+38h</span>
+</div>
+<!-- CARD 1: CRITICAL FLOOD -->
+<div class="relative bg-surface-container rounded-xl overflow-hidden shadow-sm flex flex-col">
+<!-- Left Hazard Accent Stripe -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#EF4444]"></div>
+<div class="pl-5 pr-space-md py-space-md flex flex-col gap-space-xs">
+<!-- Card Header -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-error-container/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">flood</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface leading-tight">Flood Inundation Risk</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Model: Hydro-Net v3.2</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+            CRITICAL 88%
+          </span>
+</div>
+<!-- Metric Spotlight -->
+<div class="mt-1 bg-surface-container-lowest/80 p-3 rounded-lg flex items-end justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">River Discharge Rate</div>
+<div class="font-display-md-mobile text-display-md-mobile font-bold text-on-surface leading-none mt-0.5">
+              14,200 <span class="font-body-md text-body-md font-normal text-on-surface-variant">m³/s</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center text-error font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>+18.3%
+            </span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">10-yr cap: 12k m³/s</div>
+</div>
+</div>
+<!-- Secondary Metrics Grid -->
+<div class="grid grid-cols-2 gap-2 text-center">
+<div class="p-2 rounded bg-surface-container-high flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">24h Precipitation</span>
+<span class="font-title-md text-title-md font-semibold text-primary mt-0.5">68.4 mm</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gauge Anomaly</span>
+<span class="font-title-md text-title-md font-semibold text-error mt-0.5">+1.80 m</span>
+</div>
+</div>
+<!-- Attribution Factors -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Decomposed Drivers</span>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface">Glacial Melt Telemetry</span>
+<span class="text-primary font-mono-metric">42%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface">Monsoonal Convergence</span>
+<span class="text-primary font-mono-metric">38%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 38%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface">Antecedent Soil Saturation</span>
+<span class="text-secondary font-mono-metric">20%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 20%;"></div>
+</div>
+</div>
+</div>
+<!-- Card Micro-Footer Alert -->
+<div class="mt-1 flex items-center justify-between text-error bg-error-container/20 px-2.5 py-1.5 rounded">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase">Pre-Breach Warning</span>
+</div>
+<span class="font-label-sm text-label-sm">Evacuation Trigger: 91%</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: HEATWAVE RISK -->
+<div class="relative bg-surface-container rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#F97316]"></div>
+<div class="pl-5 pr-space-md py-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-[#F97316]/20 flex items-center justify-center text-[#F97316]">
+<span class="material-symbols-outlined text-[18px]">solar_power</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface leading-tight">Extreme Heatwave Risk</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Model: ThermoWatch v2.1</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-[#F97316]/20 text-[#F97316] font-label-sm text-label-sm font-bold">
+            HIGH 76%
+          </span>
+</div>
+<div class="mt-1 bg-surface-container-lowest/80 p-3 rounded-lg flex items-end justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">Ambient / Wet-Bulb (WBGT)</div>
+<div class="font-display-md-mobile text-display-md-mobile font-bold text-on-surface leading-none mt-0.5">
+              46.2°C <span class="font-title-md text-title-md text-[#F97316]">/ 31.8°C</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[#F97316] font-label-md text-label-md font-semibold">+6.4°C</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">vs 30y mean</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-center">
+<div class="p-2 rounded bg-surface-container-high">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Night Minimum</span>
+<div class="font-title-md text-title-md font-semibold text-on-surface">33.5°C</div>
+</div>
+<div class="p-2 rounded bg-surface-container-high">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rel. Humidity</span>
+<div class="font-title-md text-title-md font-semibold text-on-surface">78.4% RH</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1">
+<span>500hPa Heat Dome (55%)</span>
+<span>Radiative Trap (25%)</span>
+<span>Albedo (20%)</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: DROUGHT / ARIDITY -->
+<div class="relative bg-surface-container rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#EAB308]"></div>
+<div class="pl-5 pr-space-md py-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-[#EAB308]/20 flex items-center justify-center text-[#EAB308]">
+<span class="material-symbols-outlined text-[18px]">grain</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface leading-tight">Agricultural Drought Deficit</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Model: AridScan v4.0</span>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-[#EAB308]/20 text-[#EAB308] font-label-sm text-label-sm font-bold">
+            MODERATE 64%
+          </span>
+</div>
+<div class="mt-1 bg-surface-container-lowest/80 p-3 rounded-lg flex items-end justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">Root-Zone Soil Moisture</div>
+<div class="font-display-md-mobile text-display-md-mobile font-bold text-on-surface leading-none mt-0.5">
+              -41.0% <span class="font-body-md text-body-md font-normal text-on-surface-variant">RZSM</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[#EAB308] font-label-md text-label-md font-semibold">45 Rain-Free Days</span>
+<div class="font-label-sm text-label-sm text-on-surface-variant">ET: 7.2 mm/day</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-center">
+<div class="p-2 rounded bg-surface-container-high">
+<span class="font-label-sm text-label-sm text-on-surface-variant">NDVI Index Lag</span>
+<div class="font-title-md text-title-md font-semibold text-[#EAB308]">-0.32 σ</div>
+</div>
+<div class="p-2 rounded bg-surface-container-high">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aquifer Drawdown</span>
+<div class="font-title-md text-title-md font-semibold text-on-surface">-1.14 m/mo</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FORECAST PROBABILITY & TRAJECTORY CHART -->
+<div class="px-margin py-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">ssid_chart</span>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface">7-Day Trajectory Forecast</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Confidence 96.8%</span>
+</div>
+<!-- Chart Surface Card -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-3">
+<!-- Chart Subhead / Legend -->
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Discharge (m³/s)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-[#EF4444] border-t border-dashed"></span>
+<span class="font-label-sm text-label-sm text-error">Breach Threshold</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high px-2 py-0.5 rounded text-on-surface">Peak: T+48h</span>
+</div>
+<!-- Vector SVG Chart -->
+<div class="relative w-full h-44 bg-surface-container-lowest rounded-lg p-2 overflow-hidden flex items-center justify-center">
+<!-- SVG Canvas -->
+<svg class="w-full h-full" fill="none" viewbox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Grid Lines -->
+<line stroke="#1c2b3c" stroke-dasharray="3 3" stroke-width="1" x1="10" x2="330" y1="20" y2="20"></line>
+<line stroke="#1c2b3c" stroke-dasharray="3 3" stroke-width="1" x1="10" x2="330" y1="55" y2="55"></line>
+<line stroke="#1c2b3c" stroke-dasharray="3 3" stroke-width="1" x1="10" x2="330" y1="90" y2="90"></line>
+<line stroke="#1c2b3c" stroke-width="1" x1="10" x2="330" y1="120" y2="120"></line>
+<!-- Parametric Breach Danger Band (Y=48 equivalent to 12,000 m³/s) -->
+<rect fill="#93000a" fill-opacity="0.15" height="28" width="320" x="10" y="20"></rect>
+<line stroke="#EF4444" stroke-dasharray="4 2" stroke-width="1.5" x1="10" x2="330" y1="48" y2="48"></line>
+<text fill="#EF4444" font-family="Inter" font-size="8" font-weight="600" x="14" y="44">TRIGGER: 12,000 m³/s</text>
+<!-- Historic 2010 super-flood baseline marker -->
+<line stroke="#859397" stroke-dasharray="2 4" stroke-width="1" x1="10" x2="330" y1="36" y2="36"></line>
+<text fill="#859397" font-family="Inter" font-size="7" x="210" y="32">2010 Super-Flood (13,600)</text>
+<!-- Area fill under discharge curve -->
+<path d="M 15 115 Q 60 110 110 85 T 180 32 T 240 68 T 325 105 L 325 125 L 15 125 Z" fill="url(#dischargeGrad)"></path>
+<defs>
+<lineargradient id="dischargeGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#22d3ee" stop-opacity="0.45"></stop>
+<stop offset="60%" stop-color="#0566d9" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#0566d9" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- River Discharge Curve -->
+<path d="M 15 115 Q 60 110 110 85 T 180 32 T 240 68 T 325 105" stroke="#22d3ee" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Breach Peak Point Node -->
+<circle cx="180" cy="32" fill="#EF4444" r="4.5"></circle>
+<circle cx="180" cy="32" r="8" stroke="#EF4444" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+<text fill="#8aebff" font-family="Inter" font-size="8.5" font-weight="bold" x="160" y="22">14,200 m³/s</text>
+<!-- Ambient Heat Curve (Muted Orange) -->
+<path d="M 15 80 Q 75 60 140 70 T 210 50 T 325 65" stroke="#F97316" stroke-dasharray="2 2" stroke-linecap="round" stroke-width="1.5"></path>
+<!-- X-Axis Labels -->
+<text fill="#859397" font-family="Inter" font-size="8" x="15" y="134">Now</text>
+<text fill="#859397" font-family="Inter" font-size="8" x="65" y="134">+24h</text>
+<text fill="#859397" font-family="Inter" font-size="8" x="120" y="134">+48h</text>
+<text fill="#22d3ee" font-family="Inter" font-size="8" font-weight="bold" x="175" y="134">+72h (Peak)</text>
+<text fill="#859397" font-family="Inter" font-size="8" x="235" y="134">+5d</text>
+<text fill="#859397" font-family="Inter" font-size="8" x="300" y="134">+7d</text>
+</svg>
+</div>
+<!-- Historical Comparison Callout Banner -->
+<div class="flex items-center gap-2 p-2 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-[#F97316] text-[18px]">history_toggle_off</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+          Exceeds <strong class="text-on-surface font-semibold">2010 Super-Flood baseline</strong> by <span class="text-error font-mono-metric font-semibold">+4.2%</span> peak volume.
+        </span>
+</div>
+</div>
+</div>
+<!-- SHAP ATTRIBUTION & FEATURE SENSITIVITY -->
+<div class="px-margin py-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface">SHAP Factor Sensitivity</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Global Loss Impact</span>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-3">
+<!-- Factor 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface font-medium">Upstream Precipitation Volume</span>
+<span class="font-mono-metric text-primary font-semibold">0.38 φ</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 76%;"></div>
+</div>
+</div>
+<!-- Factor 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface font-medium">Antecedent Soil Saturation</span>
+<span class="font-mono-metric text-primary font-semibold">0.28 φ</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 56%;"></div>
+</div>
+</div>
+<!-- Factor 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface font-medium">Surface Radiative Heating</span>
+<span class="font-mono-metric text-[#F97316] font-semibold">0.18 φ</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-[#F97316] h-full rounded-full" style="width: 36%;"></div>
+</div>
+</div>
+<!-- Factor 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface font-medium">Barometric Pressure Gradient</span>
+<span class="font-mono-metric text-on-surface-variant font-semibold">0.16 φ</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden">
+<div class="bg-surface-bright h-full rounded-full" style="width: 32%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- EXPLAINABLE RISK & AUTOMATED PROTOCOL CARDS -->
+<div class="px-margin py-space-sm flex flex-col gap-space-sm">
+<!-- Algorithmic Narrative -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-2">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Synthetic Narrative</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Compound atmospheric forcing: A severe 500hPa upper-level low over the Karakoram range is synchronizing high-elevation glacial flush with an active Arabian Sea monsoonal moisture tongue. Extreme inundation will concentrate in Sector 43N floodplains within 38-48 hours.
+      </p>
+</div>
+<!-- Parametric Escrow Trigger Alert Banner -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm font-bold text-error uppercase tracking-wider">Trigger Contract Primed</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ID: CG-FIN-9821</span>
+</div>
+<div class="flex items-baseline justify-between bg-surface-container-lowest/90 px-3 py-2.5 rounded-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Multi-Sig Escrow Liquidity</span>
+<div class="font-title-lg text-title-lg font-bold text-primary font-mono-metric">$24,500,000 USD</div>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm">Automated Release</span>
+</div>
+<!-- Action Protocol Buttons -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-11 bg-error-container text-on-error-container hover:bg-error/30 font-title-md text-title-md font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+<span>Dispatch Sector Evacuation Notice</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 bg-surface-container text-on-surface hover:bg-surface-container-highest font-label-md text-label-md font-medium rounded-lg flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">engineering</span>
+<span>Deploy Barriers</span>
+</button>
+<button class="h-10 bg-surface-container text-on-surface hover:bg-surface-container-highest font-label-md text-label-md font-medium rounded-lg flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">token</span>
+<span>Sign Multisig Payout</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SATELLITE RADAR & ASSET TELEMETRY VISUAL -->
+<div class="px-margin py-space-xs flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Live SAR Radar Telemetry</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Sentinel-1 / MODIS
+      </span>
+</div>
+<!-- Map Tile Container with data-location -->
+<div class="w-full h-44 bg-cover bg-center rounded-xl relative overflow-hidden flex flex-col justify-between p-3" data-location="Indus River Basin, Sindh, Pakistan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBl23k-bXVecHTm0T8DyrbL-fWez8XyUMyFF8L6IxWcv7pFKlbKC7_EDJz7S3f1ve7wUJ6KWaDybaRDrJxyUd9OuJJBlI1wyiOnG67S329HI5R3gubkpJAt84QEUfeZ8D5To_xUCFCE49BsZao3PxetuaSYYa47Zru-QRrvlnU3QeK6EmIHd9OPr3bjT0oTRvMGwK71hWo9bkUneKYCstc6T3hq0RHOBjNHIx38GAY0')">
+<!-- Top Scrim & Badges -->
+<div class="flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded bg-surface/85 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-mono">
+          26°42'N 67°45'E
+        </span>
+<span class="px-2 py-0.5 rounded bg-[#EF4444]/90 text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+          Over-topping Detected
+        </span>
+</div>
+<!-- Bottom Map Floating HUD -->
+<div class="z-10 bg-surface/90 backdrop-blur-md px-3 py-2 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">satellite_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">SAR Pass: 6 mins ago</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Res: 10m Ground</span>
+</div>
+</div>
+</div>
+<!-- DATA PROVENANCE & AUDIT TRAIL FOOTER -->
+<div class="px-margin pt-space-sm pb-space-lg flex flex-col gap-2">
+<div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-1.5 text-on-surface-variant">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Feed Provenance</span>
+<span class="text-primary font-label-sm text-label-sm">3 Pipeline Feeds Synced</span>
+</div>
+<p class="font-body-sm text-body-sm leading-normal">
+        Synthesized via <strong class="text-on-surface font-medium">Copernicus ERA5</strong>, <strong class="text-on-surface font-medium">NASA MODIS Terra</strong>, and <strong class="text-on-surface font-medium">Open-Meteo High-Res</strong> spatial nodes.
+      </p>
+<div class="mt-1 pt-1.5 border-t border-surface-container-high flex flex-col gap-0.5 font-label-sm text-label-sm text-on-surface-variant">
+<span>Generated: 2026-10-24 14:32:00 UTC</span>
+<span>Model Hash: #INF-8849-C01 • Certified Deterministic Seed</span>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-semibold"><div class="flex justify-between items-center h-16 px-space-xs max-w-lg mx-auto"><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm">Overview</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="monitoring" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-label-sm text-label-sm">Monitoring</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] py-1 transition-colors text-primary font-semibold" data-path="risk-intel" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-sm text-label-sm">Risk Intel</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="finance" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-label-sm text-label-sm">Finance</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-sm text-label-sm">Settings</span></a></div></nav></body></html>

@@ -1,0 +1,195 @@
+{
+  "id": "468587b89ebc462ba2686e0f8112fbd3",
+  "title": "ClimateGuard AI - Main Dashboard",
+  "deviceType": "DESKTOP",
+  "width": "2560",
+  "height": "4490",
+  "prompt": "Create the flagship ClimateGuard AI Main Dashboard screen adhering strictly to the established design system tokens (#07111F canvas, #0B1728 sidebar/navbar, #101F33 cards, #22D3EE primary cyan, #3B82F6 blue, #EF4444 critical, #F97316 high, #EAB308 moderate, #22C55E low).\n\nThe inner content inside the dashboard main container should have 28px padding and feature:\n\n1. Top Dashboard Header & Controls:\n- Breadcrumb: Telemetry Operations > Mission Overview\n- Page Title: \"Climate Intelligence Command\" with subtitle \"Multi-hazard telemetry synthesis, MapLibre geospatial monitoring & automated disaster finance orchestration\"\n- Right controls:\n  - Basin / Zone selector dropdown (e.g., \"All Monitored Basins (18 Active)\")\n  - Time Horizon Filter: \"Live Telemetry (Real-time)\" with indicator\n  - API Sync & Refresh action button with pulsing cyan sync icon and \"Last sync: 2m ago (Open-Meteo & Copernicus)\"\n  - \"Simulate Scenario\" ghost button\n\n2. Top Row: 4 Climate KPI Telemetry Cards:\n- Card 1: Active Risk Zones: \"18 Monitored\" (Sub-breakdown: 4 Critical, 6 High Anomaly, 8 Nominal) with globe radar icon and +2 vs last 24h.\n- Card 2: Flood Inundation Index: \"Critical Alert\" with metric \"88% Threat\" (Rio Paraná & Indus Basin NW, River discharge 14,200 m³/s, +18% vs 10yr baseline) in red alert styling (#EF4444).\n- Card 3: Extreme Heat Stress: \"76% Index\" (Rajasthan & Sindh Corridor, Peak ambient 46.2°C, WBGT 31.8°C wet bulb) in high warning orange styling (#F97316).\n- Card 4: Drought & Aridity Deficit: \"64% Deficit\" (Horn of Africa Zone 4, Root-zone soil moisture 11.4%, -41% vs seasonal norm) in amber warning styling (#EAB308).\n\n3. Main Analytical Grid (2-Column Balanced Layout):\nLeft Column (65% width):\n- Section: \"Geospatial Threat Matrix (MapLibre WebGL Viewport)\"\n  - Header with MapLibre GL Integration badge, Layer toggles (Flood Extent, FIRMS Fire, Thermal Infrared, Soil Desiccation), Opacity slider (80%), Projection toggle (EPSG:3857 / 3D Globe), Fullscreen icon.\n  - Interactive Map Container: High-detail dark cartographic styling with grid lines, latitude/longitude markings (e.g. 25.5°S 54.5°W), vector river networks, pulsing hazard nodes with interactive tooltips (Paraná Critical Flood 88%, Rajasthan Thermal Wave 76%, Horn of Africa Desiccation 64%), and map legend in lower corner with scale bar and MapLibre GL attribution.\n  - Quick Map Telemetry bar underneath: Active Satellites (Sentinel-2, GPM IMERG, ERA5), Sensor cross-validation 99.4%, Inundation boundary calculated.\n\n- Section: \"Hydro-Meteorological Telemetry (48h Real-Time vs Forecast)\"\n  - Dual-axis visual chart showing Temperature (°C) in cyan curve, Rainfall (mm) in stacked/filled blue area, and Relative Humidity (%) in muted dashed curve with a \"NOW\" dividing line showing historical vs projected 24h.\n  - Mini stats pill footer: Precip peak 68.4 mm/hr, Ambient max 46.2°C, Vapor Pressure Deficit 3.82 kPa.\n\nRight Column (35% width):\n- Section: \"Global Hazard Risk Distribution\"\n  - Donut chart graphic with center label \"18 Basins\": Inundation / Flash Flood (42%, 8 Basins), Thermal Stress & Heatwave (31%, 6 Basins), Agricultural Aridity / Drought (27%, 4 Basins).\n  - Severity Stratification bar: Critical (4), High (7), Moderate (7).\n\n- Section: \"Automated Parametric Trigger Ledger\"\n  - Header with \"Simulation Only\" badge and \"Solvency Pool: $42.5M\".\n  - Active triggers quick list:\n    * CG-FIN-9821: Lower Mekong Flash Flood v2 ($5,000,000 - Triggered / Pending Multi-Sig)\n    * CG-FIN-9818: Northern Kenya NDVI Drought ($8,000,000 - Executed 4.1h ago)\n    * CG-FIN-9755: Jacobabad Thermal Health Action ($1,200,000 - Simulated Approved)\n  - Action button: \"Open Disaster Finance Vault →\"\n\n- Section: \"API Synchronization & Pipeline Health\"\n  - Live data provider status grid:\n    * Open-Meteo API: Operational (Latency 142ms, synced 2m ago)\n    * NASA GIBS / FIRMS: Operational (Orbital swath v4.8, synced 8m ago)\n    * Copernicus ERA5 Reanalysis: Operational (synced 15m ago)\n    * Multi-Sig Parametric Escrow: Testnet Verified (Sepolia Block #9,481,204)\n\n4. Bottom Section: \"Active Incident Feed & Automated Response Log\"\n- Filterable enterprise table:\n  - Headers: Incident ID, Monitored Region, Hazard Indicator, Risk Severity, Sensor Telemetry / Threshold, Detected UTC, Parametric Status, Action.\n  - 5 realistic sample rows with clean badges, clear data values, and \"Inspect Telemetry\" button.\n- Pagination footer showing \"Showing 1-5 of 48 incidents | Cryptographic Merkle Root 0x8f...39a1 verified\".\n\nEnsure pixel-perfect visual hierarchy, crisp contrast, 1px #24364B borders, and exact design system alignment.",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "MANROPE",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#22d3ee",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "on_secondary_fixed_variant": "#004395",
+      "error_container": "#93000a",
+      "secondary_fixed": "#d8e2ff",
+      "surface_variant": "#273647",
+      "surface_container_highest": "#273647",
+      "on_secondary_fixed": "#001a42",
+      "surface_container_lowest": "#010f1f",
+      "inverse_on_surface": "#233143",
+      "on_primary_fixed_variant": "#004e5a",
+      "on_secondary_container": "#e6ecff",
+      "background": "#051424",
+      "inverse_primary": "#006877",
+      "on_surface": "#d4e4fa",
+      "inverse_surface": "#d4e4fa",
+      "on_primary_container": "#005763",
+      "surface": "#051424",
+      "on_tertiary": "#003731",
+      "surface_bright": "#2c3a4c",
+      "on_primary": "#00363e",
+      "outline_variant": "#3c494c",
+      "on_tertiary_container": "#00594f",
+      "secondary_container": "#0566d9",
+      "tertiary_fixed_dim": "#4fdbc8",
+      "primary_fixed": "#a2eeff",
+      "surface_tint": "#2fd9f4",
+      "surface_dim": "#051424",
+      "on_error_container": "#ffdad6",
+      "on_tertiary_fixed_variant": "#005048",
+      "error": "#ffb4ab",
+      "tertiary": "#6af2de",
+      "secondary": "#adc6ff",
+      "primary_fixed_dim": "#2fd9f4",
+      "surface_container_high": "#1c2b3c",
+      "on_error": "#690005",
+      "surface_container_low": "#0d1c2d",
+      "tertiary_fixed": "#71f8e4",
+      "tertiary_container": "#47d5c2",
+      "on_background": "#d4e4fa",
+      "on_secondary": "#002e6a",
+      "on_primary_fixed": "#001f25",
+      "outline": "#859397",
+      "primary": "#8aebff",
+      "on_tertiary_fixed": "#00201c",
+      "on_surface_variant": "#bbc9cd",
+      "secondary_fixed_dim": "#adc6ff",
+      "surface_container": "#122131",
+      "primary_container": "#22d3ee"
+    },
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#22d3ee",
+    "overrideSecondaryColor": "#3b82f6",
+    "overrideTertiaryColor": "#14b8a6",
+    "overrideNeutralColor": "#94a3b8",
+    "spacingScale": 2,
+    "typography": {
+      "title-md": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.005em"
+      },
+      "title-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1.125rem",
+        "fontWeight": "600",
+        "lineHeight": "1.625rem",
+        "letterSpacing": "-0.01em"
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.125rem",
+        "letterSpacing": "0.01em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0"
+      },
+      "headline-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.015em"
+      },
+      "display-md-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.75rem",
+        "fontWeight": "600",
+        "lineHeight": "2.25rem",
+        "letterSpacing": "-0.02em"
+      },
+      "headline-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.875rem",
+        "fontWeight": "600",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.02em"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "2.75rem",
+        "letterSpacing": "-0.02em"
+      },
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.6875rem",
+        "fontWeight": "600",
+        "lineHeight": "0.875rem",
+        "letterSpacing": "0.06em"
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "0"
+      },
+      "display-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.5rem",
+        "fontWeight": "600",
+        "lineHeight": "3rem",
+        "letterSpacing": "-0.025em"
+      },
+      "headline-sm": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.75rem",
+        "letterSpacing": "-0.01em"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "lineHeight": "1rem",
+        "letterSpacing": "0.05em"
+      },
+      "display-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "3.5rem",
+        "fontWeight": "700",
+        "lineHeight": "4rem",
+        "letterSpacing": "-0.03em"
+      },
+      "mono-metric": {
+        "fontFamily": "Inter",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.02em"
+      }
+    },
+    "spacing": {
+      "space-sm": "0.75rem",
+      "gutter-desktop": "1.5rem",
+      "gutter": "1rem",
+      "space-2xl": "3rem",
+      "space-xl": "2rem",
+      "margin": "1rem",
+      "space-lg": "1.5rem",
+      "space-md": "1rem",
+      "margin-desktop": "1.5rem",
+      "space-xs": "0.5rem",
+      "space-2xs": "0.25rem"
+    },
+    "headlineFontFamily": "Manrope",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  }
+}

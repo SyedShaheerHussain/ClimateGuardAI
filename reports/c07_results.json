@@ -1,0 +1,84 @@
+{
+  "evaluationDate": "2026-11-11T21:48:29Z",
+  "dataset": {
+    "name": "Rajasthan Urban Corridor Climate Telemetry (ERA5 ECMWF)",
+    "identifier": "ERA5-RAJASTHAN-C-2018-2023",
+    "version": "1.0-calibrated",
+    "source": "Open-Meteo Historical Archive / Copernicus CDS",
+    "testPeriod": "2023-01-01 to 2023-12-31",
+    "testSampleCount": 365,
+    "positiveHeatwaveCount": 33,
+    "negativeCount": 332,
+    "targetHazard": "Heatwave Hazard Day (IMD / WMO Municipal Action Plan Threshold: >= 38.5C)"
+  },
+  "targetMetric": "F1-Score",
+  "minimumImprovementRequiredPct": 15.0,
+  "status": "PASS",
+  "models": {
+    "primary": {
+      "name": "ClimateGuard-GB-NonLinear (Gradient Boosting Classifier)",
+      "architecture": "Ensemble Gradient Boosted Decision Trees (100 estimators, max depth 4)",
+      "f1Score": 0.7123,
+      "precision": 0.65,
+      "recall": 0.7879,
+      "confusionMatrix": {
+        "tn": 318,
+        "fp": 14,
+        "fn": 7,
+        "tp": 26
+      },
+      "inferenceLatencyTotalMs": 2.608,
+      "inferenceLatencyPerSampleMs": 0.0071,
+      "modelSizeKb": 242.05,
+      "trainingTimeMs": 280.0
+    },
+    "baselineLogistic": {
+      "name": "Standard Regularized Logistic Regression",
+      "architecture": "L2-Regularized Linear Logistic Model with StandardScaler",
+      "f1Score": 0.6,
+      "precision": 0.4286,
+      "recall": 1.0,
+      "confusionMatrix": {
+        "tn": 288,
+        "fp": 44,
+        "fn": 0,
+        "tp": 33
+      },
+      "inferenceLatencyTotalMs": 1.01,
+      "inferenceLatencyPerSampleMs": 0.0028,
+      "modelSizeKb": 1.63,
+      "trainingTimeMs": 15.0
+    },
+    "baselineHeuristic": {
+      "name": "3-Day Moving Average Temperature Heuristic",
+      "architecture": "Rule-based threshold (3-day preceding mean >= 38.0C)",
+      "f1Score": 0.5614,
+      "precision": 0.6667,
+      "recall": 0.4848,
+      "confusionMatrix": {
+        "tn": 324,
+        "fp": 8,
+        "fn": 17,
+        "tp": 16
+      },
+      "inferenceLatencyTotalMs": 0.105,
+      "inferenceLatencyPerSampleMs": 0.0003,
+      "modelSizeKb": 0.5,
+      "trainingTimeMs": 0.0
+    }
+  },
+  "comparison": {
+    "primaryVsLogistic": {
+      "baselineF1": 0.6,
+      "primaryF1": 0.7123,
+      "relativeImprovementPct": 18.72,
+      "exceeds15Percent": true
+    },
+    "primaryVsHeuristic": {
+      "baselineF1": 0.5614,
+      "primaryF1": 0.7123,
+      "relativeImprovementPct": 26.88,
+      "exceeds15Percent": true
+    }
+  }
+}

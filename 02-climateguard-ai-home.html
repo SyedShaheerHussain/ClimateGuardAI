@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-tertiary": "#003731",
+        "inverse-primary": "#006877",
+        "on-error": "#690005",
+        "on-surface": "#d4e4fa",
+        "surface-tint": "#2fd9f4",
+        "surface-variant": "#273647",
+        "surface-container-lowest": "#010f1f",
+        "outline": "#859397",
+        "on-secondary-fixed-variant": "#004395",
+        "on-primary-fixed-variant": "#004e5a",
+        "inverse-on-surface": "#233143",
+        "on-secondary-fixed": "#001a42",
+        "surface-dim": "#051424",
+        "on-tertiary-container": "#00594f",
+        "on-background": "#d4e4fa",
+        "tertiary": "#6af2de",
+        "primary-fixed-dim": "#2fd9f4",
+        "on-secondary": "#002e6a",
+        "surface": "#051424",
+        "tertiary-fixed": "#71f8e4",
+        "on-primary-container": "#005763",
+        "surface-container-high": "#1c2b3c",
+        "on-surface-variant": "#bbc9cd",
+        "on-tertiary-fixed-variant": "#005048",
+        "surface-container-highest": "#273647",
+        "tertiary-container": "#47d5c2",
+        "secondary": "#adc6ff",
+        "outline-variant": "#3c494c",
+        "secondary-container": "#0566d9",
+        "error": "#ffb4ab",
+        "surface-container": "#122131",
+        "secondary-fixed": "#d8e2ff",
+        "background": "#051424",
+        "inverse-surface": "#d4e4fa",
+        "on-secondary-container": "#e6ecff",
+        "primary": "#8aebff",
+        "on-tertiary-fixed": "#00201c",
+        "secondary-fixed-dim": "#adc6ff",
+        "surface-bright": "#2c3a4c",
+        "primary-container": "#22d3ee",
+        "surface-container-low": "#0d1c2d",
+        "tertiary-fixed-dim": "#4fdbc8",
+        "on-primary-fixed": "#001f25",
+        "primary-fixed": "a2eeff",
+        "error-container": "#93000a",
+        "on-primary": "#00363e",
+        "on-error-container": "#ffdad6"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.75rem",
+        "space-md": "1rem",
+        "space-2xs": "0.25rem",
+        "space-2xl": "3rem",
+        "gutter-desktop": "1.5rem",
+        "gutter": "1rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "1rem",
+        "margin-desktop": "1.5rem",
+        "space-xs": "0.5rem"
+      },
+      "fontFamily": {
+        "headline-md": ["Manrope"],
+        "mono-metric": ["Inter"],
+        "display-lg-mobile": ["Manrope"],
+        "label-sm": ["Inter"],
+        "display-md": ["Manrope"],
+        "display-md-mobile": ["Manrope"],
+        "body-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "display-lg": ["Manrope"],
+        "title-lg": ["Inter"],
+        "body-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-lg": ["Manrope"],
+        "title-md": ["Inter"],
+        "headline-sm": ["Manrope"]
+      },
+      "fontSize": {
+        "headline-md": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "mono-metric": ["1.25rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "display-lg-mobile": ["2.25rem", {"lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["0.6875rem", {"lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "600"}],
+        "display-md": ["2.5rem", {"lineHeight": "3rem", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+        "display-md-mobile": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "body-sm": ["0.75rem", {"lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "label-md": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "600"}],
+        "display-lg": ["3.5rem", {"lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+        "title-lg": ["1.125rem", {"lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-lg": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "body-md": ["0.875rem", {"lineHeight": "1.375rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "headline-lg": ["1.875rem", {"lineHeight": "2.375rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "title-md": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "headline-sm": ["1.25rem", {"lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 h-[76px] bg-surface-container-low/90 backdrop-blur-xl border-b border-outline-variant"><div class="h-full max-w-7xl mx-auto px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ClimateGuard AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCU_Ya2ti5_-1RFMCeeOEKCjv6Q7J7Tr5B8ePKmk-JZb17HA012l5lg5WmlikGmAwzLUZxkaFOBK25DQ-a6CFFJdiUQ2T3Xq2xMxEtd8lDwBDq28inNfOtqXLHqiegC0ZmuDaVSjwOUKXt5xw9aE2R7FQxZZ1T13szL4Qa6NgioJCtFHRNyNTwAVQ29jzKZ5eJMpFiWtBb9bn5VNTMT4q3ziw-6oMo-XRwOwxoUYzjuHg"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">ClimateGuard <span class="text-primary-container">AI</span></span></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary-container font-semibold"><a aria-current="page" class="transition-colors text-primary-container font-semibold" data-path="home" href="#">Home</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="about-us" href="#">About Us</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="how-it-works" href="#">How It Works</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="climate-intelligence" href="#">Climate Intelligence</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="data-sources" href="#">Data Sources</a><a class="text-on-surface-variant hover:text-on-surface font-body-md text-body-md transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center px-space-md py-space-xs rounded-lg border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="login" href="#">Sign In</a><a class="inline-flex items-center px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-semibold font-label-md text-label-md hover:bg-primary transition-all shadow-[0_0_20px_rgba(34,211,238,0.25)]" data-path="overview" href="#">Launch Dashboard</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-space-xs border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBKlHGeCfdgkzIUI0jnt3WdbvUwmAXj78a-EfyV23QoyeWNfcPj6hkx9VT7FH2k5T_mg_pLWN8pxEI8GALzqRbjxgazSWqXuUx0-6hViatxd_z9krLyWE0WJ1-Guvf-oq7V4QiopExhlc5t113myh0j1uB2yX6m4pg13Mn60IBEfO47lnVZB8VzYAWHDrFo3rf7LGVb7EFjbSl4xYTipe7Fi2cptO7gRHljuveqJq"/></div></div></header><main class="w-full pt-[76px] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION A: HERO WITH GEOSPATIAL RISK COCKPIT -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-space-2xl md:py-32">
+<!-- Atmospheric subtle grid and orbital lines background -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="48" id="geo-grid" patternunits="userSpaceOnUse" width="48">
+<path d="M 48 0 L 0 0 0 48" fill="none" stroke="#2fd9f4" stroke-opacity="0.3" stroke-width="0.5"></path>
+<circle cx="0" cy="0" fill="#8aebff" r="1"></circle>
+</pattern>
+</defs>
+<rect fill="url(#geo-grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Soft radial glow for orbital visual presence -->
+<div class="absolute -top-40 right-1/4 w-[600px] h-[600px] rounded-full bg-primary-container/10 blur-[130px] pointer-events-none"></div>
+<div class="relative max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Hero Text Column -->
+<div class="lg:col-span-6 space-y-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-widest uppercase">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+            Operational Cockpit • Global Sensor Mesh Active
+          </div>
+<h1 class="font-headline-lg text-display-md text-on-surface tracking-tight leading-tight">
+            Predict Climate Risks <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-tertiary to-primary-container">
+              Before They Become Disasters.
+            </span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            AI-powered climate intelligence and automated disaster finance to help communities, sovereigns, and institutional operators prepare, respond, and recover faster with deterministic certainty.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-label-md font-semibold hover:bg-primary transition-all shadow-lg hover:shadow-primary-container/30" data-path="overview" href="#">
+<span class="material-symbols-outlined text-[18px]">satellite_alt</span>
+              Explore Live Dashboard
+            </a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-high text-on-surface hover:text-primary hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#how-it-works-pipeline">
+              Discover How It Works
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Micro Sensor Status Strip -->
+<div class="pt-space-md grid grid-cols-3 gap-space-sm max-w-lg">
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sentinel Constellation</p>
+<p class="font-headline-sm text-title-md text-primary font-semibold">99.98% Lock</p>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Parametric Vaults</p>
+<p class="font-headline-sm text-title-md text-tertiary font-semibold">$480M Liquidity</p>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mean Lead Time</p>
+<p class="font-headline-sm text-title-md text-secondary font-semibold">+168 Hours</p>
+</div>
+</div>
+</div>
+<!-- Hero Geospatial Visual Column -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container shadow-2xl">
+<!-- Simulated Earth Geospatial Satellite Layer -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="High-resolution dark orbital view of Earth at twilight showcasing illuminated climate hazard vectors, swirling atmospheric weather currents, and illuminated hydrographic river basins with cyan and crimson parametric risk telemetry overlays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-VxeHi8-PItn-MLQshAnbVpuixCR0VNU3y-NP9AB3g8iJnHJRqUYLCPCye8N4mcAbgV2YmMfxRuN1WrV43c4cF1A9P7VwCPZbKpVKDNzo1cCwGhTDkDa7kystBbqCJ6PjoJRApReZKzLyYfisD651THMU8qjngxZb97RK6EKSLopMltmep6Q_0_BeoVe0hXZzRFz5KBv2yZ8vtA4XHtvOpd1_wXxAGVCpc3suwIAB')"></div>
+<!-- Grid Scanning HUD overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent pointer-events-none"></div>
+<!-- SVG Satellite Vector Mesh with Risk Points -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 800 600">
+<!-- Grid lat/long lines -->
+<path d="M50 150 C 300 200, 500 200, 750 150" stroke="#8aebff" stroke-dasharray="4 4" stroke-opacity="0.25" stroke-width="1"></path>
+<path d="M50 300 C 300 350, 500 350, 750 300" stroke="#8aebff" stroke-dasharray="4 4" stroke-opacity="0.25" stroke-width="1"></path>
+<path d="M50 450 C 300 500, 500 500, 750 450" stroke="#8aebff" stroke-dasharray="4 4" stroke-opacity="0.25" stroke-width="1"></path>
+<!-- River basin heat/flood zones -->
+<!-- Mekong Delta (Flood Critical Red) -->
+<ellipse cx="610" cy="360" fill="#ffb4ab" fill-opacity="0.2" rx="42" ry="24"></ellipse>
+<circle class="animate-ping" cx="610" cy="360" fill="#ffb4ab" r="6"></circle>
+<circle cx="610" cy="360" fill="#ffb4ab" r="4"></circle>
+<!-- Zambezi Basin (Drought Amber) -->
+<ellipse cx="440" cy="420" fill="#47d5c2" fill-opacity="0.2" rx="36" ry="18"></ellipse>
+<circle cx="440" cy="420" fill="#47d5c2" r="5"></circle>
+<!-- Indus Valley (Elevated Heatwave Cyan) -->
+<ellipse cx="520" cy="270" fill="#22d3ee" fill-opacity="0.2" rx="45" ry="22"></ellipse>
+<circle cx="520" cy="270" fill="#22d3ee" r="5"></circle>
+<!-- Connecting orbital telemetry arc -->
+<path d="M 440 420 Q 520 300, 610 360" stroke="#22d3ee" stroke-dasharray="6 3" stroke-opacity="0.6" stroke-width="1.5"></path>
+</svg>
+<!-- Location Label Pins -->
+<div class="absolute top-[42%] left-[70%] bg-surface-container-highest/90 backdrop-blur-md px-space-xs py-0.5 rounded text-[10px] font-label-sm text-error flex items-center gap-1 shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+              MEKONG DELTA • 94% FLOOD
+            </div>
+<div class="absolute top-[67%] left-[48%] bg-surface-container-highest/90 backdrop-blur-md px-space-xs py-0.5 rounded text-[10px] font-label-sm text-tertiary flex items-center gap-1 shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              ZAMBEZI BASIN • CRITICAL DROUGHT
+            </div>
+<div class="absolute top-[38%] left-[55%] bg-surface-container-highest/90 backdrop-blur-md px-space-xs py-0.5 rounded text-[10px] font-label-sm text-primary-container flex items-center gap-1 shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              INDUS VALLEY • 44.1°C HEAT DOME
+            </div>
+<!-- Floating Live Telemetry Cards over Map -->
+<div class="absolute top-4 left-4 p-space-sm bg-surface-container-high/90 backdrop-blur-xl rounded-lg shadow-xl max-w-[210px]">
+<div class="flex items-center justify-between gap-space-2xs text-on-surface-variant font-label-sm text-label-sm">
+<span>BAROMETER ARRAY</span>
+<span class="text-tertiary">SYNC</span>
+</div>
+<p class="font-mono-metric text-mono-metric text-on-surface mt-1">988.4 <span class="text-xs text-on-surface-variant">hPa</span></p>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 78%;"></div>
+</div>
+<p class="font-label-sm text-[10px] text-error mt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trending_down</span> -14.2 hPa / 6h drop
+              </p>
+</div>
+<div class="absolute bottom-4 right-4 p-space-sm bg-surface-container-high/90 backdrop-blur-xl rounded-lg shadow-xl max-w-[220px]">
+<div class="flex items-center justify-between gap-space-2xs text-on-surface-variant font-label-sm text-label-sm">
+<span>PARAMETRIC TRIGGER</span>
+<span class="px-1.5 py-0.5 rounded bg-error/20 text-error text-[10px] font-bold">READY</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">$12.5M</p>
+<span class="text-[11px] text-on-surface-variant font-label-sm">ESCROW AUTO-LOCK</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1 leading-snug">
+                Rainfall delta &gt; 280mm/24h triggers instant sovereign liquidity.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION B: LIVE CLIMATE OVERVIEW (5 KPI TELEMETRY CARDS) -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">sensors</span>
+            Planetary Sensor Feed • Live Synchronization
+          </div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Real-Time Climate Telemetry</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 md:mt-0 font-label-md">
+          Updated 18 seconds ago • Verified against ESA Copernicus &amp; NASA GPM Constellations
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>ACTIVE RISK ZONES</span>
+<span class="material-symbols-outlined text-[18px] text-primary">public</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">14</div>
+<div class="text-tertiary font-label-sm text-label-sm mt-0.5">Monitored Basins</div>
+</div>
+<div class="pt-space-xs text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Critical: 3</span>
+<span class="text-tertiary">Elevated: 11</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>SURFACE MAPPED</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">grid_view</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">1,280<span class="text-base font-normal">km²</span></div>
+<div class="text-secondary font-label-sm text-label-sm mt-0.5">High-Res Spatial Mesh</div>
+</div>
+<div class="pt-space-xs text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>30m GSD Resolution</span>
+<span class="text-primary-container">Sub-minute</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>FLOOD RISK</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">flood</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">74%</div>
+<div class="text-primary-container font-label-sm text-label-sm mt-0.5">Elevated Probability</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 74%;"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>HEATWAVE PEAK</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">device_thermostat</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold">42.8°<span class="text-base font-normal">C</span></div>
+<div class="text-tertiary-container font-label-sm text-label-sm mt-0.5">Severe Thermal Dome</div>
+</div>
+<div class="pt-space-xs text-[11px] text-tertiary-container flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[14px]">warning</span> Wet-Bulb 31.4°C Warning
+          </div>
+</div>
+<!-- KPI 5 -->
+<div class="p-space-md bg-surface-container rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>DROUGHT RISK</span>
+<span class="material-symbols-outlined text-[18px] text-error">water_loss</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-lg text-headline-lg text-error font-bold">-38%</div>
+<div class="text-error font-label-sm text-label-sm mt-0.5">Root Moisture Deficit</div>
+</div>
+<div class="pt-space-xs text-[11px] text-error flex items-center justify-between font-label-sm">
+<span>Soil Sat: 11.2%</span>
+<span class="px-1 bg-error/20 rounded">Critical</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION C: THE PROBLEM -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="max-w-3xl mb-space-2xl">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-widest flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span> The Structural Gap in Climate Action
+        </span>
+<h2 class="font-headline-lg text-display-md text-on-surface mt-space-xs font-bold leading-tight">
+          Disasters Should Not Catch Communities Unprepared.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Traditional catastrophe models are reactive, coarse, and disconnected from financial distribution channels. When climate hazards accelerate, operational fragmentation leads to preventable human and economic losses.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Problem Card 1 -->
+<div class="p-space-lg bg-surface-container-low rounded-xl space-y-space-md hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[28px]">schedule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Delayed Disaster Response</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Emergency operational teams frequently receive hazard verifications 48–72 hours after first satellite anomaly detection, missing the golden mobilization window.
+          </p>
+<div class="text-label-sm text-error font-label-sm uppercase flex items-center gap-1 pt-space-xs">
+            Avg. 72h Latency Window
+          </div>
+</div>
+<!-- Problem Card 2 -->
+<div class="p-space-lg bg-surface-container-low rounded-xl space-y-space-md hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[28px]">crisis_alert</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Inaccurate Local Risk Awareness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            National weather models paint in broad brush strokes. Micro-basin hydrology, hyper-local heat islands, and soil depth variances remain dangerously invisible.
+          </p>
+<div class="text-label-sm text-error font-label-sm uppercase flex items-center gap-1 pt-space-xs">
+            &gt;25km Model Resolution Gaps
+          </div>
+</div>
+<!-- Problem Card 3 -->
+<div class="p-space-lg bg-surface-container-low rounded-xl space-y-space-md hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Financial Relief Bottlenecks</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Post-disaster claims assessment takes months. Vulnerable municipalities and frontline populations burn through emergency reserves before assistance arrives.
+          </p>
+<div class="text-label-sm text-error font-label-sm uppercase flex items-center gap-1 pt-space-xs">
+            120-Day Mean Payout Timeline
+          </div>
+</div>
+<!-- Problem Card 4 -->
+<div class="p-space-lg bg-surface-container-low rounded-xl space-y-space-md hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Fragmented Climate Silos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Earth observation data, hydrological buoys, demographic vulnerability data, and treasury vaults live in distinct, uncommunicative technical architectures.
+          </p>
+<div class="text-label-sm text-error font-label-sm uppercase flex items-center gap-1 pt-space-xs">
+            Zero Unified Telemetry API
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION D: OUR SOLUTION (4 PILLARS) -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-space-2xl">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Sovereign Architecture</span>
+<h2 class="font-headline-lg text-display-md text-on-surface mt-space-xs font-bold leading-tight">
+            Defense-Grade Climate Resilience Engine.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+            ClimateGuard AI converges multi-constellation satellite telemetry with edge ML to deliver verifiable risk warnings and trigger instant programmatic capital.
+          </p>
+</div>
+<div class="mt-space-md lg:mt-0">
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md" data-path="how-it-works" href="#">
+            View Complete Technical Spec
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Pillar 1 -->
+<div class="p-space-xl bg-surface-container rounded-xl flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">PILLAR 01</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Predictive Climate Intelligence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Deep atmospheric neural networks ingest petabytes of historical precipitation, pressure drops, and wind vector grids to forecast compound multi-hazard events 7–14 days in advance with 91.4% spatial precision.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-outline-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Recursive ECMWF &amp; GFS Ensembles</span>
+<span class="text-tertiary font-semibold">91.4% Spatial Precision</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-xl bg-surface-container rounded-xl flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-primary-container/10 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">satellite_alt</span>
+</span>
+<span class="font-label-sm text-label-sm text-primary-container tracking-widest uppercase">PILLAR 02</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Geospatial Telemetry Mesh</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Synthetic Aperture Radar (SAR) combined with optical multispectral imaging pierces cloud cover, delivering millimeter-level ground elevation shifts, water pooling dynamics, and surface moisture maps at 30-meter resolution.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-outline-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>SAR Sentinel-1 &amp; Landsat 9 Ingestion</span>
+<span class="text-primary-container font-semibold">Cloud Penetrating SAR</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-xl bg-surface-container rounded-xl flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-widest uppercase">PILLAR 03</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Financial Trigger Automation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Parametric smart contracts wire real-time telemetry straight to municipal escrow accounts. The millisecond index thresholds (e.g. 24h discharge &gt; 95th percentile) are breached, emergency liquidity settles automatically.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-outline-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Smart Escrow Smart Contract Execution</span>
+<span class="text-tertiary font-semibold">&lt; 30-Sec Settlement</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="p-space-xl bg-surface-container rounded-xl flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">memory</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">PILLAR 04</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Lightweight Edge Inference</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Our quantized neural models deploy directly to isolated local servers, ground stations, and regional dispatch hubs, executing deterministic risk classifications with zero dependence on central cloud connectivity.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-outline-variant/40 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Deployable on Isolated Micro-Nodes</span>
+<span class="text-secondary font-semibold">Offline Compliant</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION E: HOW IT WORKS (HORIZONTAL PIPELINE) -->
+<section class="w-full bg-surface-container-low py-space-2xl" id="how-it-works-pipeline">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">End-to-End Orchestration</span>
+<h2 class="font-headline-lg text-headline-lg md:text-display-md text-on-surface mt-space-xs font-bold">
+          Autonomous Hazard-to-Funding Pipeline
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          A continuous deterministic stream bridging global observation networks directly with immediate financial response.
+        </p>
+</div>
+<!-- Horizontal Flow Diagram -->
+<div class="relative">
+<div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-tertiary to-secondary -translate-y-6 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-space-md relative z-10">
+<!-- Step 1 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm font-bold flex items-center justify-center shadow-md mb-space-sm">
+                1
+              </div>
+<p class="font-label-sm text-label-sm text-primary uppercase">INGESTION</p>
+<h4 class="font-headline-sm text-title-lg text-on-surface font-semibold mt-1">Climate Data</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Real-time satellite feeds, radar scatterometry, and ground weather stations streamed 24/7.
+              </p>
+</div>
+<div class="mt-space-sm py-1 px-2 rounded bg-surface-container-high text-[11px] text-on-surface-variant font-mono-metric">
+              100+ telemetry vectors
+            </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container font-headline-sm font-bold flex items-center justify-center shadow-md mb-space-sm">
+                2
+              </div>
+<p class="font-label-sm text-label-sm text-primary-container uppercase">INFERENCE</p>
+<h4 class="font-headline-sm text-title-lg text-on-surface font-semibold mt-1">Risk Analysis</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Machine learning models compute compound failure scenarios across climate and infrastructure.
+              </p>
+</div>
+<div class="mt-space-sm py-1 px-2 rounded bg-surface-container-high text-[11px] text-on-surface-variant font-mono-metric">
+              Quantized model edge run
+            </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary font-headline-sm font-bold flex items-center justify-center shadow-md mb-space-sm">
+                3
+              </div>
+<p class="font-label-sm text-label-sm text-tertiary uppercase">SYNTHESIS</p>
+<h4 class="font-headline-sm text-title-lg text-on-surface font-semibold mt-1">Geospatial Intel</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                High-density 3D risk contours overlaid on population centroids and critical transport arteries.
+              </p>
+</div>
+<div class="mt-space-sm py-1 px-2 rounded bg-surface-container-high text-[11px] text-on-surface-variant font-mono-metric">
+              Multi-hazard GIS layers
+            </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary font-headline-sm font-bold flex items-center justify-center shadow-md mb-space-sm">
+                4
+              </div>
+<p class="font-label-sm text-label-sm text-secondary uppercase">VERIFICATION</p>
+<h4 class="font-headline-sm text-title-lg text-on-surface font-semibold mt-1">Financial Trigger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Deterministic oracles validate environmental parameter breaches with dual-party cryptographic proof.
+              </p>
+</div>
+<div class="mt-space-sm py-1 px-2 rounded bg-surface-container-high text-[11px] text-on-surface-variant font-mono-metric">
+              Zero loss-adjuster delay
+            </div>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary font-headline-sm font-bold flex items-center justify-center shadow-md mb-space-sm">
+                5
+              </div>
+<p class="font-label-sm text-label-sm text-tertiary-container uppercase">EXECUTION</p>
+<h4 class="font-headline-sm text-title-lg text-on-surface font-semibold mt-1">Relief Liquidity</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                Automated treasury release recommendations disburse directly to sovereign and NGO relief nodes.
+              </p>
+</div>
+<div class="mt-space-sm py-1 px-2 rounded bg-surface-container-high text-[11px] text-on-surface-variant font-mono-metric">
+              Instant capital liquidity
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION F: CLIMATE HAZARDS (3 DEEP DIVE CARDS) -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="max-w-3xl mb-space-2xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Multi-Hazard Coverage</span>
+<h2 class="font-headline-lg text-display-md text-on-surface mt-space-xs font-bold">
+          Precision Telemetry for Every Threat Vector
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm">
+          Specific environmental indices designed for municipal risk mitigation, parametric reinsurance, and community resilience.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Flood Monitoring -->
+<div class="bg-surface-container rounded-xl overflow-hidden flex flex-col justify-between shadow-xl">
+<div class="h-44 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Dramatic aerial drone view of a major swollen river system bursting banks with hydrographic telemetry grids and blue radar flood detection contours rendered over inundated agricultural wetlands." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoZLauYfE0wo1E0MZm3MfUjr3vpHw5fX9uiSHjFVJCuJWmvq2HOKyVFVqPsxS7L9WMPrxT4Hn1_NOFfZ92QXicLBrKsQdPcPyu-kwSHRMuOYgDYoLjONpPL2P1F_Uz9CQEMBQlaVVsxKTfmO9tY_szL4KWTa5GEh0zu9qGaQevgJ75TP6hBGgrQfLwkxty08-TAMd0-auYzjGYSyCE-x93R2pCOKlba6hB-Di8BZIK')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute top-3 left-3 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-sm text-[11px]">
+              HYDROLOGY RADAR
+            </div>
+</div>
+<div class="p-space-lg flex-1 space-y-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Flood Monitoring</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Real-time river discharge modeling coupled with synthetic runoff precipitation accumulation.
+              </p>
+</div>
+<!-- Quantitative Telemetry Rows -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">River Discharge</span>
+<span class="font-mono-metric text-on-surface font-semibold">14,200 m³/s <span class="text-error text-xs font-normal">(+82%)</span></span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Rainfall Accumulation</span>
+<span class="font-mono-metric text-on-surface font-semibold">214 mm / 24h</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Flood Risk Index</span>
+<span class="font-label-sm text-error font-bold px-2 py-0.5 rounded bg-error/20">8.9 / 10 • CRITICAL</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-high/60 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trigger: 180mm/24h exceedance</span>
+<span class="text-primary font-label-sm text-label-sm font-semibold">Contract Armed</span>
+</div>
+</div>
+<!-- Card 2: Heatwave Monitoring -->
+<div class="bg-surface-container rounded-xl overflow-hidden flex flex-col justify-between shadow-xl">
+<div class="h-44 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Satellite thermal infrared visualization of a dense urban metropolis glowing in bright red and orange thermal signatures during an extreme heatwave dome event, showing urban heat island contours." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARqPncgDoFFfH41jvE6Jsg_VWDK3AYbSeL3XneHCZqOqadpMii294d72U8wp1L-qAlWVOeTM4AFIUhrVAqTEKuVWCSjm_sdir-iqkGSYZapDJBnC-WvG3laWfUFuj9GFRuMdn4QiUHgI8hZPQhQuKOtUdX6udnJKlPGyyPFEUOMqxefI43T9Ts73aUrJNVKf_mJZpYekh7U30yrUxwUKYTXCPsvmLSyKebc2mU8Y1V')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute top-3 left-3 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-sm text-[11px]">
+              THERMAL INFRARED
+            </div>
+</div>
+<div class="p-space-lg flex-1 space-y-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Heatwave Monitoring</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Wet-bulb thermodynamic thresholds tracking survivability limits in high-density urban areas.
+              </p>
+</div>
+<!-- Quantitative Telemetry Rows -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Wet-Bulb Temp</span>
+<span class="font-mono-metric text-on-surface font-semibold">32.6°C <span class="text-tertiary-container text-xs font-normal">(Severe)</span></span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Relative Humidity</span>
+<span class="font-mono-metric text-on-surface font-semibold">78.4%</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Heat Vulnerability</span>
+<span class="font-label-sm text-tertiary font-bold px-2 py-0.5 rounded bg-tertiary/20">7.8 / 10 • ELEVATED</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-high/60 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trigger: 31.5°C Wet-Bulb sustained</span>
+<span class="text-tertiary font-label-sm text-label-sm font-semibold">Trigger Pending</span>
+</div>
+</div>
+<!-- Card 3: Drought Monitoring -->
+<div class="bg-surface-container rounded-xl overflow-hidden flex flex-col justify-between shadow-xl">
+<div class="h-44 relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="High-altitude multi-spectral agricultural view of parched arid earth showing cracked soil and stressed vegetative indices in bronze and muted ochre shades with geometric crop parcel outlines." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyNJVdbz8Zk8TKZV9zcCAzqtJuvbppBzG9RgC5PsmBO_uT1CIsL1UM45i3M8E8nW0DHTBl9_qe5lGMxQHJuSZH4sAFJ7tFjW8B6dQbquoCmtWUiRnVSuSFyl8AIBZ4gMaBeANZmWGYiIclTZDF_Xm-vcG4i63mD3vu5Fu3nWH4b3VJsu-wXSmln6Vu8hchinot9BWHVuNqOlJ_Ehl4SM0lLQBAjvPxoRVytNGx_8MI')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute top-3 left-3 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-[11px]">
+              SOIL RADIOMETRY
+            </div>
+</div>
+<div class="p-space-lg flex-1 space-y-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Drought Monitoring</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Root-zone soil moisture metrics, vegetative canopy stress (NDVI), and hydrological evapotranspiration.
+              </p>
+</div>
+<!-- Quantitative Telemetry Rows -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Rainfall Deficit</span>
+<span class="font-mono-metric text-on-surface font-semibold">-58% anomaly</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Root-Zone Moisture</span>
+<span class="font-mono-metric text-on-surface font-semibold">0.11 m³/m³</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Crop Stress Metric</span>
+<span class="font-label-sm text-error font-bold px-2 py-0.5 rounded bg-error/20">9.2 / 10 • HIGH LOSS</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-high/60 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trigger: 45 consecutive dry days</span>
+<span class="text-error font-label-sm text-label-sm font-semibold">Payout Active</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION G: GEOSPATIAL RISK MAP PREVIEW -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Interactive Sensor View</span>
+<h2 class="font-headline-lg text-display-md text-on-surface mt-space-xs font-bold">
+            Multi-Scalar Geospatial Engine
+          </h2>
+</div>
+<!-- Layer Selector Controls -->
+<div class="flex flex-wrap items-center gap-space-xs mt-space-sm md:mt-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">layers</span> Flood SAR
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">thermostat</span> Heatwave Anomaly
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">water</span> Drought Depletion
+          </button>
+</div>
+</div>
+<!-- High Density Map Display Panel -->
+<div class="relative w-full h-[520px] rounded-xl overflow-hidden bg-surface-container shadow-2xl">
+<!-- Interactive Map Background -->
+<div class="w-full h-full bg-cover bg-center" data-location="Bay of Bengal, Indian Ocean" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9Z7Gc550ChlLCFVrR5nJHjle3edLj0OsPFFJaPy-FKOTqZPLFSD2OXtgwu9NOY27AlJUvirG5pbS4jh6tDqqu1r8-Ty_v_p5W6Ki41COVwN0bw1nMqrWtO0L5LhYrgFnqdlj7PWQTRCNK-V1Z5m7b--tQRt3PX9AAHNS_Xs32MAd4U6_Z12YSRIIQarq4hmZosZIrQJxjM23iyA2-YhpOwwYAyqvKpPNyzM6VTSxp')"></div>
+<!-- Gradient map scrim -->
+<div class="absolute inset-0 bg-surface-container-lowest/40 pointer-events-none"></div>
+<!-- Top Left Map HUD -->
+<div class="absolute top-4 left-4 p-space-sm bg-surface-container-low/90 backdrop-blur-md rounded-lg shadow-lg flex items-center gap-space-md">
+<div>
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase">OBSERVATION SECTOR</div>
+<div class="font-headline-sm text-title-md text-on-surface font-semibold">Indo-Pacific Monsoonal Basin</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div>
+<div class="font-label-sm text-[10px] text-on-surface-variant uppercase">SATELLITE PASS</div>
+<div class="font-headline-sm text-title-md text-primary font-semibold">Sentinel-1B (Radar)</div>
+</div>
+</div>
+<!-- Bottom Center Risk Severity Legend Bar -->
+<div class="absolute bottom-4 left-4 right-4 md:left-auto md:right-4 p-space-sm bg-surface-container-low/95 backdrop-blur-md rounded-lg shadow-xl md:max-w-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">RISK SEVERITY INDEX</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">CALIBRATED ISO 14090</span>
+</div>
+<div class="grid grid-cols-4 gap-1 text-center font-label-sm text-[11px]">
+<div class="py-1 rounded bg-[#22C55E]/20 text-[#22C55E] font-semibold">
+              SAFE / LOW
+            </div>
+<div class="py-1 rounded bg-[#EAB308]/20 text-[#EAB308] font-semibold">
+              MODERATE
+            </div>
+<div class="py-1 rounded bg-[#F97316]/20 text-[#F97316] font-semibold">
+              HIGH
+            </div>
+<div class="py-1 rounded bg-[#EF4444]/25 text-[#EF4444] font-semibold flex items-center justify-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#EF4444] animate-ping"></span> CRITICAL
+            </div>
+</div>
+</div>
+<!-- Floating Map Telemetry Pins -->
+<div class="absolute top-1/3 left-1/4 p-space-xs bg-surface-container-high/90 backdrop-blur-sm rounded border-l-2 border-primary-container text-xs text-on-surface">
+<div class="font-semibold">Station BD-48 (Sylhet)</div>
+<div class="text-[10px] text-primary-container">Discharge: +122% above base</div>
+</div>
+<div class="absolute top-1/2 right-1/3 p-space-xs bg-surface-container-high/90 backdrop-blur-sm rounded border-l-2 border-error text-xs text-on-surface">
+<div class="font-semibold">Station IN-02 (Assam)</div>
+<div class="text-[10px] text-error font-bold">Flood Stage 3 Breached</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION H: PARAMETRIC DISASTER FINANCE -->
+<section class="w-full bg-surface py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 space-y-space-md">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">Parametric Capital Rails</span>
+<h2 class="font-headline-lg text-display-md text-on-surface font-bold leading-tight">
+            Instant Disaster Liquidity, Zero Claims Lag.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            By eliminating subjective human loss adjusters and replacing them with objective, satellite-verified indices, emergency capital disburses within hours instead of quarters.
+          </p>
+<ul class="space-y-space-sm pt-space-xs font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">verified</span>
+<span><strong>Deterministic Oracles:</strong> Environmental breaches confirmed by consensus among NASA, ESA, and ground meteorological barometers.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">verified</span>
+<span><strong>Pre-Allocated Liquidity Pools:</strong> Capital sits in sovereign multi-sig escrow, ready for immediate treasury distribution.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">verified</span>
+<span><strong>Anti-Basis Risk Tuning:</strong> High-resolution spatial tessellation prevents false-negative triggers across heterogeneous topographies.</span>
+</li>
+</ul>
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-tertiary text-on-tertiary font-label-md text-label-md font-semibold hover:bg-tertiary-fixed transition-colors" data-path="disaster-finance" href="#">
+              Simulate Parametric Payout
+              <span class="material-symbols-outlined text-[16px]">calculate</span>
+</a>
+</div>
+</div>
+<!-- Parametric Simulation Card -->
+<div class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-2xl space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase">SIMULATED CONTRACT • REGION-74</p>
+<h3 class="font-headline-sm text-title-lg text-on-surface font-semibold">East Africa Drought Resilience Facility</h3>
+</div>
+<span class="px-2 py-1 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+              STATUS: ARMED
+            </span>
+</div>
+<!-- Slider / Trigger Threshold Visualizer -->
+<div class="space-y-space-xs py-space-xs">
+<div class="flex justify-between text-body-sm font-label-sm text-on-surface-variant">
+<span>Root Soil Moisture Trigger Threshold</span>
+<span class="text-on-surface font-mono-metric font-bold">12.0% Saturation</span>
+</div>
+<!-- Dual-track slider visual representation -->
+<div class="relative w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 bg-[#22C55E]" style="width: 40%;"></div>
+<div class="absolute left-[40%] top-0 bottom-0 bg-[#EAB308]" style="width: 30%;"></div>
+<div class="absolute left-[70%] top-0 bottom-0 bg-[#EF4444]" style="width: 30%;"></div>
+<div class="absolute left-[78%] top-0 bottom-0 w-1.5 bg-on-surface shadow-md"></div>
+</div>
+<div class="flex justify-between text-[11px] text-on-surface-variant font-label-sm pt-1">
+<span>Nominal (&gt;25%)</span>
+<span>Warning (18-25%)</span>
+<span class="text-error font-semibold">Trigger Payout (&lt;12%)</span>
+</div>
+</div>
+<!-- Dynamic Payout Tier Grid -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-[11px] text-on-surface-variant">TIER 1 (EARLY WARN)</p>
+<p class="font-mono-metric text-title-lg text-on-surface font-bold">$2.5M</p>
+<p class="text-[11px] text-secondary mt-1">Disbursed to seed banks</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<p class="font-label-sm text-[11px] text-on-surface-variant">TIER 2 (SEVERITY)</p>
+<p class="font-mono-metric text-title-lg text-on-surface font-bold">$8.0M</p>
+<p class="text-[11px] text-tertiary mt-1">Direct water distribution</p>
+</div>
+<div class="p-space-sm bg-surface-container-high rounded-lg ring-1 ring-error/40">
+<p class="font-label-sm text-[11px] text-error font-semibold">TIER 3 (CRITICAL)</p>
+<p class="font-mono-metric text-title-lg text-error font-bold">$25.0M</p>
+<p class="text-[11px] text-on-surface-variant mt-1">Sovereign liquidity</p>
+</div>
+</div>
+<div class="p-space-xs rounded bg-surface-container-lowest text-xs text-on-surface-variant font-mono-metric flex items-center justify-between">
+<span class="truncate">Oracle Hash: 0x9f1a...48c2 • Multi-party ECDSA Verified</span>
+<span class="text-tertiary">LATENCY: 420ms</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION I: C01 PERFORMANCE CALLOUT (EDGE INFERENCE SPECS) -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="p-space-xl bg-surface-container-lowest rounded-2xl relative overflow-hidden">
+<!-- Corner watermark accent -->
+<div class="absolute -right-8 -bottom-8 opacity-5 text-on-surface font-headline-lg text-[180px] pointer-events-none select-none font-bold">
+          C01
+        </div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-7 space-y-space-sm">
+<div class="inline-flex items-center gap-space-xs px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[11px] uppercase tracking-wider">
+              VERIFIABLE ARCHITECTURAL REQUIREMENT
+            </div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+              C01 Lightweight Edge Inference Performance
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+              Engineered specifically for constrained operational disaster scenarios where central internet connections fail. ClimateGuard C01 operates deterministic risk classification entirely on local sovereign edge nodes.
+            </p>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-space-md">
+<div class="p-space-md bg-surface-container rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Throughput Latency</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">100 Inferences</span>
+<span class="font-label-sm text-label-sm text-tertiary block mt-1">Under 200 ms • Deterministic</span>
+</div>
+<div class="p-space-md bg-surface-container rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Operational Footprint</span>
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">&lt; 256 MB</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-1">Zero Cloud Dependency</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION J: FINAL CALL TO ACTION -->
+<section class="w-full bg-surface-container-lowest py-space-2xl relative overflow-hidden">
+<div class="max-w-5xl mx-auto px-margin-desktop text-center space-y-space-lg relative z-10">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">
+        Institutional • Sovereign • Municipal Readiness
+      </span>
+<h2 class="font-headline-lg text-display-md md:text-display-lg text-on-surface font-bold leading-tight">
+        Build Climate Resilience <br class="hidden sm:inline"/>
+        Before the Next Disaster.
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        Join leading sovereign disaster agencies, global reinsurers, and frontline municipalities deploying deterministic climate telemetry to secure lives and capital.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-xl py-3.5 rounded-lg bg-primary-container text-on-primary-container font-headline-sm text-label-md font-semibold hover:bg-primary transition-all shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-path="overview" href="#">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+          Launch ClimateGuard
+        </a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-lg bg-surface-container text-on-surface hover:text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md" data-path="contact" href="#">
+          Request Institutional Briefing
+        </a>
+</div>
+<div class="pt-space-lg flex items-center justify-center gap-space-lg text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span> 14-Day Simulation Sandbox
+        </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span> Zero Capital Setup
+        </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span> Open Telemetry API
+        </span>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant"><div class="max-w-7xl mx-auto px-margin-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl"><div class="space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="ClimateGuard AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCU_Ya2ti5_-1RFMCeeOEKCjv6Q7J7Tr5B8ePKmk-JZb17HA012l5lg5WmlikGmAwzLUZxkaFOBK25DQ-a6CFFJdiUQ2T3Xq2xMxEtd8lDwBDq28inNfOtqXLHqiegC0ZmuDaVSjwOUKXt5xw9aE2R7FQxZZ1T13szL4Qa6NgioJCtFHRNyNTwAVQ29jzKZ5eJMpFiWtBb9bn5VNTMT4q3ziw-6oMo-XRwOwxoUYzjuHg"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">ClimateGuard <span class="text-primary-container">AI</span></span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Sovereign climate intelligence, real-time planetary telemetry, and parametric risk automation engineered for defense, sovereign states, and institutional capital.</p><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="inline-flex w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm">Telemetry Node 01: Active</span></div></div><div><h4 class="font-title-md text-title-md text-on-surface mb-space-md">Platform</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li data-path="overview"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Mission Overview</a></li><li data-path="live-monitoring"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Live Telemetry Feed</a></li><li data-path="geospatial-map"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Geospatial Satellite Engine</a></li><li data-path="disaster-finance"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Parametric Disaster Finance</a></li></ul></div><div><h4 class="font-title-md text-title-md text-on-surface mb-space-md">Resources</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li data-path="climate-intelligence"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Risk Intelligence Reports</a></li><li data-path="data-sources"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Earth Sensor Array</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">API Documentation</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Parametric Trigger Specs</a></li></ul></div><div><h4 class="font-title-md text-title-md text-on-surface mb-space-md">Legal &amp; Security</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Telemetry Privacy Policy</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Spatial Service</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Institutional Security Audit</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Sovereign Data Governance</a></li></ul></div></div><div class="mt-space-2xl pt-space-md border-t border-outline-variant flex flex-col md:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2026 ClimateGuard AI Inc. All sovereign risk and geospatial rights reserved.</p><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-on-surface-variant"><span class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-[16px] text-tertiary">shield</span> ISO 27001 Certified</span><span class="flex items-center gap-space-2xs"><span class="material-symbols-outlined text-[16px] text-primary">public</span> ESA/NASA Feeds Verified</span></div></div></div></footer></body></html>

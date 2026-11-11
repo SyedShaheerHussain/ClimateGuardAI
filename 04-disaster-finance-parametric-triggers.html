@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-tertiary": "#003731",
+        "inverse-primary": "#006877",
+        "on-error": "#690005",
+        "on-surface": "#d4e4fa",
+        "surface-tint": "#2fd9f4",
+        "surface-variant": "#273647",
+        "surface-container-lowest": "#010f1f",
+        "outline": "#859397",
+        "on-secondary-fixed-variant": "#004395",
+        "on-primary-fixed-variant": "#004e5a",
+        "inverse-on-surface": "#233143",
+        "on-secondary-fixed": "#001a42",
+        "surface-dim": "#051424",
+        "on-tertiary-container": "#00594f",
+        "on-background": "#d4e4fa",
+        "tertiary": "#6af2de",
+        "primary-fixed-dim": "#2fd9f4",
+        "on-secondary": "#002e6a",
+        "surface": "#051424",
+        "tertiary-fixed": "#71f8e4",
+        "on-primary-container": "#005763",
+        "surface-container-high": "#1c2b3c",
+        "on-surface-variant": "#bbc9cd",
+        "on-tertiary-fixed-variant": "#005048",
+        "surface-container-highest": "#273647",
+        "tertiary-container": "#47d5c2",
+        "secondary": "#adc6ff",
+        "outline-variant": "#3c494c",
+        "secondary-container": "#0566d9",
+        "error": "#ffb4ab",
+        "surface-container": "#122131",
+        "secondary-fixed": "#d8e2ff",
+        "background": "#051424",
+        "inverse-surface": "#d4e4fa",
+        "on-secondary-container": "#e6ecff",
+        "primary": "#8aebff",
+        "on-tertiary-fixed": "#00201c",
+        "secondary-fixed-dim": "#adc6ff",
+        "surface-bright": "#2c3a4c",
+        "primary-container": "#22d3ee",
+        "surface-container-low": "#0d1c2d",
+        "tertiary-fixed-dim": "#4fdbc8",
+        "on-primary-fixed": "#001f25",
+        "primary-fixed": "a2eeff",
+        "error-container": "#93000a",
+        "on-primary": "#00363e",
+        "on-error-container": "#ffdad6"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.75rem",
+        "space-md": "1rem",
+        "space-2xs": "0.25rem",
+        "space-2xl": "3rem",
+        "gutter-desktop": "1.5rem",
+        "gutter": "1rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "1rem",
+        "margin-desktop": "1.5rem",
+        "space-xs": "0.5rem"
+      },
+      "fontFamily": {
+        "headline-md": ["Manrope"],
+        "mono-metric": ["Inter"],
+        "display-lg-mobile": ["Manrope"],
+        "label-sm": ["Inter"],
+        "display-md": ["Manrope"],
+        "display-md-mobile": ["Manrope"],
+        "body-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "display-lg": ["Manrope"],
+        "title-lg": ["Inter"],
+        "body-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-lg": ["Manrope"],
+        "title-md": ["Inter"],
+        "headline-sm": ["Manrope"]
+      },
+      "fontSize": {
+        "headline-md": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "mono-metric": ["1.25rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "display-lg-mobile": ["2.25rem", {"lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["0.6875rem", {"lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "600"}],
+        "display-md": ["2.5rem", {"lineHeight": "3rem", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+        "display-md-mobile": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "body-sm": ["0.75rem", {"lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "label-md": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "600"}],
+        "display-lg": ["3.5rem", {"lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+        "title-lg": ["1.125rem", {"lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-lg": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "body-md": ["0.875rem", {"lineHeight": "1.375rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "headline-lg": ["1.875rem", {"lineHeight": "2.375rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "title-md": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "headline-sm": ["1.25rem", {"lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[250px] bg-surface-container-low border-r border-outline-variant z-50 flex flex-col justify-between"><div class="flex flex-col h-full"><div class="h-[72px] px-space-md flex items-center justify-between border-b border-outline-variant"><div class="flex items-center gap-space-xs"><img alt="ClimateGuard AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCU_Ya2ti5_-1RFMCeeOEKCjv6Q7J7Tr5B8ePKmk-JZb17HA012l5lg5WmlikGmAwzLUZxkaFOBK25DQ-a6CFFJdiUQ2T3Xq2xMxEtd8lDwBDq28inNfOtqXLHqiegC0ZmuDaVSjwOUKXt5xw9aE2R7FQxZZ1T13szL4Qa6NgioJCtFHRNyNTwAVQ29jzKZ5eJMpFiWtBb9bn5VNTMT4q3ziw-6oMo-XRwOwxoUYzjuHg"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface text-[1.125rem]">ClimateGuard</span></div><span class="px-space-2xs py-0.5 rounded bg-primary-container/20 text-primary-container border border-primary-container/40 font-label-sm text-label-sm uppercase">Enterprise</span></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-lg"><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Main Menu</p><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Overview</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Live Monitoring</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="risk-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span>Risk Intelligence</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="flood-forecast" href="#"><span class="material-symbols-outlined text-[18px]">tsunami</span>Flood Forecast</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="heatwave-forecast" href="#"><span class="material-symbols-outlined text-[18px]">sunny</span>Heatwave Forecast</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="drought-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">water_loss</span>Drought Monitoring</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="geospatial-map" href="#"><span class="material-symbols-outlined text-[18px]">public</span>Geospatial Map</a></nav><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Finance</p><a aria-current="page" class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg transition-colors bg-surface-container-high text-primary font-semibold" data-path="disaster-finance" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span>Disaster Finance</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="funding-triggers" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span>Funding Triggers</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="incident-reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span>Incident Reports</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="analytics" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Analytics</a></nav><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System</p><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="c01-edge-benchmark" href="#"><span class="material-symbols-outlined text-[18px]">memory</span>C01 Edge Benchmark</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="data-sources" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span>Data Sources</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</a></nav></div><div class="p-space-sm border-t border-outline-variant bg-surface-container-lowest flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBKlHGeCfdgkzIUI0jnt3WdbvUwmAXj78a-EfyV23QoyeWNfcPj6hkx9VT7FH2k5T_mg_pLWN8pxEI8GALzqRbjxgazSWqXuUx0-6hViatxd_z9krLyWE0WJ1-Guvf-oq7V4QiopExhlc5t113myh0j1uB2yX6m4pg13Mn60IBEfO47lnVZB8VzYAWHDrFo3rf7LGVb7EFjbSl4xYTipe7Fi2cptO7gRHljuveqJq"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Dr. Aris Thorne</span><span class="font-label-sm text-label-sm text-on-surface-variant">Risk Director</span></div></div><a class="text-outline hover:text-error transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-[250px]"><header class="fixed top-0 left-[250px] right-0 h-[72px] bg-surface-container-low/90 backdrop-blur-xl border-b border-outline-variant z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">menu_open</span></button><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="hover:text-on-surface">Telemetry Operations</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-primary font-semibold">Global Sentinel</span></div></div><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-outline">search</span><input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg pl-9 pr-space-md py-1.5 font-body-sm text-body-sm text-on-surface placeholder-outline focus:border-primary-container focus:outline-none transition-colors" placeholder="Search basin, province, or lat/long..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-2xs px-space-xs py-1 rounded-full bg-tertiary-container/10 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary font-mono-metric">SYSTEM NORMAL • 99.98%</span></div><div class="relative"><button class="relative text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface-container-low"></span></button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBKlHGeCfdgkzIUI0jnt3WdbvUwmAXj78a-EfyV23QoyeWNfcPj6hkx9VT7FH2k5T_mg_pLWN8pxEI8GALzqRbjxgazSWqXuUx0-6hViatxd_z9krLyWE0WJ1-Guvf-oq7V4QiopExhlc5t113myh0j1uB2yX6m4pg13Mn60IBEfO47lnVZB8VzYAWHDrFo3rf7LGVb7EFjbSl4xYTipe7Fi2cptO7gRHljuveqJq"/></div></header><main class="relative pt-[72px] p-[28px] bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-lg text-on-surface">
+<!-- Top Operational Alert Banner & Header Actions -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+          SIMULATION ONLY • Parametric Testnet Environment
+        </span>
+<span class="px-space-2xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+          ORACLE BLOCK: #9,481,204
+        </span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Disaster Finance Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Simulate parametric trigger payouts, monitor reserve liquidity, and audit automated relief disbursements.</p>
+</div>
+<!-- Quick Parametric Actions -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+        Liquidity Controls
+      </button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Create New Parametric Rule
+      </button>
+</div>
+</div>
+<!-- ROW 1 — FINANCIAL KPI CARDS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Simulated Funding -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Total Simulated Funding</span>
+<div class="p-1.5 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">$42,500,000</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span>+12.4% pool capacity vs Q2</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-outline text-label-sm font-label-sm">
+<span>Solvency Factor: 3.2x</span>
+<span>Max Capacity: $60M</span>
+</div>
+</div>
+<!-- Pending Funding Requests -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Pending Verifications</span>
+<div class="p-1.5 rounded-lg bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">$6,200,000</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+<span>3 Active Multi-Sig Verifications</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-outline text-label-sm font-label-sm">
+<span>Oracle Quorum: 4/5 nodes</span>
+<span>ETA: ~18 mins</span>
+</div>
+</div>
+<!-- Triggered Financial Rules -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Triggered Financial Rules</span>
+<div class="p-1.5 rounded-lg bg-surface-container-high text-error">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">8 Rules</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-error">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>Threshold Exceeded in 48h</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-outline text-label-sm font-label-sm">
+<span>Active Parametric Contracts: 24</span>
+<span>Auto-execution: ON</span>
+</div>
+</div>
+<!-- Disbursed Relief Simulations -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Disbursed Relief Simulations</span>
+<div class="p-1.5 rounded-lg bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">$28,150,000</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>Avg payout velocity: 4.2 hours</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-outline text-label-sm font-label-sm">
+<span>14 Disaster Instances</span>
+<span>Settlement Rate: 100%</span>
+</div>
+</div>
+</div>
+<!-- ROW 2 — FINANCIAL CHARTS -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- LEFT (60% ~ 7 cols): Funding Distribution & Reserve Liquidity Chart -->
+<div class="lg:col-span-7 p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs mb-space-sm">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Reserve Liquidity &amp; Disaster Distribution</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cumulative parametric disbursements allocated by catastrophe vector.</p>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container-high p-1 rounded-lg">
+<button class="px-space-xs py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">30 Days</button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">90 Days</button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">YTD</button>
+</div>
+</div>
+<!-- Breakdown Pills -->
+<div class="grid grid-cols-3 gap-space-xs my-space-xs">
+<div class="p-space-xs rounded-lg bg-surface-container flex flex-col">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Floods
+          </div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">$22.0M</span>
+<span class="font-label-sm text-label-sm text-outline">51.8% of pool</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container flex flex-col">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            Drought Relief
+          </div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">$14.0M</span>
+<span class="font-label-sm text-label-sm text-outline">32.9% of pool</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container flex flex-col">
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Heatwave Response
+          </div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">$6.5M</span>
+<span class="font-label-sm text-label-sm text-outline">15.3% of pool</span>
+</div>
+</div>
+<!-- Responsive SVG Area/Bar Visualization -->
+<div class="relative w-full h-52 mt-space-sm flex flex-col justify-end">
+<svg class="w-full h-44 overflow-visible" preserveaspectratio="none" viewbox="0 0 540 160">
+<defs>
+<lineargradient id="floodGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#8aebff" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#8aebff" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="droughtGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#6af2de" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#6af2de" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Background Grid lines -->
+<line stroke="#273647" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="30" y2="30"></line>
+<line stroke="#273647" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="80" y2="80"></line>
+<line stroke="#273647" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="540" y1="130" y2="130"></line>
+<!-- Filled path for Flood pool growth -->
+<path d="M 0 140 Q 90 120 180 95 T 360 55 T 540 25 L 540 160 L 0 160 Z" fill="url(#floodGrad)"></path>
+<path d="M 0 140 Q 90 120 180 95 T 360 55 T 540 25" fill="none" stroke="#8aebff" stroke-width="2.5"></path>
+<!-- Secondary path for Drought -->
+<path d="M 0 150 Q 110 135 220 110 T 400 80 T 540 60 L 540 160 L 0 160 Z" fill="url(#droughtGrad)"></path>
+<path d="M 0 150 Q 110 135 220 110 T 400 80 T 540 60" fill="none" stroke="#6af2de" stroke-dasharray="4 2" stroke-width="2"></path>
+<!-- Heatwave accent points -->
+<circle cx="180" cy="95" fill="#adc6ff" r="4"></circle>
+<circle cx="360" cy="55" fill="#adc6ff" r="4"></circle>
+<circle cx="540" cy="25" fill="#8aebff" r="5"></circle>
+</svg>
+<div class="flex justify-between text-outline font-label-sm text-label-sm pt-2">
+<span>Week 1 (Reserve: $30M)</span>
+<span>Week 2 ($34M)</span>
+<span>Week 3 ($38M)</span>
+<span>Current Active Capacity: $42.5M</span>
+</div>
+</div>
+</div>
+<!-- RIGHT (40% ~ 5 cols): Parametric Rule Verification Gauge & Payout Speed -->
+<div class="lg:col-span-5 p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Payout Speed vs Legacy</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated smart contract triggers vs conventional adjusters.</p>
+</div>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</span>
+</div>
+<!-- Comparative Velocity Bars -->
+<div class="space-y-space-md my-space-xs">
+<!-- ClimateGuard Speed -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+              ClimateGuard AI Parametric Trigger
+            </span>
+<span class="font-mono-metric text-on-surface font-semibold">4.2 Hours</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 6%;"></div>
+</div>
+<span class="text-outline font-label-sm text-label-sm">Immediate telemetry settlement upon verified satellite oracle threshold</span>
+</div>
+<!-- Legacy Insurance Claims Speed -->
+<div class="space-y-1">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">history</span>
+              Traditional Disaster Claim Adjusting
+            </span>
+<span class="font-mono-metric text-error font-semibold">45 Days</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-error-container/60 rounded-full" style="width: 100%;"></div>
+</div>
+<span class="text-outline font-label-sm text-label-sm">Manual ground inspection, loss assessment, claim friction &amp; bureaucracy</span>
+</div>
+</div>
+<!-- Verification Precision Metric Pill -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between mt-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">99.94% Oracle Consensus</span>
+<span class="font-label-sm text-label-sm text-outline">Sentinel-2, GPM IMERG, ERA5 Reanalysis</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary-container font-label-sm text-label-sm font-semibold">
+          ZERO BASIS RISK
+        </span>
+</div>
+</div>
+</div>
+<!-- ROW 3 — PARAMETRIC RULE CONFIGURATION & TRIGGER EVALUATION -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Parametric Rule Configuration &amp; Real-time Triggers</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic threshold policies actively reading geospatial satellite feeds.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline hidden sm:inline">3 ACTIVE SIMULATION RULES</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Rule 1: Mekong Flash Flood Trigger v2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm relative group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="p-2 rounded-lg bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-[20px]">tsunami</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container/20 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                ACTIVE (TRIGGERED)
+              </span>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors" title="Contract Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Mekong Flash Flood Trigger v2</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Hydrological Basin Lower Delta • Contract #FL-MEK-04</p>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-high space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Sensor Trigger:</span>
+<span class="text-on-surface font-mono-metric">Discharge &gt; 12,000 m³/s for 6h</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Current Telemetry:</span>
+<span class="text-error font-semibold font-mono-metric">12,480 m³/s (Threshold Met)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Max Simulated Payout</span>
+<span class="font-mono-metric text-on-surface font-semibold text-primary">$5,000,000</span>
+</div>
+<button class="px-space-xs py-1 rounded bg-error-container text-on-error font-label-sm text-label-sm font-semibold hover:opacity-90 transition-opacity" type="button">
+            Audit Trigger
+          </button>
+</div>
+</div>
+<!-- Rule 2: Sahel Drought Soil Depletion -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm relative group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="p-2 rounded-lg bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">water_loss</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                ACTIVE (MONITORING)
+              </span>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors" title="Contract Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Sahel Drought Soil Depletion</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Sub-Saharan Agrozone 3B • Contract #DR-SHL-91</p>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-high space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Sensor Trigger:</span>
+<span class="text-on-surface font-mono-metric">Soil Moisture &lt; 12% for 21d</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Current Telemetry:</span>
+<span class="text-secondary font-semibold font-mono-metric">13.8% (Day 14 of 21)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Max Simulated Payout</span>
+<span class="font-mono-metric text-on-surface font-semibold text-tertiary">$8,000,000</span>
+</div>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-colors" type="button">
+            Configure Rules
+          </button>
+</div>
+</div>
+<!-- Rule 3: Urban Heatwave Health Relief -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shadow-sm relative group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="p-2 rounded-lg bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[20px]">sunny</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                ACTIVE (STANDBY)
+              </span>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors" title="Contract Options">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Urban Heatwave Health Relief</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Metropolitan Sindh Corridor • Contract #HW-SND-19</p>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-high space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Sensor Trigger:</span>
+<span class="text-on-surface font-mono-metric">WBGT &gt; 32°C for 72h</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Current Telemetry:</span>
+<span class="text-on-surface-variant font-semibold font-mono-metric">29.4°C (Sub-threshold)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Max Simulated Payout</span>
+<span class="font-mono-metric text-on-surface font-semibold text-secondary">$2,500,000</span>
+</div>
+<button class="px-space-xs py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-colors" type="button">
+            Configure Rules
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 4 — RECENT SIMULATED DISBURSEMENTS & AUDIT LOG -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm shadow-sm overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Simulated Disbursements &amp; Smart Contract Audit Log</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immutable parametric settlement ledger with cryptographic proof of loss.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2 top-2 text-[16px] text-outline">filter_list</span>
+<select class="bg-surface-container-high text-on-surface font-label-sm text-label-sm pl-7 pr-4 py-1.5 rounded-lg border-0 focus:outline-none">
+<option>All Disaster Classes</option>
+<option>Floods Only</option>
+<option>Droughts Only</option>
+<option>Heatwaves Only</option>
+</select>
+</div>
+<button class="px-space-xs py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">download</span>
+          Export Audit Proofs
+        </button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="w-full overflow-x-auto rounded-lg">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse min-w-[900px]">
+<thead>
+<tr class="bg-surface-container-high text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-xs px-space-sm">Request ID</th>
+<th class="py-space-xs px-space-sm">Monitored Region</th>
+<th class="py-space-xs px-space-sm">Hazard Indicator</th>
+<th class="py-space-xs px-space-sm">Triggering Rule</th>
+<th class="py-space-xs px-space-sm text-right">Calculated Payout</th>
+<th class="py-space-xs px-space-sm">Multi-Sig Audit Status</th>
+<th class="py-space-xs px-space-sm">Timestamp</th>
+<th class="py-space-xs px-space-sm text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-space-xs px-space-sm font-mono-metric text-primary font-semibold">CG-FIN-9821</td>
+<td class="py-space-xs px-space-sm text-on-surface font-medium">Lower Mekong Delta (Sector 4)</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-2xs py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm flex items-center gap-1 w-max">
+<span class="material-symbols-outlined text-[14px]">tsunami</span>
+                Flood
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Mekong Flash Flood Trigger v2</td>
+<td class="py-space-xs px-space-sm text-right font-mono-metric font-semibold text-on-surface">$5,000,000</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-error-container/20 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1 w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Pending Risk Review
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-outline font-label-sm text-label-sm">Today, 14:22:08 UTC</td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="px-space-xs py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors">
+                View Simulation Proof
+              </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-high/30">
+<td class="py-space-xs px-space-sm font-mono-metric text-primary font-semibold">CG-FIN-9818</td>
+<td class="py-space-xs px-space-sm text-on-surface font-medium">Northern Kenya Pastoral Belt</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-2xs py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm flex items-center gap-1 w-max">
+<span class="material-symbols-outlined text-[14px]">water_loss</span>
+                Drought
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Horn of Africa NDVI Deficit</td>
+<td class="py-space-xs px-space-sm text-right font-mono-metric font-semibold text-on-surface">$8,000,000</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Executed (4.1h)
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-outline font-label-sm text-label-sm">Yesterday, 19:40:12 UTC</td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="px-space-xs py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+                View Simulation Proof
+              </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-space-xs px-space-sm font-mono-metric text-primary font-semibold">CG-FIN-9790</td>
+<td class="py-space-xs px-space-sm text-on-surface font-medium">Brahmaputra River Basin</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-2xs py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm flex items-center gap-1 w-max">
+<span class="material-symbols-outlined text-[14px]">tsunami</span>
+                Flood
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Brahmaputra Crest Level Stage 3</td>
+<td class="py-space-xs px-space-sm text-right font-mono-metric font-semibold text-on-surface">$12,000,000</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Executed (3.8h)
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-outline font-label-sm text-label-sm">2 days ago, 08:11:45 UTC</td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="px-space-xs py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+                View Simulation Proof
+              </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-high/30">
+<td class="py-space-xs px-space-sm font-mono-metric text-primary font-semibold">CG-FIN-9755</td>
+<td class="py-space-xs px-space-sm text-on-surface font-medium">Jacobabad Thermal Belt</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-2xs py-0.5 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm flex items-center gap-1 w-max">
+<span class="material-symbols-outlined text-[14px]">sunny</span>
+                Heatwave
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Extreme WBGT Health Action Level</td>
+<td class="py-space-xs px-space-sm text-right font-mono-metric font-semibold text-on-surface">$1,200,000</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Simulated Approved
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-outline font-label-sm text-label-sm">3 days ago, 11:29:10 UTC</td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="px-space-xs py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+                View Simulation Proof
+              </button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-space-xs px-space-sm font-mono-metric text-primary font-semibold">CG-FIN-9732</td>
+<td class="py-space-xs px-space-sm text-on-surface font-medium">Chari-Logone River Catchment</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-2xs py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm flex items-center gap-1 w-max">
+<span class="material-symbols-outlined text-[14px]">tsunami</span>
+                Flood
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-on-surface-variant">Lake Chad Basin Stage Overtopping</td>
+<td class="py-space-xs px-space-sm text-right font-mono-metric font-semibold text-on-surface">$1,950,000</td>
+<td class="py-space-xs px-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Executed (4.5h)
+              </span>
+</td>
+<td class="py-space-xs px-space-sm text-outline font-label-sm text-label-sm">5 days ago, 04:02:18 UTC</td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="px-space-xs py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+                View Simulation Proof
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Ledger Status -->
+<div class="flex items-center justify-between pt-space-xs text-outline font-label-sm text-label-sm flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Cryptographic Hash Tree: Merkle Root <span class="font-mono-metric text-on-surface">0x8f...39a1</span> verified on Sepolia testnet</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span>Showing 1-5 of 48 records</span>
+<button class="px-2 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest">←</button>
+<button class="px-2 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest">→</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

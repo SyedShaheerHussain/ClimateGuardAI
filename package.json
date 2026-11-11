@@ -1,0 +1,41 @@
+{
+  "name": "climateguard-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClimateGuard AI — Multi-Hazard Climate Risk Intelligence & Automated Disaster Finance Platform",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node --experimental-strip-types --import ./tests/register-ts-hooks.mjs --test tests/engines.test.ts",
+    "benchmark": "node scripts/benchmark/run-benchmark.mjs",
+    "benchmark:c01": "node scripts/benchmark/run-c01-benchmark.mjs",
+    "benchmark:c07": "python scripts/benchmark/run-c07-benchmark.py",
+    "benchmark:c15": "node scripts/benchmark/run-c15-benchmark.mjs",
+    "benchmark:all": "node scripts/benchmark/run-benchmark.mjs --all"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.46.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.454.0",
+    "maplibre-gl": "^4.7.1",
+    "next": "^14.2.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.13.3",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  }
+}

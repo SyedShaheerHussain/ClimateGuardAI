@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-tertiary": "#003731",
+        "inverse-primary": "#006877",
+        "on-error": "#690005",
+        "on-surface": "#d4e4fa",
+        "surface-tint": "#2fd9f4",
+        "surface-variant": "#273647",
+        "surface-container-lowest": "#010f1f",
+        "outline": "#859397",
+        "on-secondary-fixed-variant": "#004395",
+        "on-primary-fixed-variant": "#004e5a",
+        "inverse-on-surface": "#233143",
+        "on-secondary-fixed": "#001a42",
+        "surface-dim": "#051424",
+        "on-tertiary-container": "#00594f",
+        "on-background": "#d4e4fa",
+        "tertiary": "#6af2de",
+        "primary-fixed-dim": "#2fd9f4",
+        "on-secondary": "#002e6a",
+        "surface": "#051424",
+        "tertiary-fixed": "#71f8e4",
+        "on-primary-container": "#005763",
+        "surface-container-high": "#1c2b3c",
+        "on-surface-variant": "#bbc9cd",
+        "on-tertiary-fixed-variant": "#005048",
+        "surface-container-highest": "#273647",
+        "tertiary-container": "#47d5c2",
+        "secondary": "#adc6ff",
+        "outline-variant": "#3c494c",
+        "secondary-container": "#0566d9",
+        "error": "#ffb4ab",
+        "surface-container": "#122131",
+        "secondary-fixed": "#d8e2ff",
+        "background": "#051424",
+        "inverse-surface": "#d4e4fa",
+        "on-secondary-container": "#e6ecff",
+        "primary": "#8aebff",
+        "on-tertiary-fixed": "#00201c",
+        "secondary-fixed-dim": "#adc6ff",
+        "surface-bright": "#2c3a4c",
+        "primary-container": "#22d3ee",
+        "surface-container-low": "#0d1c2d",
+        "tertiary-fixed-dim": "#4fdbc8",
+        "on-primary-fixed": "#001f25",
+        "primary-fixed": "a2eeff",
+        "error-container": "#93000a",
+        "on-primary": "#00363e",
+        "on-error-container": "#ffdad6"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.75rem",
+        "space-md": "1rem",
+        "space-2xs": "0.25rem",
+        "space-2xl": "3rem",
+        "gutter-desktop": "1.5rem",
+        "gutter": "1rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "1rem",
+        "margin-desktop": "1.5rem",
+        "space-xs": "0.5rem"
+      },
+      "fontFamily": {
+        "headline-md": ["Manrope"],
+        "mono-metric": ["Inter"],
+        "display-lg-mobile": ["Manrope"],
+        "label-sm": ["Inter"],
+        "display-md": ["Manrope"],
+        "display-md-mobile": ["Manrope"],
+        "body-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "display-lg": ["Manrope"],
+        "title-lg": ["Inter"],
+        "body-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-lg": ["Manrope"],
+        "title-md": ["Inter"],
+        "headline-sm": ["Manrope"]
+      },
+      "fontSize": {
+        "headline-md": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "mono-metric": ["1.25rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "display-lg-mobile": ["2.25rem", {"lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["0.6875rem", {"lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "600"}],
+        "display-md": ["2.5rem", {"lineHeight": "3rem", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+        "display-md-mobile": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "body-sm": ["0.75rem", {"lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400"}],
+        "label-md": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "600"}],
+        "display-lg": ["3.5rem", {"lineHeight": "4rem", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+        "title-lg": ["1.125rem", {"lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-lg": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "body-md": ["0.875rem", {"lineHeight": "1.375rem", "letterSpacing": "0", "fontWeight": "400"}],
+        "headline-lg": ["1.875rem", {"lineHeight": "2.375rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "title-md": ["1rem", {"lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "headline-sm": ["1.25rem", {"lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[250px] bg-surface-container-low border-r border-outline-variant z-50 flex flex-col justify-between"><div class="flex flex-col h-full"><div class="h-[72px] px-space-md flex items-center justify-between border-b border-outline-variant"><div class="flex items-center gap-space-xs"><img alt="ClimateGuard AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCU_Ya2ti5_-1RFMCeeOEKCjv6Q7J7Tr5B8ePKmk-JZb17HA012l5lg5WmlikGmAwzLUZxkaFOBK25DQ-a6CFFJdiUQ2T3Xq2xMxEtd8lDwBDq28inNfOtqXLHqiegC0ZmuDaVSjwOUKXt5xw9aE2R7FQxZZ1T13szL4Qa6NgioJCtFHRNyNTwAVQ29jzKZ5eJMpFiWtBb9bn5VNTMT4q3ziw-6oMo-XRwOwxoUYzjuHg"/><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface text-[1.125rem]">ClimateGuard</span></div><span class="px-space-2xs py-0.5 rounded bg-primary-container/20 text-primary-container border border-primary-container/40 font-label-sm text-label-sm uppercase">Enterprise</span></div><div class="flex-1 overflow-y-auto px-space-sm py-space-md space-y-space-lg"><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Main Menu</p><a aria-current="page" class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg transition-colors bg-surface-container-high text-primary font-semibold" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Overview</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="live-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Live Monitoring</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="risk-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span>Risk Intelligence</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="flood-forecast" href="#"><span class="material-symbols-outlined text-[18px]">tsunami</span>Flood Forecast</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="heatwave-forecast" href="#"><span class="material-symbols-outlined text-[18px]">sunny</span>Heatwave Forecast</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="drought-monitoring" href="#"><span class="material-symbols-outlined text-[18px]">water_loss</span>Drought Monitoring</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="geospatial-map" href="#"><span class="material-symbols-outlined text-[18px]">public</span>Geospatial Map</a></nav><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Finance</p><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="disaster-finance" href="#"><span class="material-symbols-outlined text-[18px]">account_balance</span>Disaster Finance</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="funding-triggers" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span>Funding Triggers</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="incident-reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span>Incident Reports</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="analytics" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Analytics</a></nav><nav class="space-y-space-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold"><p class="px-space-xs mb-space-2xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System</p><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="c01-edge-benchmark" href="#"><span class="material-symbols-outlined text-[18px]">memory</span>C01 Edge Benchmark</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="data-sources" href="#"><span class="material-symbols-outlined text-[18px]">satellite_alt</span>Data Sources</a><a class="flex items-center gap-space-xs px-space-xs py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</a></nav></div><div class="p-space-sm border-t border-outline-variant bg-surface-container-lowest flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-9 h-9 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBKlHGeCfdgkzIUI0jnt3WdbvUwmAXj78a-EfyV23QoyeWNfcPj6hkx9VT7FH2k5T_mg_pLWN8pxEI8GALzqRbjxgazSWqXuUx0-6hViatxd_z9krLyWE0WJ1-Guvf-oq7V4QiopExhlc5t113myh0j1uB2yX6m4pg13Mn60IBEfO47lnVZB8VzYAWHDrFo3rf7LGVb7EFjbSl4xYTipe7Fi2cptO7gRHljuveqJq"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Dr. Aris Thorne</span><span class="font-label-sm text-label-sm text-on-surface-variant">Risk Director</span></div></div><a class="text-outline hover:text-error transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-[250px]"><header class="fixed top-0 left-[250px] right-0 h-[72px] bg-surface-container-low/90 backdrop-blur-xl border-b border-outline-variant z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">menu_open</span></button><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="hover:text-on-surface">Telemetry Operations</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-primary font-semibold">Global Sentinel</span></div></div><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-outline">search</span><input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg pl-9 pr-space-md py-1.5 font-body-sm text-body-sm text-on-surface placeholder-outline focus:border-primary-container focus:outline-none transition-colors" placeholder="Search basin, province, or lat/long..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-2xs px-space-xs py-1 rounded-full bg-tertiary-container/10 border border-tertiary/40"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary font-mono-metric">SYSTEM NORMAL • 99.98%</span></div><div class="relative"><button class="relative text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface-container-low"></span></button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBKlHGeCfdgkzIUI0jnt3WdbvUwmAXj78a-EfyV23QoyeWNfcPj6hkx9VT7FH2k5T_mg_pLWN8pxEI8GALzqRbjxgazSWqXuUx0-6hViatxd_z9krLyWE0WJ1-Guvf-oq7V4QiopExhlc5t113myh0j1uB2yX6m4pg13Mn60IBEfO47lnVZB8VzYAWHDrFo3rf7LGVb7EFjbSl4xYTipe7Fi2cptO7gRHljuveqJq"/></div></header><main class="relative pt-[72px] p-[28px] bg-surface min-h-screen"><div class="flex flex-col w-full space-y-space-lg text-on-surface">
+<!-- TOP COMMAND & SCOPE HEADER -->
+<section class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container">Live Telemetry Synchronized</span>
+<span class="text-outline text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono-metric">ORBITAL SWATH v4.8</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Climate Intelligence Overview</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Monitor environmental risks, predictive vector thresholds, and disaster finance activity.</p>
+</div>
+<!-- Interactive Filters & Controls -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-low p-1.5 rounded-xl shadow-md">
+<!-- Location Selector -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-high hover:bg-surface-variant text-on-surface text-body-sm font-body-sm pl-8 pr-8 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer transition-colors">
+<option>Global Overview — All Monitored Zones</option>
+<option>South American Hydrological Basin (Rio Paraná)</option>
+<option>South Asia Sector 04 (Rajasthan / Indus)</option>
+<option>Horn of Africa Drought Corridor</option>
+<option>Lower Mekong River Basin</option>
+</select>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-[16px] text-primary pointer-events-none">public</span>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Time Range Trigger -->
+<button class="flex items-center gap-1.5 bg-surface-container-high hover:bg-surface-variant text-on-surface-variant hover:text-on-surface text-body-sm font-body-sm px-3 py-2 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span class="font-mono-metric font-semibold text-label-md">Last 24 Hours • Live Telemetry</span>
+</button>
+<!-- Refresh Stream -->
+<button class="flex items-center gap-1.5 bg-primary text-on-primary font-title-md text-body-sm px-3.5 py-2 rounded-lg hover:bg-primary-container transition-all active:scale-95 shadow-sm" id="refreshBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="font-semibold">Refresh Stream</span>
+</button>
+</div>
+</section>
+<!-- ROW 1: 4 INSTRUMENT-GRADE KPI CARDS -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1: Active Risk Zones -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Geospatial Watch</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 font-bold">18 Active Basins</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/15 text-primary text-label-sm font-label-sm uppercase tracking-wide flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> Live Satellite
+        </span>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-body-sm font-body-sm bg-surface-container-lowest/60 p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-outline">High Priority</span>
+<span class="font-mono-metric text-error font-bold">04 Zones</span>
+</div>
+<div class="w-px h-6 bg-surface-variant"></div>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-outline">Moderate</span>
+<span class="font-mono-metric text-secondary font-semibold">09 Zones</span>
+</div>
+<div class="w-px h-6 bg-surface-variant"></div>
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-outline">Nominal</span>
+<span class="font-mono-metric text-tertiary">05 Zones</span>
+</div>
+</div>
+</div>
+<!-- KPI 2: Flood Risk -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[18px]">tsunami</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Critical Warning</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">88%</h2>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Rio Paraná Basin</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">water_full</span>
+</div>
+</div>
+<div class="mt-4 pt-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline mb-1">
+<span>Discharge: <strong class="text-on-surface font-mono-metric">14,200 m³/s</strong></span>
+<span class="text-error font-mono-metric font-semibold">+18% vs 10yr Base</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full transition-all duration-700" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+<!-- KPI 3: Heatwave Risk -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">sunny</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">High Risk Anomaly</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">76%</h2>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Rajasthan Sector</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">thermostat</span>
+</div>
+</div>
+<div class="mt-4 pt-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline mb-1">
+<span>Peak Ambient: <strong class="text-on-surface font-mono-metric">46.2°C</strong></span>
+<span class="text-secondary font-mono-metric font-semibold">WBGT 31.8°C</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full transition-all duration-700" style="width: 76%;"></div>
+</div>
+</div>
+</div>
+<!-- KPI 4: Drought Risk -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow relative flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">water_loss</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Severe Deficit</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">64%</h2>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Horn of Africa Z4</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">humidity_low</span>
+</div>
+</div>
+<div class="mt-4 pt-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline mb-1">
+<span>Soil Root Zone: <strong class="text-on-surface font-mono-metric">11.4%</strong></span>
+<span class="text-tertiary font-mono-metric font-semibold">-41% Anomaly</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full transition-all duration-700" style="width: 64%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ROW 2: GEOSPATIAL MAP VIEWPORT (2/3) + RISK DISTRIBUTION BREAKDOWN (1/3) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- LEFT 2/3: Geospatial Map Viewport -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col relative overflow-hidden">
+<!-- Map Chrome Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm mb-space-sm z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">public</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Active Environmental Threat Matrix</h2>
+<span class="bg-surface-container-high text-primary-container px-2 py-0.5 rounded text-label-sm font-mono-metric font-semibold">GEO-SYNCH 18.2Hz</span>
+</div>
+<!-- Map Layer & View Switchers -->
+<div class="flex items-center gap-1.5 bg-surface-container-lowest p-1 rounded-lg">
+<button class="bg-surface-container-high text-on-surface px-2.5 py-1 rounded text-label-sm font-semibold transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px] text-tertiary">satellite_alt</span> Satellite
+          </button>
+<button class="text-on-surface-variant hover:text-on-surface px-2.5 py-1 rounded text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">terrain</span> Topographic
+          </button>
+<button class="text-on-surface-variant hover:text-on-surface px-2.5 py-1 rounded text-label-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">layers</span> Hazards
+          </button>
+</div>
+</div>
+<!-- Geospatial Viewport Container -->
+<div class="relative w-full h-[410px] rounded-lg overflow-hidden bg-surface-container-lowest group">
+<!-- Interactive Map Canvas Element -->
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-location="Global Climate Hazards, South America, North Africa, Indus Basin" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMDwjUQfwSnCvLP4_nyTsLJxwcVWgUoYD9w8-Gler-f10h_vEbZjTO-V1DfsJIS9MSpRCxrMiDRNNTheOH8YQxpyfJlMVMfgfNmyrDms947p6r0Bk0CwdoXWP4-RPgw6n_5nVRoUk-w-CQNCuMmMIZb8rzt9iFDbVpi5Z_vTDbSrcKN_txOoXhsy6A_hnSAQbw0V7beHTyl4XnlhPaAcBUOfE9okpFNXdFtG04CBFl');">
+</div>
+<!-- Dark Gradient Scrim for crisp HUD visibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-surface-dim/30 to-surface-dim/60 pointer-events-none"></div>
+<!-- Hotspot 1: Rio Paraná Flood (Pulsing Critical Alert) -->
+<div class="absolute top-1/2 left-[32%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-8 h-8 rounded-full bg-error/40 animate-ping"></span>
+<span class="relative w-4 h-4 rounded-full bg-error border-2 border-surface-lowest flex items-center justify-center shadow-lg"></span>
+</div>
+<!-- Tooltip HUD -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-surface-container/95 backdrop-blur-md px-3 py-2 rounded-lg text-body-sm shadow-xl whitespace-nowrap pointer-events-none opacity-90 group-hover/pin:opacity-100 transition-opacity">
+<div class="flex items-center gap-1.5 text-error font-semibold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">flood</span> PARANÁ BASIN • CRITICAL (88%)
+            </div>
+<div class="text-on-surface-variant font-mono-metric text-label-sm mt-0.5">25.5° S, 54.5° W • 14,200 m³/s</div>
+</div>
+</div>
+<!-- Hotspot 2: Rajasthan Heatwave -->
+<div class="absolute top-[38%] left-[68%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin2">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-7 h-7 rounded-full bg-secondary-container/40 animate-ping"></span>
+<span class="relative w-3.5 h-3.5 rounded-full bg-secondary border-2 border-surface-lowest shadow-lg"></span>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-surface-container/95 backdrop-blur-md px-3 py-2 rounded-lg text-body-sm shadow-xl whitespace-nowrap pointer-events-none opacity-90 group-hover/pin2:opacity-100 transition-opacity">
+<div class="flex items-center gap-1.5 text-secondary font-semibold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">sunny</span> RAJASTHAN CORRIDOR • HIGH (76%)
+            </div>
+<div class="text-on-surface-variant font-mono-metric text-label-sm mt-0.5">26.9° N, 70.9° E • 46.2°C Max</div>
+</div>
+</div>
+<!-- Hotspot 3: Horn of Africa Drought -->
+<div class="absolute top-[52%] left-[58%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin3">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-6 h-6 rounded-full bg-tertiary/40 animate-ping"></span>
+<span class="relative w-3 h-3 rounded-full bg-tertiary border-2 border-surface-lowest shadow-lg"></span>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-surface-container/95 backdrop-blur-md px-3 py-2 rounded-lg text-body-sm shadow-xl whitespace-nowrap pointer-events-none opacity-0 group-hover/pin3:opacity-100 transition-opacity">
+<div class="flex items-center gap-1.5 text-tertiary font-semibold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[14px]">water_loss</span> HORN OF AFRICA • DEFICIT (64%)
+            </div>
+<div class="text-on-surface-variant font-mono-metric text-label-sm mt-0.5">04.1° N, 42.1° E • -41% Soil Moist.</div>
+</div>
+</div>
+<!-- Floating Map HUD Overlay: Coordinates & Zoom Controls -->
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1.5 rounded-lg flex items-center gap-3 font-mono-metric text-label-sm text-outline">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>LAT: 25.5482° S</span>
+</div>
+<div class="text-on-surface">LON: 54.5822° W</div>
+<div>ELEV: 164m</div>
+</div>
+<!-- Map Layer Legend (Floating Bottom Right) -->
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md p-2.5 rounded-lg shadow-lg flex items-center gap-4 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="text-on-surface">Flood (High/Crit)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Thermal Stress</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface">Aridity Anomaly</span>
+</div>
+</div>
+<!-- Zoom HUD Actions -->
+<div class="absolute bottom-3 left-3 flex flex-col gap-1">
+<button class="w-8 h-8 rounded bg-surface-container/90 hover:bg-surface-variant backdrop-blur-md text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container/90 hover:bg-surface-variant backdrop-blur-md text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT 1/3: Risk Distribution Breakdown -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Hazard Distribution</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Global exposure aggregation</p>
+</div>
+<span class="text-label-sm font-mono-metric font-semibold text-primary bg-primary-container/10 px-2 py-0.5 rounded">Σ 100%</span>
+</div>
+<!-- Donut & Breakdown Visualization -->
+<div class="py-2 flex items-center justify-center relative">
+<!-- Inline Clean SVG Multi-Segment Ring Chart -->
+<svg class="w-44 h-44 transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background track -->
+<circle class="text-surface-container-highest" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-width="11"></circle>
+<!-- Flood 42% (Circumference ~ 238.76. 42% = 100.28) -->
+<circle class="text-error" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="100.28 238.76" stroke-dashoffset="0" stroke-width="11"></circle>
+<!-- Heatwave 31% (31% = 74.01) -->
+<circle class="text-secondary" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="74.01 238.76" stroke-dashoffset="-100.28" stroke-width="11"></circle>
+<!-- Drought 27% (27% = 64.46) -->
+<circle class="text-tertiary" cx="50" cy="50" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="64.46 238.76" stroke-dashoffset="-174.29" stroke-width="11"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-mono-metric text-headline-sm font-bold text-on-surface">18</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Basins</span>
+</div>
+</div>
+<!-- Categorical Breakdown Bars -->
+<div class="space-y-space-xs mt-3">
+<!-- Flood -->
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-error"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Inundation / Flash Flood</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono-metric text-body-sm font-bold text-error">42%</span>
+<span class="text-label-sm font-label-sm text-outline">(8 Basins)</span>
+</div>
+</div>
+<!-- Heatwave -->
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Thermal Stress &amp; Heatwaves</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono-metric text-body-sm font-bold text-secondary">31%</span>
+<span class="text-label-sm font-label-sm text-outline">(6 Basins)</span>
+</div>
+</div>
+<!-- Drought -->
+<div class="bg-surface-container p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-tertiary"></span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Agricultural Aridity / Drought</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono-metric text-body-sm font-bold text-tertiary">27%</span>
+<span class="text-label-sm font-label-sm text-outline">(4 Basins)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Severity Tier Breakdown -->
+<div class="mt-4 pt-3 bg-surface-container-lowest/60 p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1.5">Impact Severity Stratification</span>
+<div class="flex items-center gap-1 w-full h-2 rounded-full overflow-hidden bg-surface-variant">
+<div class="bg-error h-full" style="width: 22%;" title="Critical: 22%"></div>
+<div class="bg-secondary-container h-full" style="width: 38%;" title="High Risk: 38%"></div>
+<div class="bg-tertiary-container h-full" style="width: 40%;" title="Moderate: 40%"></div>
+</div>
+<div class="flex justify-between items-center text-label-sm font-mono-metric text-outline mt-1.5">
+<span class="text-error font-semibold">Critical: 4</span>
+<span class="text-secondary font-semibold">High: 7</span>
+<span class="text-tertiary font-semibold">Moderate: 7</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ROW 3: MULTI-METRIC WEATHER TRENDS CHART (LEFT) + HAZARD SUMMARY MATRIX (RIGHT) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- LEFT (7 Cols): Multi-metric Weather Trends Chart -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-xs mb-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">ssid_chart</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Hydro-Meteorological 48h Telemetry</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous sensor stream: Temperature, Precipitation &amp; Relative Humidity</p>
+</div>
+<!-- Series Toggles Legend -->
+<div class="flex items-center gap-3 text-label-sm font-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface font-semibold">
+<span class="w-3 h-0.5 bg-secondary"></span> Temp (°C)
+            </span>
+<span class="flex items-center gap-1.5 text-on-surface font-semibold">
+<span class="w-3 h-0.5 bg-primary"></span> Rainfall (mm)
+            </span>
+<span class="flex items-center gap-1.5 text-on-surface font-semibold">
+<span class="w-3 h-0.5 bg-tertiary"></span> Humidity (%)
+            </span>
+</div>
+</div>
+<!-- Telemetry Multi-series Chart Visual (SVG) -->
+<div class="relative w-full h-[220px] bg-surface-container-lowest/80 rounded-lg p-3 flex flex-col justify-between">
+<!-- Background Grid Lines -->
+<div class="absolute inset-x-3 inset-y-3 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+</div>
+<!-- Vertical Current Time Needle -->
+<div class="absolute top-3 bottom-8 left-[64%] w-px bg-primary/70 border-dashed pointer-events-none z-10">
+<span class="absolute -top-1.5 left-1/2 -translate-x-1/2 bg-primary text-on-primary font-mono-metric text-[9px] px-1 rounded uppercase font-bold">Now</span>
+</div>
+<!-- Forecast Zone Shade -->
+<div class="absolute top-3 bottom-8 left-[64%] right-3 bg-primary/5 pointer-events-none rounded-r-lg">
+<span class="absolute bottom-2 right-2 text-label-sm font-mono-metric text-outline">Forecast Projection →</span>
+</div>
+<!-- Inline Line Chart SVG -->
+<svg class="w-full h-[170px] overflow-visible" preserveaspectratio="none" viewbox="0 0 500 150">
+<defs>
+<lineargradient id="rainGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#8aebff" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#8aebff" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Rainfall Area & Line (Cyan) -->
+<path d="M 0,140 Q 60,135 120,110 T 240,65 T 320,30 T 400,75 T 500,105 L 500,150 L 0,150 Z" fill="url(#rainGrad)"></path>
+<path d="M 0,140 Q 60,135 120,110 T 240,65 T 320,30 T 400,75 T 500,105" fill="none" stroke="#8aebff" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Temperature Line (Blue Accent / Secondary) -->
+<path d="M 0,90 Q 70,80 140,50 T 260,35 T 320,45 T 410,25 T 500,20" fill="none" stroke="#adc6ff" stroke-dasharray="3,0" stroke-linecap="round" stroke-width="2"></path>
+<!-- Relative Humidity Line (Tertiary Mint) -->
+<path d="M 0,45 Q 80,60 160,85 T 280,115 T 320,130 T 420,110 T 500,85" fill="none" stroke="#6af2de" stroke-dasharray="4,3" stroke-width="1.8"></path>
+<!-- Peak Trigger Indicator dot -->
+<circle cx="320" cy="30" fill="#ffb4ab" r="4" stroke="#051424" stroke-width="2"></circle>
+</svg>
+<!-- Timeline Axis Labels -->
+<div class="flex justify-between items-center text-label-sm font-mono-metric text-outline pt-1">
+<span>T-48h (00:00)</span>
+<span>T-36h</span>
+<span>T-24h (Midday)</span>
+<span>T-12h</span>
+<span class="text-primary font-semibold">T-0 (Present)</span>
+<span>+12h</span>
+<span>+24h (Projected)</span>
+</div>
+</div>
+</div>
+<!-- Quick stats ribbon -->
+<div class="grid grid-cols-3 gap-2 mt-3 pt-3">
+<div class="bg-surface-container p-2 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-outline block">Precip Peak Rate</span>
+<span class="font-mono-metric text-body-md font-bold text-primary">68.4 mm/hr</span>
+</div>
+<div class="bg-surface-container p-2 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-outline block">Ambient High</span>
+<span class="font-mono-metric text-body-md font-bold text-secondary">46.2 °C</span>
+</div>
+<div class="bg-surface-container p-2 rounded-lg text-center">
+<span class="font-label-sm text-label-sm text-outline block">Vapor Pressure Deficit</span>
+<span class="font-mono-metric text-body-md font-bold text-tertiary">3.82 kPa</span>
+</div>
+</div>
+</div>
+<!-- RIGHT (5 Cols): Hazard Summary Matrix Cards -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Hazard Sentinel Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active algorithmic event detection</p>
+</div>
+<span class="font-mono-metric text-label-sm text-outline">18 Triggers</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Flood Matrix Card -->
+<div class="p-3 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-error/15 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">flood</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Flood Alert System</span>
+<span class="bg-error/20 text-error text-label-sm px-1.5 py-0.5 rounded font-bold font-mono-metric">4 ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Paraná, Brahmaputra, Zambezi &amp; Irrawaddy</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- Heatwave Matrix Card -->
+<div class="p-3 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">thermostat</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Extreme Heatwave Watch</span>
+<span class="bg-secondary-container/20 text-secondary text-label-sm px-1.5 py-0.5 rounded font-bold font-mono-metric">6 ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rajasthan, Sahel Sector, Central Valley, Sevilla</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- Drought Matrix Card -->
+<div class="p-3 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">water_loss</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Drought Aridity Anomaly</span>
+<span class="bg-tertiary-container/20 text-tertiary text-label-sm px-1.5 py-0.5 rounded font-bold font-mono-metric">8 ACTIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Horn of Africa, Gran Chaco, Mediterranean East</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Trigger Drilldown -->
+<div class="pt-3 mt-3 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline">Autonomous Sensor Cross-Validation:</span>
+<span class="text-primary font-mono-metric font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> 99.4% Confidence
+        </span>
+</div>
+</div>
+</section>
+<!-- ROW 4: RECENT INCIDENTS TABLE -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm mb-space-xs">
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Active Incident Feeds</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified anomaly triggers across monitored transboundary catchments</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">Real-Time Ingestion</span>
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+</div>
+<!-- Dense Data Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm whitespace-nowrap">
+<thead>
+<tr class="bg-surface-container-lowest text-outline text-label-sm uppercase font-label-sm">
+<th class="py-2.5 px-4 rounded-l-lg">Incident ID</th>
+<th class="py-2.5 px-4">Basin / Location</th>
+<th class="py-2.5 px-4">Hazard Type</th>
+<th class="py-2.5 px-4">Risk Severity</th>
+<th class="py-2.5 px-4">Detected Timestamp</th>
+<th class="py-2.5 px-4">Parametric Status</th>
+<th class="py-2.5 px-4 text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant">
+<!-- Row 1: Rio Parana -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3 px-4 font-mono-metric font-semibold text-primary">#CG-FL-8902</td>
+<td class="py-3 px-4">
+<div class="font-semibold text-on-surface">Rio Paraná Delta</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant font-mono-metric">LAT -25.54 • LON -54.58</div>
+</td>
+<td class="py-3 px-4">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-error text-[16px]">tsunami</span> Flash Inundation
+              </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold bg-error/20 text-error inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> Critical 88%
+              </span>
+</td>
+<td class="py-3 px-4 font-mono-metric text-on-surface-variant">Today • 14:22:04 UTC</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-semibold bg-error-container/30 text-error">
+                Active Breach
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-primary hover:text-on-surface text-label-md font-semibold bg-surface-container px-3 py-1.5 rounded hover:bg-primary-container/20 transition-colors" type="button">
+                Inspect Matrix
+              </button>
+</td>
+</tr>
+<!-- Row 2: Rajasthan -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3 px-4 font-mono-metric font-semibold text-primary">#CG-HW-4419</td>
+<td class="py-3 px-4">
+<div class="font-semibold text-on-surface">Rajasthan Thar Corridor</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant font-mono-metric">LAT +26.91 • LON +70.90</div>
+</td>
+<td class="py-3 px-4">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">sunny</span> Extreme Heat Dome
+              </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
+                High Risk 76%
+              </span>
+</td>
+<td class="py-3 px-4 font-mono-metric text-on-surface-variant">Today • 11:08:12 UTC</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-semibold bg-secondary-container/20 text-secondary">
+                Under Review
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-primary hover:text-on-surface text-label-md font-semibold bg-surface-container px-3 py-1.5 rounded hover:bg-primary-container/20 transition-colors" type="button">
+                Inspect Matrix
+              </button>
+</td>
+</tr>
+<!-- Row 3: Horn of Africa -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3 px-4 font-mono-metric font-semibold text-primary">#CG-DR-1184</td>
+<td class="py-3 px-4">
+<div class="font-semibold text-on-surface">Horn of Africa Sector 4</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant font-mono-metric">LAT +04.18 • LON +42.12</div>
+</td>
+<td class="py-3 px-4">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">water_loss</span> Root-Zone Desiccation
+              </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold bg-tertiary-container/20 text-tertiary inline-flex items-center gap-1">
+                Severe Deficit 64%
+              </span>
+</td>
+<td class="py-3 px-4 font-mono-metric text-on-surface-variant">Yesterday • 19:40:55 UTC</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-semibold bg-surface-variant text-on-surface-variant">
+                Active Assessment
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-primary hover:text-on-surface text-label-md font-semibold bg-surface-container px-3 py-1.5 rounded hover:bg-primary-container/20 transition-colors" type="button">
+                Inspect Matrix
+              </button>
+</td>
+</tr>
+<!-- Row 4: Mekong Basin -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3 px-4 font-mono-metric font-semibold text-primary">#CG-FL-3012</td>
+<td class="py-3 px-4">
+<div class="font-semibold text-on-surface">Lower Mekong Basin (Stung Treng)</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant font-mono-metric">LAT +13.52 • LON +105.97</div>
+</td>
+<td class="py-3 px-4">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-error text-[16px]">tsunami</span> Riverine Overflow
+              </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold bg-secondary-container/20 text-secondary inline-flex items-center gap-1">
+                Moderate 58%
+              </span>
+</td>
+<td class="py-3 px-4 font-mono-metric text-on-surface-variant">2 days ago • 04:15:30 UTC</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-semibold bg-tertiary/10 text-tertiary">
+                Mitigated (Crested)
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-primary hover:text-on-surface text-label-md font-semibold bg-surface-container px-3 py-1.5 rounded hover:bg-primary-container/20 transition-colors" type="button">
+                Inspect Matrix
+              </button>
+</td>
+</tr>
+<!-- Row 5: Gran Chaco -->
+<tr class="hover:bg-surface-container-high/60 transition-colors">
+<td class="py-3 px-4 font-mono-metric font-semibold text-primary">#CG-DR-0925</td>
+<td class="py-3 px-4">
+<div class="font-semibold text-on-surface">Gran Chaco Biosphere Buffer</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant font-mono-metric">LAT -21.40 • LON -61.22</div>
+</td>
+<td class="py-3 px-4">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">humidity_low</span> Soil Moisture Deficit
+              </span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2.5 py-1 rounded-full text-label-sm font-label-sm font-bold bg-tertiary-container/20 text-tertiary inline-flex items-center gap-1">
+                Moderate 52%
+              </span>
+</td>
+<td class="py-3 px-4 font-mono-metric text-on-surface-variant">3 days ago • 22:11:09 UTC</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-semibold bg-surface-variant text-on-surface-variant">
+                Active Assessment
+              </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-primary hover:text-on-surface text-label-md font-semibold bg-surface-container px-3 py-1.5 rounded hover:bg-primary-container/20 transition-colors" type="button">
+                Inspect Matrix
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- ROW 5: AUTOMATED FUNDING ACTIVITY (PARAMETRIC DISASTER FINANCE) -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm mb-space-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold tracking-tight">Automated Parametric Funding Ledger</h2>
+<span class="bg-primary/20 text-primary px-2.5 py-0.5 rounded text-label-sm font-mono-metric font-semibold">PARAMETRIC SIMULATION MODE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Smart contractual capital triggers linked directly to satellite validation indices</p>
+</div>
+</div>
+<!-- Quick Action / Documentation -->
+<button class="flex items-center gap-1 text-label-md font-label-md text-primary hover:text-on-surface transition-colors bg-surface-container px-3 py-1.5 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> Full Financial Audit
+      </button>
+</div>
+<!-- Mini KPI Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Triggered Rules (24h)</span>
+<div class="font-mono-metric text-headline-md font-bold text-on-surface mt-1">07 Events</div>
+<span class="text-label-sm text-error font-mono-metric">4 Exceeded Payout Cap</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Pending Requests Escrow</span>
+<div class="font-mono-metric text-headline-md font-bold text-secondary mt-1">$4,200,000</div>
+<span class="text-label-sm text-outline font-mono-metric">2 Basins under multi-sig audit</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">hourglass_top</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container p-space-md rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Approved Simulations (MTD)</span>
+<div class="font-mono-metric text-headline-md font-bold text-tertiary mt-1">$18,500,000</div>
+<span class="text-label-sm text-tertiary font-mono-metric">100% Contract Solvency</span>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Micro Activity Ledger List -->
+<div class="bg-surface-container-lowest/80 rounded-lg p-space-sm divide-y divide-surface-variant">
+<div class="py-2.5 px-3 flex flex-wrap items-center justify-between gap-2 text-body-sm font-body-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-[18px]">account_balance_wallet</span>
+<div>
+<span class="font-semibold text-on-surface">Emergency Flood Liquidity Injection</span>
+<span class="text-outline text-label-sm ml-2">Paraná River Sub-Catchment Basin</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-mono-metric font-bold text-error text-body-md">$2,500,000 USD</span>
+<span class="px-2 py-0.5 bg-error/15 text-error rounded text-label-sm font-semibold font-mono-metric">TRIGGER CONFIRMED</span>
+<span class="text-label-sm font-mono-metric text-outline">18m ago</span>
+</div>
+</div>
+<div class="py-2.5 px-3 flex flex-wrap items-center justify-between gap-2 text-body-sm font-body-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[18px]">emergency</span>
+<div>
+<span class="font-semibold text-on-surface">Heat Wave Relief Buffer Allocation</span>
+<span class="text-outline text-label-sm ml-2">Rajasthan Urban Resiliency Consortium</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-mono-metric font-bold text-secondary text-body-md">$1,700,000 USD</span>
+<span class="px-2 py-0.5 bg-secondary-container/20 text-secondary rounded text-label-sm font-semibold font-mono-metric">VALIDATION QUEUED</span>
+<span class="text-label-sm font-mono-metric text-outline">1h 14m ago</span>
+</div>
+</div>
+<div class="py-2.5 px-3 flex flex-wrap items-center justify-between gap-2 text-body-sm font-body-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<div>
+<span class="font-semibold text-on-surface">Parametric Drought Micro-Insurance Payout</span>
+<span class="text-outline text-label-sm ml-2">East Africa Pastoralists Syndicate</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-mono-metric font-bold text-tertiary text-body-md">$650,000 USD</span>
+<span class="px-2 py-0.5 bg-tertiary-container/20 text-tertiary rounded text-label-sm font-semibold font-mono-metric">COMPLETED SIM</span>
+<span class="text-label-sm font-mono-metric text-outline">4h 02m ago</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for refresh button state
+  document.getElementById('refreshBtn')?.addEventListener('click', function() {
+    const btn = this;
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.classList.add('animate-spin');
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+      }, 1000);
+    }
+  });
+</script></main></div></body></html>

@@ -1,0 +1,118 @@
+{
+  "projectTitle": "ClimateGuard AI Design System",
+  "projectId": "14887812630545724297",
+  "downloadedAt": "2026-11-10T20:07:55.725Z",
+  "totalScreens": 10,
+  "screens": [
+    {
+      "index": 1,
+      "title": "Climate Intelligence Overview",
+      "id": "9be960a0c416413e9084ad8f424df64e",
+      "deviceType": "DESKTOP",
+      "htmlFile": "01-climate-intelligence-overview.html",
+      "htmlSize": "57.3 KB",
+      "imageFile": "01-climate-intelligence-overview.png",
+      "imageSize": "1258.5 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 2,
+      "title": "ClimateGuard AI - Home",
+      "id": "dbec315114eb469fa6503073cc8a5854",
+      "deviceType": "DESKTOP",
+      "htmlFile": "02-climateguard-ai-home.html",
+      "htmlSize": "64.0 KB",
+      "imageFile": "02-climateguard-ai-home.png",
+      "imageSize": "4803.2 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 3,
+      "title": "Geospatial Monitoring Map",
+      "id": "deffbf1a2f7d4dc38f5a45cac33ae695",
+      "deviceType": "DESKTOP",
+      "htmlFile": "03-geospatial-monitoring-map.html",
+      "htmlSize": "32.7 KB",
+      "imageFile": "03-geospatial-monitoring-map.png",
+      "imageSize": "1650.3 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 4,
+      "title": "Disaster Finance & Parametric Triggers",
+      "id": "da6b0f85af4d4445a453a1106b3dbbe6",
+      "deviceType": "DESKTOP",
+      "htmlFile": "04-disaster-finance-parametric-triggers.html",
+      "htmlSize": "45.8 KB",
+      "imageFile": "04-disaster-finance-parametric-triggers.png",
+      "imageSize": "992.1 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 5,
+      "title": "ClimateGuard AI - Main Dashboard",
+      "id": "468587b89ebc462ba2686e0f8112fbd3",
+      "deviceType": "DESKTOP",
+      "htmlFile": "05-climateguard-ai-main-dashboard.html",
+      "htmlSize": "57.5 KB",
+      "imageFile": "05-climateguard-ai-main-dashboard.png",
+      "imageSize": "1278.9 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 6,
+      "title": "Climate Risk Intelligence",
+      "id": "793ff1ff846f484bb504b9b8e46c1017",
+      "deviceType": "DESKTOP",
+      "htmlFile": "06-climate-risk-intelligence.html",
+      "htmlSize": "54.7 KB",
+      "imageFile": "06-climate-risk-intelligence.png",
+      "imageSize": "1330.5 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 7,
+      "title": "Climate Risk Intelligence - Mobile",
+      "id": "1a2e2bd5e73e4fada723a844cef42e12",
+      "deviceType": "MOBILE",
+      "htmlFile": "07-climate-risk-intelligence-mobile.html",
+      "htmlSize": "34.4 KB",
+      "imageFile": "07-climate-risk-intelligence-mobile.png",
+      "imageSize": "802.9 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 8,
+      "title": "Disaster Finance & Parametric Triggers",
+      "id": "77e6394916c644ba876254f1cc8add62",
+      "deviceType": "DESKTOP",
+      "htmlFile": "08-disaster-finance-parametric-triggers-alt.html",
+      "htmlSize": "59.0 KB",
+      "imageFile": "08-disaster-finance-parametric-triggers-alt.png",
+      "imageSize": "1225.3 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 9,
+      "title": "C01 Low-Compute Edge Inference Benchmark",
+      "id": "7504176f8f754e579af1f2dad60698b1",
+      "deviceType": "DESKTOP",
+      "htmlFile": "09-c01-low-compute-edge-inference-benchmark.html",
+      "htmlSize": "48.7 KB",
+      "imageFile": "09-c01-low-compute-edge-inference-benchmark.png",
+      "imageSize": "992.2 KB",
+      "status": "SUCCESS"
+    },
+    {
+      "index": 10,
+      "title": "ClimateGuard AI Production Next.js Architecture Spec",
+      "id": "8b8fc521100246678ccf58bcafd5fcb5",
+      "deviceType": "DESKTOP",
+      "screenType": "DOCUMENT",
+      "docFile": "10-climateguard-ai-production-next-js-architecture-spec.md",
+      "htmlFile": "10-climateguard-ai-production-next-js-architecture-spec.html",
+      "docSize": "19.6 KB",
+      "status": "SUCCESS"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "runId": "C01-MWCNHV3Y",
+  "timestamp": "2026-11-11T21:48:23.613Z",
+  "status": "PASS",
+  "mandatoryCriteria": {
+    "batchSizeRequired": 100,
+    "actualBatchSize": 100,
+    "maxAllowedLatencyMs": 200,
+    "actualTotalLatencyMs": 5.497,
+    "latencyPassed": true,
+    "maxAllowedMemoryMb": 256,
+    "actualPeakMemoryMb": 60.41,
+    "memoryPassed": true
+  },
+  "performance": {
+    "totalLatencyMs": 5.497,
+    "avgLatencyMs": 0.055,
+    "p50LatencyMs": 0.0123,
+    "p95LatencyMs": 0.1166,
+    "p99LatencyMs": 0.8946,
+    "throughputInferencesPerSec": 18191.1,
+    "peakMemoryMb": 60.41
+  },
+  "device": {
+    "platform": "win32",
+    "arch": "x64",
+    "release": "10.0.22621",
+    "cpuModel": "Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz",
+    "cpuCores": 8,
+    "cpuSpeedMhz": 2112,
+    "totalRamGb": 15.84,
+    "freeRamGb": 3.32
+  },
+  "runtime": {
+    "engine": "Node.js",
+    "version": "v26.13.0",
+    "v8Version": "14.6.202.34-node.40",
+    "pid": 17556,
+    "uptimeSeconds": 0.1
+  },
+  "model": {
+    "name": "ClimateGuard-Edge-INT8-QuantNet",
+    "architecture": "Dense-32-ReLU -> Dense-16-ReLU -> Softmax-3",
+    "inputFeatures": 8,
+    "parametersCount": 867,
+    "quantization": "INT8 Uniform Fixed-Point",
+    "weightsSizeBytes": 867,
+    "footprintKb": 0.847
+  },
+  "cryptographicAttestation": {
+    "scheme": "Ed25519 (RFC 8032)",
+    "publicKeyHex": "302a300506032b657003210046027982e30df6b0266f06252771c081c54074b7a13c1c0b8e42b862f31d038b",
+    "signature": "ed25519:8e7986c5da5e72350ea45b20b482a05595f9c64b9b360b97cc1545ef0e935c6582c272c8de2055f4dafbf9b937d6eefd59b5d211bbb8cc28904059e66b94bd01",
+    "verified": true
+  },
+  "samplePredictions": [
+    {
+      "floodRiskProb": 1,
+      "heatwaveRiskProb": 0,
+      "droughtRiskProb": 0
+    },
+    {
+      "floodRiskProb": 0,
+      "heatwaveRiskProb": 0,
+      "droughtRiskProb": 1
+    },
+    {
+      "floodRiskProb": 0,
+      "heatwaveRiskProb": 0,
+      "droughtRiskProb": 1
+    },
+    {
+      "floodRiskProb": 0.9951,
+      "heatwaveRiskProb": 0.0049,
+      "droughtRiskProb": 0
+    },
+    {
+      "floodRiskProb": 1,
+      "heatwaveRiskProb": 0,
+      "droughtRiskProb": 0
+    }
+  ]
+}

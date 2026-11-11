@@ -1,0 +1,195 @@
+{
+  "id": "793ff1ff846f484bb504b9b8e46c1017",
+  "title": "Climate Risk Intelligence",
+  "deviceType": "DESKTOP",
+  "width": "2560",
+  "height": "4276",
+  "prompt": "Create the comprehensive ClimateGuard AI 'Risk Intelligence' analysis workspace screen for desktop using the web_dashboard app shell.\n\nPAGE CONTEXT & SHELL INTEGRATION:\n- App title: ClimateGuard AI\n- Active Nav: Highlight 'Risk Intelligence' in the MAIN MENU sidebar.\n- Top Navbar: Show breadcrumbs 'Telemetry Operations > Risk Intelligence Workspace', Location quick-search input, System Normal 99.98% indicator, Notification Bell, User Avatar (Dr. Aris Thorne).\n\nCONTENT SPECIFICATIONS (strictly following user request):\n1. TOP FILTER & ANALYSIS CONTROL BAR:\n   - Header title: 'Climate Risk Intelligence Engine'\n   - Subtitle: 'Multi-hazard predictive synthesis, automated model inference, and calibrated exposure evaluation.'\n   - Functional controls in a dark card toolbar:\n     - Location selector dropdown: Selected 'Indus Basin & Thar Corridor (Zone 43N - South Asia)' with quick options (Rio Paraná Delta, Horn of Africa Sector 4, Lower Mekong Estuary).\n     - Hazard selector: Multi-select/segmented buttons ('All Hazards (Synthesized)', 'Flood Inundation', 'Extreme Heatwave', 'Agricultural Drought').\n     - Forecast period selector: Segmented pills or dropdown: '24 Hours', '48 Hours (Recommended)', '7 Days', '14 Days Ensemble'.\n     - Model confidence toggle / ensemble version: 'ECMWF ERA5 + GFS + ClimateGuard C01 Edge v2.4'.\n     - Primary Action Button: 'Run Risk Analysis' (electric cyan button #22D3EE with pulse/sparkle icon).\n     - Secondary Action: 'Export Risk Assessment PDF/JSON' and 'Simulate Parametric Payout'.\n\n2. ROW 1: THREE CORE HAZARD RISK ANALYSIS CARDS:\n   - FLOOD RISK CARD:\n     - Severity badge: 'CRITICAL (88% Threat)' in Red #EF4444.\n     - Headline metric: 14,200 m³/s River Discharge (vs 12,000 m³/s 10-year Threshold).\n     - Secondary metrics: 68.4 mm/24h precipitation, +1.8m gauge crest anomaly.\n     - Contributing factors: Upstream glacial melt runoff (42%), Heavy monsoonal front convergence (38%), Saturated soil infiltration capacity < 8% (20%).\n     - Model version: Hydro-Net v3.2 (Calibrated).\n     - Status: Pre-breach active warning.\n   - HEATWAVE RISK CARD:\n     - Severity badge: 'HIGH ANOMALY (76% Index)' in Orange #F97316.\n     - Headline metric: 46.2°C Ambient / 31.8°C Wet-Bulb Globe Temp (WBGT).\n     - Secondary metrics: +6.4°C vs 30-year seasonal baseline, 78.4% relative humidity during night cycle.\n     - Contributing factors: Persistent high-pressure atmospheric heat dome (55%), Low nighttime radiative cooling (25%), High surface urban albedo absorption (20%).\n     - Model version: ThermoWatch v2.1.\n     - Status: High heat-stress mortality exposure.\n   - DROUGHT / ARIDITY RISK CARD:\n     - Severity badge: 'MODERATE DEFICIT (64% Index)' in Yellow #EAB308.\n     - Headline metric: -41% Root Zone Soil Moisture Deficit.\n     - Secondary metrics: NDVI vegetation index deviation -0.32, 45 consecutive rain-free days.\n     - Contributing factors: Consecutive failure of seasonal pre-monsoon showers (60%), Groundwater depletion acceleration (25%), Elevated evapotranspiration rate (15%).\n     - Model version: AridScan v4.0.\n     - Status: Agricultural stress watch.\n\n3. ROW 2: DETAILED PREDICTIVE FORECAST CHARTS & HISTORICAL COMPARISON (2-column layout):\n   - LEFT (60%): 'Multi-Model Risk Probability & Forecast Trajectory (7-Day Multi-Hazard Ensemble)'\n     - Visual chart showing 3 distinct trend lines: Flood discharge curve (cyan/red peak), Heatwave temperature projection (orange curve), and Drought soil moisture depletion line (amber).\n     - Clear 'T-Zero (Current Moment)' demarcation dividing 48h Observed historical telemetry from 120h Projected AI forecast.\n     - Historical comparison callout overlay: 'Compared to 2010 Super-Flood & 2022 South Asian Heat Dome baselines: Exceeds 92nd percentile historic severity'.\n   - RIGHT (40%): 'Hazard Factor Attribution & Sensitivity Weights'\n     - Interactive breakdown bars and radial gauge showing model feature importance:\n       - Upstream precipitation volume (Weight: 0.38)\n       - Antecedent soil saturation (Weight: 0.28)\n       - Surface radiative heating (Weight: 0.18)\n       - Atmospheric barometric gradient (Weight: 0.16)\n     - Risk Classification Matrix summary table with threshold triggers.\n\n4. ROW 3: DEEP-DIVE RISK EXPLANATION & ACTIONABLE PROTOCOLS:\n   - Panel 1: 'Algorithmic Risk Explanation & Causal Narrative'\n     - Explainable AI summary: Clear breakdown of why the system reached an 88% Critical Flood threat and 76% Heatwave score, written in authoritative scientific risk assessment language.\n     - Clear disclaimer: 'Note: River discharge thresholds are derived from satellite altimetry (Sentinel-3) and hydrological gauges. Inundation depth variations require local DEM ground truthing.'\n   - Panel 2: 'Automated Parametric Trigger & Recommended Interventions'\n     - Trigger Status: 'Parametric Condition CG-FIN-9821 Primed' (Discharge > 12,000 m³/s for > 6 consecutive hours).\n     - Actionable recommendations: Municipal early evacuation advisory (Zone 2B), Deploy mobile flood barriers along eastern dyke, Pre-fund local disaster relief escrow via automated multi-sig.\n\n5. FOOTER TELEMETRY & DATA PROVENANCE:\n   - Data Sources: Open-Meteo Global (Synced 2m ago), NASA FIRMS MODIS/VIIRS (Active), Copernicus ERA5 Reanalysis, Sepolia Testnet Oracle block #9,481,204.\n   - Timestamp: 'Forecast generated: 2026-10-24 14:32:10 UTC • Model Run #INF-8849-C01 • Confidence: 96.8% (ERA5+GFS calibrated)'.\n\nSTYLING & THEME:\n- Dark navy palette: #07111F (background), #0B1728 (nav/sidebar), #101F33 (cards), #162840 (elevated cards), #24364B (borders).\n- Risk color tokens: Green #22C55E (Safe), Yellow #EAB308 (Moderate), Orange #F97316 (High), Red #EF4444 (Critical), Primary Cyan #22D3EE.\n- Modern high-density typography, tabular numerals, clean SVG mini-charts and gauges. No cartoon illustrations.",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "MANROPE",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#22d3ee",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "on_tertiary": "#003731",
+      "primary_fixed": "#a2eeff",
+      "background": "#051424",
+      "inverse_surface": "#d4e4fa",
+      "primary_fixed_dim": "#2fd9f4",
+      "on_secondary_container": "#e6ecff",
+      "on_surface": "#d4e4fa",
+      "surface_container_highest": "#273647",
+      "on_primary": "#00363e",
+      "surface_variant": "#273647",
+      "surface_container": "#122131",
+      "outline": "#859397",
+      "tertiary_fixed_dim": "#4fdbc8",
+      "error_container": "#93000a",
+      "on_background": "#d4e4fa",
+      "primary": "#8aebff",
+      "surface_container_lowest": "#010f1f",
+      "surface_container_high": "#1c2b3c",
+      "secondary_container": "#0566d9",
+      "primary_container": "#22d3ee",
+      "tertiary_fixed": "#71f8e4",
+      "on_secondary_fixed_variant": "#004395",
+      "outline_variant": "#3c494c",
+      "on_primary_fixed": "#001f25",
+      "secondary_fixed_dim": "#adc6ff",
+      "tertiary_container": "#47d5c2",
+      "on_error": "#690005",
+      "surface": "#051424",
+      "on_primary_container": "#005763",
+      "inverse_on_surface": "#233143",
+      "on_error_container": "#ffdad6",
+      "surface_container_low": "#0d1c2d",
+      "secondary_fixed": "#d8e2ff",
+      "surface_dim": "#051424",
+      "on_secondary_fixed": "#001a42",
+      "on_tertiary_container": "#00594f",
+      "on_secondary": "#002e6a",
+      "surface_tint": "#2fd9f4",
+      "on_primary_fixed_variant": "#004e5a",
+      "on_surface_variant": "#bbc9cd",
+      "on_tertiary_fixed_variant": "#005048",
+      "error": "#ffb4ab",
+      "on_tertiary_fixed": "#00201c",
+      "inverse_primary": "#006877",
+      "tertiary": "#6af2de",
+      "surface_bright": "#2c3a4c",
+      "secondary": "#adc6ff"
+    },
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#22d3ee",
+    "overrideSecondaryColor": "#3b82f6",
+    "overrideTertiaryColor": "#14b8a6",
+    "overrideNeutralColor": "#94a3b8",
+    "spacingScale": 2,
+    "typography": {
+      "headline-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.875rem",
+        "fontWeight": "600",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.02em"
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "0"
+      },
+      "title-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1.125rem",
+        "fontWeight": "600",
+        "lineHeight": "1.625rem",
+        "letterSpacing": "-0.01em"
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.125rem",
+        "letterSpacing": "0.01em"
+      },
+      "title-md": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.005em"
+      },
+      "display-md-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.75rem",
+        "fontWeight": "600",
+        "lineHeight": "2.25rem",
+        "letterSpacing": "-0.02em"
+      },
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "0.6875rem",
+        "fontWeight": "600",
+        "lineHeight": "0.875rem",
+        "letterSpacing": "0.06em"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "2.75rem",
+        "letterSpacing": "-0.02em"
+      },
+      "mono-metric": {
+        "fontFamily": "Inter",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.02em"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "lineHeight": "1rem",
+        "letterSpacing": "0.05em"
+      },
+      "display-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "2.5rem",
+        "fontWeight": "600",
+        "lineHeight": "3rem",
+        "letterSpacing": "-0.025em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0"
+      },
+      "headline-md": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.015em"
+      },
+      "display-lg": {
+        "fontFamily": "Manrope",
+        "fontSize": "3.5rem",
+        "fontWeight": "700",
+        "lineHeight": "4rem",
+        "letterSpacing": "-0.03em"
+      },
+      "headline-sm": {
+        "fontFamily": "Manrope",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.75rem",
+        "letterSpacing": "-0.01em"
+      }
+    },
+    "spacing": {
+      "gutter": "1rem",
+      "space-2xs": "0.25rem",
+      "space-lg": "1.5rem",
+      "margin": "1rem",
+      "space-xs": "0.5rem",
+      "space-xl": "2rem",
+      "margin-desktop": "1.5rem",
+      "gutter-desktop": "1.5rem",
+      "space-md": "1rem",
+      "space-sm": "0.75rem",
+      "space-2xl": "3rem"
+    },
+    "headlineFontFamily": "Manrope",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  }
+}
